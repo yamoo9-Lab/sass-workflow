@@ -11,6 +11,8 @@ Sass 문법, 출력 스타일, 빌드, 파일간 변환, 소스맵, 문법 고�
 - `sass-convert` 명령을 사용한 `sass` ⇔ `scss`
 - Chrome 웹 브라우저와 Sass 소스맵(Sourcemap)
 - Chrome 웹 브라우저 워크스페이스(Workspace)를 활용한 업무 효율성 증대
+- Git Bash 별칭(Alias) 만드는 방법 ([네이버 카페 덧글](http://cafe.naver.com/webstandardproject/3971) 참고)
+- Sass 프리프로세싱 [GUI 도구](http://sass-lang.com/install) 소개
 
 ### 수업자료 PDF 다운로드
 [네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3971)
