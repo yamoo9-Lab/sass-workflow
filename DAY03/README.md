@@ -17,6 +17,9 @@ Sass 주석, 중첩 규칙&속성, 부모 참조 선택자, 선택자 상속, �
 -
 
 - Sass 명령어 __별칭(Alias)__으로 명령 코드 간소화하기
+	- `alias sass-e="sass -t expanded --watch"`
+	- `alias sass-c="sass -t compact --watch"`
+	- `alias sass-p="sass -t compressed --watch"`
 - Emmet 구문 사용시, __Sass__ 파일에서 코드 힌트가 처리되지 않는 문제 해결
 - Sass __주석__ `Comments`
 - Sass __중첩규칙__ `Nested Rules` & __중첩속성__ `Nested Properties`
