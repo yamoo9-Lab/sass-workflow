@@ -11,7 +11,7 @@ html {
 }
 
 /* -----------------------------------------------
- * 모바일 폰트 부드럽게(font-smoothing)
+ * 폰트 부드럽게(font-smoothing)
  * none | subpixel-antialiased | antialiased
  * -------------------------------------------- */
 html, html a {
