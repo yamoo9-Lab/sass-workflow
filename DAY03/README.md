@@ -1,3 +1,15 @@
+## 3일차 과정 시작 전 Mission 수행!!
+1. Sass를 실행할 준비를 하고, 아웃풋 스타일 별로 명령을 각각 실행해보세요.
+ - Nested
+ - Expanded
+ - Compact
+ - Compressed
+
+2. `sass-convert`명령을 사용하여 작성한 Sass 파일을 변경해보세요.
+ - `sass` ⇔ `scss`
+
+-
+
 ## 3일차 수업 내용 요약
 __Sass 레퍼런스: 기본 사용법__<br>
 Sass 주석, 중첩 규칙&속성, 부모 참조 선택자, 선택자 상속, 대체 선택자, 호출 등
