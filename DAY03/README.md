@@ -12,22 +12,23 @@
 
 ## 3일차 수업 내용 요약
 __Sass 레퍼런스: 기본 사용법__<br>
-Sass 주석, 중첩 규칙&속성, 부모 참조 선택자, 선택자 상속, 대체 선택자, 호출 등
+Sass 주석, 중첩 규칙&속성, 부모 참조 선택자, <strike>선택자 상속, 대체 선택자, 호출</strike> 등
 
 -
 
 - Sass 명령어 __별칭(Alias)__으로 명령 코드 간소화하기
-	- `alias sass-e="sass -t expanded --watch"`
-	- `alias sass-c="sass -t compact --watch"`
-	- `alias sass-p="sass -t compressed --watch"`
+	- `alias sass="sass -E UTF-8 --watch"`
+	- `alias sass-n="sass -E UTF-8 -t nested --watch"`
+	- `alias sass-c="sass -E UTF-8 -t compact --watch"`
+	- `alias sass-p="sass -E UTF-8 -t compressed --watch"`
 - Emmet 구문 사용시, __Sass__ 파일에서 코드 힌트가 처리되지 않는 문제 해결
 - Sass __주석__ `Comments`
 - Sass __중첩규칙__ `Nested Rules` & __중첩속성__ `Nested Properties`
 - Sass __부모 참조 선택자__ `Parent Reference Selector`
-- Sass __선택자 상속__ `Selector Inheritance`
-- Sass __대체 선택자__ `Placeholder Selector`
-- Sass __호출__ `Import on Steroids`
-- Sass __호출 제어__ `Partials`
+- <strike>Sass __선택자 상속__ `Selector Inheritance`</strike> (4일차 교육 진행)
+- <strike>Sass __대체 선택자__ `Placeholder Selector`</strike> (4일차 교육 진행)
+- <strike>Sass __호출__ `Import on Steroids`</strike> (4일차 교육 진행)
+- <strike>Sass __호출 제어__ `Partials`</strike> (4일차 교육 진행)
 
 ### 수업자료 PDF 다운로드
 [네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3972)
