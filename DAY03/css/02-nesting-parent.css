@@ -104,9 +104,11 @@ em {
  * ----------------------------------- */
 .icon-email {
   background: url("images/svg/email.svg") no-repeat;
-  /* & ⇒ .icon-email
-   * & 조합된 선택자 결과 ⇒ .yamoo9-no-svg .icon-email a em
-   */
+  /* & ⇒ .icon-email */
+}
+.yamoo9-no-svg .icon-email {
+  background-image: url("images/png/email.png");
+  /* & 조합된 선택자 결과 ⇒ .yamoo9-no-svg .icon-email a em */
 }
 .yamoo9-no-svg .icon-email a em {
   text-indent: -9999em;
