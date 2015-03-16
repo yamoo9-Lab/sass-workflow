@@ -70,6 +70,7 @@ h5, h6 {
 
 /* 강조 */
 em {
+  font-style: normal;
   font-weight: bold;
 }
 
