@@ -1,0 +1,37 @@
+/* Google 웹폰트 ━ Source Sans Pro */
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400");
+
+/* Container: 컨테이너 클래스 설정 */
+.conatiner {
+  width: 70rem;
+  margin: 0 auto;
+  .row {
+    +clearfix() // Compass 프레임워크 믹스인 clearfix 호출
+    .fl {
+      float: left;
+      margin-right: 0.625rem;
+      .lt-ie7 & {
+        display: inline;
+      } // .lt-ie7 &
+    } // .fl
+  } // .row
+} // .container
+
+/* blockquote: 인용문 설정 */
+blockquote {
+  border-top-width: 0.0625rem;
+  border-top-color: #52bfdb;
+  border-bottom-width: 1.25rem;
+  margin: 0.625rem 1.25rem;
+  border-bottom-color: #52bfdb;
+  p {
+    font-family: "Source Sans Pro", Dotum, Sans-Serif;
+    font-size: 1.25rem;
+    letter-spacing: -0.003em;
+    font-weight: 300;
+    cite {
+      font-style: normal;
+      color: #8ac3d3;
+    } // cite
+  } // p
+} // blockquote
