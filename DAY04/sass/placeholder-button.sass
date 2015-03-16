@@ -1,0 +1,51 @@
+/**
+ * ---------------------------------------------
+ * 주제: Sass 상속(Inheritance)
+ * 내용: 공통적으로 자주 사용되는 일종의 코드 덩어리(모듈)을
+ * 재사용하고자 할 때 사용하는 것이 상속
+ * ---------------------------------------------
+ */
+
+// IR: 이미지 대체기법
+%ir
+	overflow: hidden
+	display: block
+	text-indent: -9999em
+
+header .brand-logo
+	@extend %ir
+	width: 120px
+	height: 30px
+	background-image: url(images/logo.png)
+
+footer .brand-logo
+	@extend %ir
+	width: 100px
+	height: 14px
+	background-image: url(images/logo-footer.png)
+
+// 목록 초기화
+%reset-list
+	list-style-type: none
+	padding-left: 0
+
+// 내비게이션 코드
+nav ul, nav ol,
+#gnb ul, #lnb ul
+	@extend %reset-list
+
+// 클리어픽스
+%clearfix
+	&::before, &::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+	.lt-ie8 &
+		zoom: 1
+
+.container
+	@extend %clearfix
+
+#page .row
+	@extend %clearfix

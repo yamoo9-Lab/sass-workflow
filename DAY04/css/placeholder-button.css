@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/**
+ * ---------------------------------------------
+ * 주제: Sass 상속(Inheritance)
+ * 내용: 공통적으로 자주 사용되는 일종의 코드 덩어리(모듈)을
+ * 재사용하고자 할 때 사용하는 것이 상속
+ * ---------------------------------------------
+ */
+header .brand-logo, footer .brand-logo {
+  overflow: hidden;
+  display: block;
+  text-indent: -9999em;
+}
+
+header .brand-logo {
+  width: 120px;
+  height: 30px;
+  background-image: url(images/logo.png);
+}
+
+footer .brand-logo {
+  width: 100px;
+  height: 14px;
+  background-image: url(images/logo-footer.png);
+}
+
+nav ul, nav ol,
+#gnb ul, #lnb ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.container::before, #page .row::before, .container::after, #page .row::after {
+  content: "";
+  display: table;
+}
+.container::after, #page .row::after {
+  clear: both;
+}
+.lt-ie8 .container, .lt-ie8 #page .row, #page .lt-ie8 .row {
+  zoom: 1;
+}
+
+/*# sourceMappingURL=placeholder-button.css.map */

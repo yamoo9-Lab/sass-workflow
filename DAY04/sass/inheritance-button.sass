@@ -11,15 +11,11 @@
 	width: 305px
 	height: 84px
 	border-radius: 4px
+	.article &
+		// .button 모듈 상속
+		@extend .button
+		background-color: #54aec3
 
-.article .button
-	width: 305px
-	height: 84px
-	border-radius: 4px
-	background-color: #54aec3
-
-.sidebar .button
-	width: 305px
-	height: 84px
-	border-radius: 4px
-	background-color: #fe4940
+	.sidebar &
+		@extend .button
+		background-color: #fe4940
