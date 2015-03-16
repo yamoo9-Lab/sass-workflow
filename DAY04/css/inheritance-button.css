@@ -6,15 +6,23 @@
  * 재사용하고자 할 때 사용하는 것이 상속
  * ---------------------------------------------
  */
-.button, .article .button, .sidebar .button {
+.button {
   width: 305px;
   height: 84px;
   border-radius: 4px;
 }
+
 .article .button {
+  width: 305px;
+  height: 84px;
+  border-radius: 4px;
   background-color: #54aec3;
 }
+
 .sidebar .button {
+  width: 305px;
+  height: 84px;
+  border-radius: 4px;
   background-color: #fe4940;
 }
 
