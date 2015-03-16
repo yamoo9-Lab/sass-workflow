@@ -1,0 +1,83 @@
+/*
+Error: Invalid CSS after "+clearfix": expected selector, was "() // Compass 프..."
+        on line 9 of sass/00_mission_converted.scss
+
+4: /* Container: 컨테이너 클래스 설정 *\/
+5: .conatiner {
+6:   width: 70rem;
+7:   margin: 0 auto;
+8:   .row {
+9:     +clearfix() // Compass 프레임워크 믹스인 clearfix 호출
+10:     .fl {
+11:       float: left;
+12:       margin-right: 0.625rem;
+13:       .lt-ie7 & {
+14:         display: inline;
+
+Backtrace:
+sass/00_mission_converted.scss:9
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/static_parser.rb:21:in `parse_selector'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:424:in `visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:293:in `watch'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin.rb:108:in `method_missing'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/Cellar/ruby/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+/usr/local/opt/ruby/bin/sass:23:in `load'
+/usr/local/opt/ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"+clearfix\": expected selector, was \"() // Compass 프...\"\A         on line 9 of sass/00_mission_converted.scss\A \A 4: /* Container: 컨테이너 클래스 설정 */\A 5: .conatiner {\A 6:   width: 70rem;\A 7:   margin: 0 auto;\A 8:   .row {\A 9:     +clearfix() // Compass 프레임워크 믹스인 clearfix 호출\A 10:     .fl {\A 11:       float: left;\A 12:       margin-right: 0.625rem;\A 13:       .lt-ie7 & {\A 14:         display: inline;"; }

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/**
+ * ---------------------------------------------
+ * 주제: Sass + RWD (MQ문)
+ * 내용: Sass 중첩 규칙과 미디어쿼리문
+ * ---------------------------------------------
+ */
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 1100px;
+  }
+}
+
+p {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 1200px) {
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+/*# sourceMappingURL=rwd-nesting.css.map */

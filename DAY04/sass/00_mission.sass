@@ -6,25 +6,29 @@
 	width: 70rem // 70rem ⇒ 1120px
 	margin: 0 auto
 	.row
-		+clearfix() // Compass 프레임워크 믹스인 clearfix 호출
+		// +clearfix() // Compass 프레임워크 믹스인 clearfix 호출
 		.fl
 			float: left
 			margin-right: 0.625rem // 0.625rem ⇒ 10px
-			.lt-ie7 &
+			.lt-ie7 & // .container .row .fl
 				display: inline // 마진 버그 해결 (IE 6)
 
 /* blockquote: 인용문 설정 */
 blockquote
-	border-top-width: 0.0625rem // 0.0625rem ⇒ 1px
-	border-top-color: #52bfdb
-	border-bottom-width: 1.25rem // 1.25rem ⇒ 20px
+	border:
+		top:
+			width: 0.0625rem // 0.0625rem ⇒ 1px
+			color: #52bfdb
+		bottom:
+			width: 1.25rem // 1.25rem ⇒ 20px
+			color: #52bfdb
 	margin: 0.625rem 1.25rem
-	border-bottom-color: #52bfdb
 	p
-		font-family: "Source Sans Pro", Dotum, Sans-Serif
-		font-size: 1.25rem
+		font:
+			family: "Source Sans Pro", Dotum, Sans-Serif
+			size: 1.25rem
+			weight: 300 // Light
 		letter-spacing: -0.003em // Photoshop 트래킹(Tracking) 설정 값
-		font-weight: 300 // Light
 		cite
 			font-style: normal
 			color: #8ac3d3
