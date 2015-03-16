@@ -27,6 +27,9 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-###SASS###
+# SASS
 .sass-cache
 *.css.map
+
+# PSD
+.psd
