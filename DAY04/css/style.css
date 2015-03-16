@@ -1,9 +1,20 @@
 @charset "UTF-8";
 /**
  * ---------------------------------------------
- * 주제: Sass
- * 내용:
+ * 주제: Sass 호출
+ * 내용: sass, scss, css 모두 호출 가능(Combine, Merge)
  * ---------------------------------------------
  */
+/* Config Setting */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.grid-2 {
+  float: left;
+  width: 60px;
+  margin-right: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,18 @@
 /**
  * ---------------------------------------------
- * 주제: Sass
- * 내용:
+ * 주제: Sass 호출
+ * 내용: sass, scss, css 모두 호출 가능(Combine, Merge)
  * ---------------------------------------------
  */
+
+@import "patials/config"
+// @import "patials/normalize"
+
+.container
+	width: $page-width
+	margin: 0 auto
+
+.grid-2
+	float: left
+	width: $column-width * 2
+	margin-right: $gutter
