@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* 웹폰트
+ * http://www.google.com/fonts#UsePlace:use/Collection:Teko
+ * Teko Light : 300, 400, 500, 600, 700
+ * http://www.google.com/fonts#UsePlace:use/Collection:Titillium+Web
+ * Titillium Web Light : 200, 300, 400, 600, 700, 900
+ * 이탤릭체의 경우, italic을 뒤에 붙여줍니다. */
+@import url("http://fonts.googleapis.com/css?family=Teko:300, 400");
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web:300, 400");
+/* 노멀라이즈 호출 */
+/*! Normalize.css v3.0.1 | MIT License | git.io/normalize
+ *  Chrome, Firefox, Opera, Safari 6+, IE 8+
+ *  다운로드: http://necolas.github.io/normalize.css/3.0.1/normalize.css */
+/**
+ * 글꼴 sans-serief로 조정, iOS 회전에 따른 글꼴 크기 고정
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * body 요소 margin 초기화
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * HTML5 새로운 요소 초기화
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+/**
+ * 링크(Links) 초기화
+ */
+a {
+  background: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/**
+ * 텍스트 의미 구조화, 브라우저 간 디자인 동일하게 변경.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * 엠베드 요소, 브라우저 간 디자인 동일하게 변경.
+ */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ * 그룹핑 콘텐츠, 브라우저 간 디자인 동일하게 변경.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * 폼 요소, 브라우저 간 디자인 동일하게 변경.
+ */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+select {
+  text-transform: none;
+}
+
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * 테이블 요소, 브라우저 간 디자인 동일하게 변경.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/* 그리드 시스템 */
+body {
+  min-width: 960px;
+}
+
+/* =Containers
+ *-------------------------------------------------------------------------------- */
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+/* =Grid >> Global
+ *-------------------------------------------------------------------------------- */
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11 {
+  position: relative;
+}
+
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+ *-------------------------------------------------------------------------------- */
+.alpha, .first {
+  margin-left: 0;
+}
+
+.omega, .last {
+  margin-right: 0;
+}
+
+/* =Grid >> 12 Columns
+ *-------------------------------------------------------------------------------- */
+.container_12 .grid_1 {
+  width: 70px;
+}
+.container_12 .grid_2 {
+  width: 170px;
+}
+.container_12 .grid_3 {
+  width: 270px;
+}
+.container_12 .grid_4 {
+  width: 370px;
+}
+.container_12 .grid_5 {
+  width: 470px;
+}
+.container_12 .grid_6 {
+  width: 570px;
+}
+.container_12 .grid_7 {
+  width: 670px;
+}
+.container_12 .grid_8 {
+  width: 770px;
+}
+.container_12 .grid_9 {
+  width: 870px;
+}
+.container_12 .grid_10 {
+  width: 970px;
+}
+.container_12 .grid_11 {
+  width: 1070px;
+}
+.container_12 .grid_12 {
+  width: 1170px;
+}
+.container_12 .prefix_1 {
+  padding-left: 100px;
+}
+.container_12 .prefix_2 {
+  padding-left: 200px;
+}
+.container_12 .prefix_3 {
+  padding-left: 300px;
+}
+.container_12 .prefix_4 {
+  padding-left: 400px;
+}
+.container_12 .prefix_5 {
+  padding-left: 500px;
+}
+.container_12 .prefix_6 {
+  padding-left: 600px;
+}
+.container_12 .prefix_7 {
+  padding-left: 700px;
+}
+.container_12 .prefix_8 {
+  padding-left: 800px;
+}
+.container_12 .prefix_9 {
+  padding-left: 900px;
+}
+.container_12 .prefix_10 {
+  padding-left: 1000px;
+}
+.container_12 .prefix_11 {
+  padding-left: 1100px;
+}
+.container_12 .suffix_1 {
+  padding-right: 100px;
+}
+.container_12 .suffix_2 {
+  padding-right: 200px;
+}
+.container_12 .suffix_3 {
+  padding-right: 300px;
+}
+.container_12 .suffix_4 {
+  padding-right: 400px;
+}
+.container_12 .suffix_5 {
+  padding-right: 500px;
+}
+.container_12 .suffix_6 {
+  padding-right: 600px;
+}
+.container_12 .suffix_7 {
+  padding-right: 700px;
+}
+.container_12 .suffix_8 {
+  padding-right: 800px;
+}
+.container_12 .suffix_9 {
+  padding-right: 900px;
+}
+.container_12 .suffix_10 {
+  padding-right: 1000px;
+}
+.container_12 .suffix_11 {
+  padding-right: 1100px;
+}
+.container_12 .push_1 {
+  left: 100px;
+}
+.container_12 .push_2 {
+  left: 200px;
+}
+.container_12 .push_3 {
+  left: 300px;
+}
+.container_12 .push_4 {
+  left: 400px;
+}
+.container_12 .push_5 {
+  left: 500px;
+}
+.container_12 .push_6 {
+  left: 600px;
+}
+.container_12 .push_7 {
+  left: 700px;
+}
+.container_12 .push_8 {
+  left: 800px;
+}
+.container_12 .push_9 {
+  left: 900px;
+}
+.container_12 .push_10 {
+  left: 1000px;
+}
+.container_12 .push_11 {
+  left: 1100px;
+}
+.container_12 .pull_1 {
+  left: -100px;
+}
+.container_12 .pull_2 {
+  left: -200px;
+}
+.container_12 .pull_3 {
+  left: -300px;
+}
+.container_12 .pull_4 {
+  left: -400px;
+}
+.container_12 .pull_5 {
+  left: -500px;
+}
+.container_12 .pull_6 {
+  left: -600px;
+}
+.container_12 .pull_7 {
+  left: -700px;
+}
+.container_12 .pull_8 {
+  left: -800px;
+}
+.container_12 .pull_9 {
+  left: -900px;
+}
+.container_12 .pull_10 {
+  left: -1000px;
+}
+.container_12 .pull_11 {
+  left: -1100px;
+}
+
+/**
+ * 그리드 시스템
+ */
+body {
+  background: url("../images/BG/baseline10.gif"), url("../images/BG/GS.gif") repeat-y center top;
+  height: 100vh;
+}
+
+.container_12 {
+  height: 100vh;
+}
+.container_12 [class^="grid_"] {
+  height: 70px;
+  background: #E5742F;
+}
+
+/*# sourceMappingURL=style.css.map */
