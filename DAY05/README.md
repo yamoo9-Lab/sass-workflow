@@ -10,7 +10,7 @@ __Sass 적응 훈련: "미니 프로젝트" `PSD` 시안 ⇒ `Sass` 스타일링
 -
 
 ### 수업자료 PDF 다운로드
-[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3973)
+[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3979)
 
 -
 
