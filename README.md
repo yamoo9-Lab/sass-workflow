@@ -10,3 +10,4 @@
 - [3일차 수업내용 보기](DAY03/README.md)
 - [4일차 수업내용 보기](DAY04/README.md)
 - [5일차 수업내용 보기](DAY05/README.md)
+- [6일차 수업내용 보기](DAY06/README.md)
