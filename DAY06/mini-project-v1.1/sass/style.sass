@@ -1,0 +1,341 @@
+
+/**
+ * 모듈 호출
+ * Normalize, GridSystem, Common
+ * --------------------------------
+ */
+
+// Configuration 설정
+@import "partials/config"
+// Web Fonts 웹 폰트
+@import "partials/fonts"
+// 노멀라이즈
+@import "partials/normalize"
+// 그리드 시스템
+@import "partials/grid"
+// 공통 클래스 스타일
+@import "partials/common"
+// 믹스인
+@import "partials/mixins"
+
+
+/**
+ * 기본 스타일
+ * --------------------------------
+ */
+::-moz-selection
+	background: $bg-selection
+	color: $fg-selection
+	text-shadow: $text-shadow-selection
+::selection
+	background: $bg-selection
+	color: $fg-selection
+	text-shadow: $text-shadow-selection
+
+html
+	overflow-y: visible
+
+body
+	// height: 100vh
+	background: $bg-color
+	color: $fg-color
+	font-family: $body-font-face
+	font-weight: 300
+
+/**
+ * 그리드 시스템
+ */
+.grid.show
+	opacity: 0.3
+	position: absolute
+	z-index: 10000
+	top: 0
+	left: 0
+	// width: 100%
+	// height: 10000px
+	+size(100%, 10000px)
+	background: url('../images/BG/baseline10.gif'), url('../images/BG/GS.gif') repeat-y center top
+
+$margin: 10px
+
+/**
+ * HEADER 영역
+ * --------------------------------
+ */
+#header
+	position: relative
+	padding: $padding
+	margin-top: $margin
+	// height: 100vh
+
+	// 미디어 쿼리 + 연산(덧셈)
+	// @media screen and (max-width: $mobile)
+	// 	color: red
+	// @media screen and (min-width: $mobile+1) and (max-width: $tablet)
+	// 	color: green
+	// @media screen and (min-width: $tablet+1)
+	// 	color: blue
+
+	&::before
+		content: ''
+		position: absolute
+		top: 380px
+		right: 15px
+		+size(320px, 320px)
+		background: url('../images/BG/pic.svg') no-repeat
+
+		@media only screen and ($mquery: $mobile)
+			display: none
+
+		.yamoo9-no-svg &
+			background-image: url('../images/BG/pic.png')
+
+// #logo 영역
+////////////////////////////////
+#logo a
+	display: inline-block
+	img
+		float: left
+
+// GNB 영역
+#gnb
+	margin-left: 30px
+
+// #menu-lang 영역
+////////////////////////////////
+#menu-lang
+	float: left
+	height: 40px
+	margin:
+		top: 15px
+		left: 40px
+	border-right: 1px solid rgba(#fff, 0.2)
+
+	// .select-lang 영역
+	////////////////////////////////
+	.select-lang
+		list-style: none
+		margin:
+			top: 8px
+			bottom: 0
+		padding-left: 0
+		float: left
+		color: #adabab
+		font-weight: 400
+
+		li
+			display: none
+			&.selected
+				display: block
+
+	// .toggle-lang 영역
+	////////////////////////////////
+	.toggle-lang
+		float: left
+		display: block
+		// width: 40px
+		// height: 100%
+		+size(40px, 100%)
+		background: url('../images/HEADER/Arrow.svg') no-repeat center
+		.yamoo9-no-svg &
+			background-image: url('../images/HEADER/Arrow.png')
+
+// .toggle-navi-menu 버튼
+////////////////////////////////
+.toggle-navi-menu
+	position: relative
+	display: block
+	// width: 70px
+	// height: 70px
+	+size(70px, 70px)
+	background: #352d2f
+
+	&::before
+
+		// 지역변수
+		$w: 24px
+		$h: 14px
+
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		// width: $w
+		// height: $h
+		+size($w, $h)
+		margin:
+			left: -($w/2)
+			top: -($h/2)
+		background: url('../images/HEADER/Menu Icon.svg') no-repeat
+		.yamoo9-no-svg &
+			background-image: url('../images/HEADER/Menu Icon.png')
+
+
+/**
+ * #contents 영역
+ * --------------------------------
+ */
+#contents
+	margin-top: 180px
+
+	h1
+		margin:
+			top: 1px
+			bottom: 0
+			left: -5px
+		color: #fff
+		font-family: $heading-font-face
+		font-size: 120px
+		font-weight: 300
+		text-transform: uppercase
+		letter-spacing: (150em/1000)
+		line-height: 0.8
+
+	.slogan
+		clear: both
+		color: #d0cfcf
+		font-size: 26px
+		font-weight: 300
+		margin-top: 14px
+		margin-bottom: 23px
+		line-height: 1.2
+
+	.desc
+		margin-top: 0
+		line-height: 1.2
+
+// #connect
+////////////////////////////////
+#connect
+	margin-left: 0
+	margin-top: 40px
+	margin-bottom: 30px
+
+	& *
+		margin: 0
+
+	h2
+		color: #FFF
+		font-family: $heading-font-face
+		font-size: 30px
+		font-weight: 400
+		text-transform: uppercase
+		letter-spacing: (75em/1000)
+		line-height: 0.8
+
+		&+p
+			margin-top: 29px
+			color: #adabab
+			font-size: 18px
+			font-weight: 300
+			line-height: (24/18)
+
+// #send-email
+////////////////////////////////
+#send-email
+	margin-top: 47px
+
+	input
+		float: left
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		// width: 350px
+		// height: 50px
+		+size(350px, 50px)
+		padding-left: 17px
+		background-color: #fff
+		border: 1px solid #e5e5e5
+
+		&+button
+			// width: 120px
+			// height: 50px
+			+size(120px, 50px)
+			border: 0
+			background: #f63c3c
+			color: #fff
+			font-family: $heading-font-face
+			font-size: 20px
+			font-weight: 400
+			text-transform: uppercase
+			letter-spacing: (150em/1000)
+
+// #twitter-tweet
+////////////////////////////////
+#twitter-tweet
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	clear: both
+	background: url(../images/CONTENTS/Twitter.svg) no-repeat
+	padding-left: 50px
+
+	@media only screen and ($mquery: $mobile)
+		display: none
+
+
+	.yamoo9-no-svg &
+		background-image: url(../images/CONTENTS/Twitter.png)
+
+	& *
+		margin: 0
+
+	abbr
+		cursor: help
+		border-bottom: none
+
+	h3
+		color: #fff
+		font-family: $heading-font-face
+		font-size: 20px
+		font-weight: 300
+		text-transform: uppercase
+		letter-spacing: (120em/1000)
+
+	p
+		margin-top: 4px
+		color: #fff
+		font-size: 14px
+		font-weight: 300
+		letter-spacing: (10em/1000)
+		line-height: 1.2
+
+	.tweet-time
+		display: inline-block
+		margin-top: 13px
+		color: #959595
+		font-family: $heading-font-face
+		font-size: 16px
+		font-weight: 300
+		text-transform: uppercase
+		letter-spacing: (50em/1000)
+
+
+/**
+ * #footer 영역
+ * --------------------------------
+ */
+#footer
+	margin-top: 140px
+	margin-bottom: 60px
+	font-family: $body-font-face
+	color: #959595
+	font-weight: 300
+	font-size: 13px
+	letter-spacing: (25em/1000)
+
+	small strong
+		color: #fff
+
+	// 그리드 시스템 .grid_3 덮어쓰기
+	.grid_3
+		// width: 180px
+		+size(180px)
+		margin-left: 7px
+
+	a
+		text-decoration: none
+		color: inherit
+
+		&:first-of-type
+			margin-right: 20px

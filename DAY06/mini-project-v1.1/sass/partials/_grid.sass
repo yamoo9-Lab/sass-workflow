@@ -1,0 +1,148 @@
+/*! 그리드 시스템 */
+body
+	min-width: $page-min-width
+
+//=Containers
+.container_12
+	// Sass 조건(@if) 처리
+	////////////////////////////////
+	@if $isCenter == true
+		margin-left: auto
+		margin-right: auto
+	width: $page-width
+
+//=Grid >> Global
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12
+	float: left
+	margin-left: $gutter
+	margin-right: $gutter
+	display: inline
+
+.push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11
+	position: relative
+
+//=Grid >> Children (Alpha ~ First, Omega ~ Last)
+.alpha, .first
+	margin-left: 0
+.omega, .last
+	margin-right: 0
+
+//=Grid >> 12 Columns
+// $column-width: ( $page-width - ($gutter * 24) ) / 12
+.container_12
+	.grid_1
+		width: $column-width * 1 + $gutter * 2 * 0
+	.grid_2
+		width: $column-width * 2 + $gutter * 2 * 1
+	.grid_3
+		width: $column-width * 3 + $gutter * 2 * 2
+	.grid_4
+		width: $column-width * 4 + $gutter * 2 * 3
+	.grid_5
+		width: $column-width * 5 + $gutter * 2 * 4
+	.grid_6
+		width: $column-width * 6 + $gutter * 2 * 5
+	.grid_7
+		width: $column-width * 7 + $gutter * 2 * 6
+	.grid_8
+		width: $column-width * 8 + $gutter * 2 * 7
+	.grid_9
+		width: $column-width * 9 + $gutter * 2 * 8
+	.grid_10
+		width: $column-width * 10 + $gutter * 2 * 9
+	.grid_11
+		width: $column-width * 11 + $gutter * 2 * 10
+	.grid_12
+		width: $column-width * 12 + $gutter * 2 * 11
+
+	.prefix_1
+		padding-left: $column-width * 1 + $gutter * 2 * 1 // 100px
+	.prefix_2
+		padding-left: $column-width * 2 + $gutter * 2 * 2 // 200px
+	.prefix_3
+		padding-left: $column-width * 3 + $gutter * 2 * 3 // 300px
+	.prefix_4
+		padding-left: $column-width * 4 + $gutter * 2 * 4 // 400px
+	.prefix_5
+		padding-left: $column-width * 5 + $gutter * 2 * 5 // 500px
+	.prefix_6
+		padding-left: $column-width * 6 + $gutter * 2 * 6 // 600px
+	.prefix_7
+		padding-left: $column-width * 7 + $gutter * 2 * 7 // 700px
+	.prefix_8
+		padding-left: $column-width * 8 + $gutter * 2 * 8 // 800px
+	.prefix_9
+		padding-left: $column-width * 9 + $gutter * 2 * 9 // 900px
+	.prefix_10
+		padding-left: $column-width * 10 + $gutter * 2 * 10 // 1000px
+	.prefix_11
+		padding-left: $column-width * 11 + $gutter * 2 * 11 // 1100px
+
+	.suffix_1
+		padding-right: $column-width * 1 + $gutter * 2 * 1 // 100px
+	.suffix_2
+		padding-right: $column-width * 2 + $gutter * 2 * 2 // 200px
+	.suffix_3
+		padding-right: $column-width * 3 + $gutter * 2 * 3 // 300px
+	.suffix_4
+		padding-right: $column-width * 4 + $gutter * 2 * 4 // 400px
+	.suffix_5
+		padding-right: $column-width * 5 + $gutter * 2 * 5 // 500px
+	.suffix_6
+		padding-right: $column-width * 6 + $gutter * 2 * 6 // 600px
+	.suffix_7
+		padding-right: $column-width * 7 + $gutter * 2 * 7 // 700px
+	.suffix_8
+		padding-right: $column-width * 8 + $gutter * 2 * 8 // 800px
+	.suffix_9
+		padding-right: $column-width * 9 + $gutter * 2 * 9 // 900px
+	.suffix_10
+		padding-right: $column-width * 10 + $gutter * 2 * 10 // 1000px
+	.suffix_11
+		padding-right: $column-width * 11 + $gutter * 2 * 11 // 1100px
+
+	.push_1
+		left: $column-width * 1 + $gutter * 2 * 1 // 100px
+	.push_2
+		left: $column-width * 2 + $gutter * 2 * 2 // 200px
+	.push_3
+		left: $column-width * 3 + $gutter * 2 * 3 // 300px
+	.push_4
+		left: $column-width * 4 + $gutter * 2 * 4 // 400px
+	.push_5
+		left: $column-width * 5 + $gutter * 2 * 5 // 500px
+	.push_6
+		left: $column-width * 6 + $gutter * 2 * 6 // 600px
+	.push_7
+		left: $column-width * 7 + $gutter * 2 * 7 // 700px
+	.push_8
+		left: $column-width * 8 + $gutter * 2 * 8 // 800px
+	.push_9
+		left: $column-width * 9 + $gutter * 2 * 9 // 900px
+	.push_10
+		left: $column-width * 10 + $gutter * 2 * 10 // 1000px
+	.push_11
+		left: $column-width * 11 + $gutter * 2 * 11 // 1100px
+
+	.pull_1
+		left: -1 * ($column-width * 1 + $gutter * 2 * 1) // -100px
+	.pull_2
+		left: -1 * ($column-width * 2 + $gutter * 2 * 2) // -200px
+	.pull_3
+		left: -1 * ($column-width * 3 + $gutter * 2 * 3) // -300px
+	.pull_4
+		left: -1 * ($column-width * 4 + $gutter * 2 * 4) // -400px
+	.pull_5
+		left: -1 * ($column-width * 5 + $gutter * 2 * 5) // -500px
+	.pull_6
+		left: -1 * ($column-width * 6 + $gutter * 2 * 6) // -600px
+	.pull_7
+		left: -1 * ($column-width * 7 + $gutter * 2 * 7) // -700px
+	.pull_8
+		left: -1 * ($column-width * 8 + $gutter * 2 * 8) // -800px
+	.pull_9
+		left: -1 * ($column-width * 9 + $gutter * 2 * 9) // -900px
+	.pull_10
+		left: -1 * ($column-width * 10 + $gutter * 2 * 10) // -1000px
+	.pull_11
+		left: -1 * ($column-width * 11 + $gutter * 2 * 11) // -1100px

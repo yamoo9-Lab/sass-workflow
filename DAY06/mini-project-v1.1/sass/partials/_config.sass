@@ -1,0 +1,52 @@
+// 그리드 시스템 설정
+// ( 1200 - ( 15 * 24 )) / 12
+// ( $page-width - ($gutter * 24) ) / 12
+////////////////////////////////
+$page-min-width: 960px
+$page-width: 1200px
+$isCenter: true !default
+$gutter: 15px
+$column-width: ($page-width - ($gutter * 24)) / 12 // 70px
+
+// 중단점(Breakpoint)
+////////////////////////////////
+$mquery: max-width
+$mobile: 480px
+$tablet: 800px
+$desktop: 1100px
+
+// 셀렉션 컬러
+////////////////////////////////
+$bg-selection: #00bdc4
+$fg-selection: #fff
+$text-shadow-selection: none
+
+// 본문 컬러
+////////////////////////////////
+$bg-color: #30282a
+$fg-color: #a09e9e
+
+// 웹폰트 글꼴
+////////////////////////////////
+$body-font-face: "Titillium Web"
+$heading-font-face: Teko
+$heading-font-options: "300italic, 400"
+
+// 공간 설정(기본값)
+////////////////////////////////
+$margin: 0 !default
+$padding: 0 !default
+$border: 1px !default
+
+
+// Sass 데이터 유형(Data Type)
+////////////////////////////////
+	/*
+	1. null    --> 아무것도 아님
+	2. number  --> 10px | 1.5 | 0.2
+	3. string  --> 'Helvetica Neue' | Dotum
+	4. color   --> #333 | rgba(0,0,0,0.3)
+	5. boolean --> true | false
+	6. list    --> 'Helvetica Neue', Dotum
+	7. map     --> (h1: 22px, h3: 17px)
+	*/

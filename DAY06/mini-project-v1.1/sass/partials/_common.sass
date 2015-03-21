@@ -1,0 +1,21 @@
+/**
+ * 공통 스타일
+ * --------------------------------
+ */
+
+// 이미지 대체(IR)
+////////////////////////////////
+.ir
+	overflow: hidden
+	text-indent: -9999em
+
+// 클리어픽스
+////////////////////////////////
+.cf
+	&::before, &::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+	.lt-ie8 &
+		zoom: 1
