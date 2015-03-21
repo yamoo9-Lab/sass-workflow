@@ -11,7 +11,7 @@ Sass 스크립트 ~ 변수, 데이터 유형, 연산, 믹스인
 -
 
 ### 수업자료 PDF 다운로드
-[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3973)
+[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3980)
 
 -
 
