@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// Modernizr mixin
+// https://github.com/danielguillan/modernizr-mixin/blob/master/stylesheets/_modernizr.scss
+// -----------------------------------------------------------------------------
+
+=_modernizr($supports, $features...)
+	$prefix: if($supports, '', 'no-')
+	$selector: if($supports, '', unquote('.no-js'))
+
+	@if not &
+		@error 'Modernizr mixin should be called within a selector.'
+
+	@each $feature in $features
+		@if type-of($feature) != 'string'
+			@error '`#{$feature}` is not a string for `modernizr`.'
+		@else
+			$new-selector: #{'.' + $prefix + $feature}
+			$selector: if($supports, $selector + $new-selector, append($selector, $new-selector, 'comma'))
+
+	$selector: selector-nest($selector, &)
+
+	@at-root #{$selector}
+		@content
+
+
+
+
+=yep($features...)
+	@include _modernizr(true, $features...)
+		@content
+
+=nope($features...)
+	@include _modernizr(false, $features...)
+		@content
