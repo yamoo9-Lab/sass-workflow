@@ -6,7 +6,55 @@
 
 /**
  * ---------------------------------------------
- * 주제: Sass
- * 내용:
+ * 주제: Sass 스크립트
+ * 내용: $변수, 데이터 유형, 연산, 믹스인, 함수
  * ---------------------------------------------
  */
+
+=square($size: 10px, $bg: #333)
+	+size($size, $size)
+	background: $bg
+
+=center-pos($width: 10px, $height: 10px)
+	position: absolute
+	top: 50%
+	left: 50%
+	width: $width
+	height: $height
+	margin:
+		left: -($width/2)
+		top: -($height/2)
+
+
+[class^=sq-box]
+	margin-bottom: 10px
+
+$sq-box-color: #FC414B
+
+.sq-box1
+	position: relative
+	+square(100px, $sq-box-color)
+	div
+		+square(50px, lighten($sq-box-color, 30%))
+		+center-pos(50px, 50px)
+
+.sq-box2
+	position: relative
+	+square(200px, darken($sq-box-color, 3%))
+	div
+		+square(120px, lighten($sq-box-color, 20%))
+		+center-pos(120px, 120px)
+
+.sq-box3
+	position: relative
+	+square(300px, darken($sq-box-color, 9%))
+	div
+		+square(150px, lighten($sq-box-color, 50%))
+		+center-pos(150px, 150px)
+
+.sq-box4
+	position: relative
+	+square(400px, darken($sq-box-color, 27%))
+	div
+		+square(250px, lighten($sq-box-color, 10%))
+		+center-pos(250px, 250px)

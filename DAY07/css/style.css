@@ -195,9 +195,88 @@ td, th {
 
 /**
  * ---------------------------------------------
- * 주제: Sass
- * 내용:
+ * 주제: Sass 스크립트
+ * 내용: $변수, 데이터 유형, 연산, 믹스인, 함수
  * ---------------------------------------------
  */
+[class^=sq-box] {
+  margin-bottom: 10px;
+}
+
+.sq-box1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #FC414B;
+}
+.sq-box1 div {
+  width: 50px;
+  height: 50px;
+  background: #fed8da;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.sq-box2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fc323d;
+}
+.sq-box2 div {
+  width: 120px;
+  height: 120px;
+  background: #fea5aa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -60px;
+}
+
+.sq-box3 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #fb1420;
+}
+.sq-box3 div {
+  width: 150px;
+  height: 150px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+}
+
+.sq-box4 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #b1030c;
+}
+.sq-box4 div {
+  width: 250px;
+  height: 250px;
+  background: #fd737b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+}
 
 /*# sourceMappingURL=style.css.map */
