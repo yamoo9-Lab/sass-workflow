@@ -1,0 +1,10 @@
+//////////////////////////////
+// REM
+//////////////////////////////
+
+@function rem($px, $base-font-size: 16px)
+	@return ($px / $base-font-size) * 1rem
+
+=font-size($px)
+	font-size: $px
+	font-size: rem($px)
