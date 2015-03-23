@@ -56,5 +56,6 @@ $sq-box-color: #FC414B
 	position: relative
 	+square(400px, darken($sq-box-color, 27%))
 	div
+		+transition(color 0.4s ease-out, background 0.3s linear 100ms, opacity 1s)
 		+square(250px, lighten($sq-box-color, 10%))
 		+center-pos(250px, 250px)

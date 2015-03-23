@@ -267,6 +267,8 @@ td, th {
   background: #b1030c;
 }
 .sq-box4 div {
+  -webkit-transition: color 0.4s ease-out, background 0.3s linear 100ms, opacity 1s;
+  transition: color 0.4s ease-out, background 0.3s linear 100ms, opacity 1s;
   width: 250px;
   height: 250px;
   background: #fd737b;
