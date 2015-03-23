@@ -3,16 +3,17 @@
 // https://github.com/danielguillan/modernizr-mixin/blob/master/stylesheets/_modernizr.scss
 // -----------------------------------------------------------------------------
 
+// +_modernizr()
 =_modernizr($supports, $features...)
 	$prefix: if($supports, '', 'no-')
 	$selector: if($supports, '', unquote('.no-js'))
 
 	@if not &
-		@error 'Modernizr mixin should be called within a selector.'
+		@error 'Modernizr 믹스인은 선택자 내부에서 호출해야 합니다.'
 
 	@each $feature in $features
 		@if type-of($feature) != 'string'
-			@error '`#{$feature}` is not a string for `modernizr`.'
+			@error '전달한 인자 `#{$feature}`는 문자열이 아닙니다.'
 		@else
 			$new-selector: #{'.' + $prefix + $feature}
 			$selector: if($supports, $selector + $new-selector, append($selector, $new-selector, 'comma'))
@@ -24,11 +25,20 @@
 
 
 
-
+// +yep()
 =yep($features...)
-	@include _modernizr(true, $features...)
+	+_modernizr(true, $features...)
 		@content
 
+=yes($features...)
+	+_modernizr(true, $features...)
+		@content
+
+// +nope()
 =nope($features...)
-	@include _modernizr(false, $features...)
+	+_modernizr(false, $features...)
+		@content
+
+=no($features...)
+	+_modernizr(false, $features...)
 		@content
