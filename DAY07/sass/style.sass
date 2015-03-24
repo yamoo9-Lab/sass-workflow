@@ -4,58 +4,48 @@
 @import parts/config
 @import parts/library
 
+
 /**
- * ---------------------------------------------
  * 주제: Sass 스크립트
- * 내용: $변수, 데이터 유형, 연산, 믹스인, 함수
+ * 내용: $변수, 데이터 유형, 연산, {믹스인}
+ * 코드 리팩토링(Code Refactoring)
  * ---------------------------------------------
  */
 
-=square($size: 10px, $bg: #333)
-	+size($size, $size)
-	background: $bg
+//////////////////////////////
+// 사용자 정의 믹스인 호출
+@import user-define-mixins
 
-=center-pos($width: 10px, $height: 10px)
-	position: absolute
-	top: 50%
-	left: 50%
-	width: $width
-	height: $height
-	margin:
-		left: -($width/2)
-		top: -($height/2)
+
+//////////////////////////////
+// 스퀘어 박스 스타일 코드
+
+// 스퀘어 박스 배경 색상 $변수
+$sq-box-color: #fc414b
 
 
 [class^=sq-box]
+	position: relative
 	margin-bottom: 10px
 
-$sq-box-color: #FC414B
-
 .sq-box1
-	position: relative
 	+square(100px, $sq-box-color)
 	div
-		+square(50px, lighten($sq-box-color, 30%))
-		+center-pos(50px, 50px)
+		+square-center-pos(50px, lighten($sq-box-color, 30%))
 
 .sq-box2
-	position: relative
 	+square(200px, darken($sq-box-color, 3%))
 	div
-		+square(120px, lighten($sq-box-color, 20%))
-		+center-pos(120px, 120px)
+		+square-center-pos(120px, lighten($sq-box-color, 20%))
 
 .sq-box3
-	position: relative
 	+square(300px, darken($sq-box-color, 9%))
 	div
-		+square(150px, lighten($sq-box-color, 50%))
-		+center-pos(150px, 150px)
+		+square-center-pos(150px, lighten($sq-box-color, 50%))
 
 .sq-box4
-	position: relative
 	+square(400px, darken($sq-box-color, 27%))
 	div
+		+square-center-pos(250px, lighten($sq-box-color, 10%))
+		// parts/mixins/mixin/_css3.sass 파일에 정의한 믹스인 호출
 		+transition(color 0.4s ease-out, background 0.3s linear 100ms, opacity 1s)
-		+square(250px, lighten($sq-box-color, 10%))
-		+center-pos(250px, 250px)
