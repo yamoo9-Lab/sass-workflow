@@ -1,0 +1,40 @@
+////////////////////////////////
+// 그리드 시스템 기본 설정
+$page-width: 960px !default
+$column-count: 12 !default
+$gutter: 20px !default
+$col-width: ( $page-width - ( $gutter * ($column-count - 1) ) ) / $column-count !default
+
+
+/////////////////////////////////
+// grid-width, grid-width-rwd 함수
+@function grid-width($n: 1)
+	@return $col-width * $n + $gutter * ($n - 1)
+
+@function grid-width-rwd($n: 1, $floor: false)
+	$percent: percentage( grid-width($n) / $page-width )
+	@if $floor == true
+		@return floor( $percent )
+	@else
+		@return $percent
+
+////////////////////////////////
+// container 믹스인
+=container($width: 960px)
+	@extend %cf
+	width: $width
+	margin:
+		left: auto
+		right: auto
+
+
+////////////////////////////////
+// 마이크로 클리어픽스(Micro Clearfix)
+%cf
+	&::before, &::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+	.lt-ie8 &
+		zoom: 1

@@ -1,0 +1,57 @@
+//////////////////////////////
+// Layout
+//////////////////////////////
+
+=margin($margin:(null null null null))
+	margin:
+		top: nth($margin, 1)
+		right: nth($margin, 2)
+		bottom: nth($margin, 3)
+		left: nth($margin, 4)
+
+
+=padding($padding:(null null null null))
+	margin:
+		top: nth($padding, 1)
+		right: nth($padding, 2)
+		bottom: nth($padding, 3)
+		left: nth($padding, 4)
+
+
+=container($width: 960px)
+	// display: block
+	width: $width
+	margin:
+		left: auto
+		right: auto
+
+
+=size($width, $height: null)
+	width: $width
+	height: $height
+
+
+=position($coordinates: (top: null, left: null, bottom: null, right: null), $pos: absolute)
+	position: $pos
+	@if type-of($coordinates) == list
+		top: nth($coordinates, 1)
+		right: nth($coordinates, 2)
+		bottom: nth($coordinates, 3)
+		left: nth($coordinates, 4)
+	@else if type-of($coordinates) == map
+		@each $prop, $coordinate in $coordinates
+			@if is-length($coordinate)
+				#{$prop}: $coordinate
+
+
+=center-h($height)
+	+position(50% null null null)
+	margin-top: -($height/2)
+
+=center-w($width)
+	+position(null null null 50%)
+	margin-left: -($width/2)
+
+=center($width, $height)
+	+position(50% null null 50%)
+	+margin(-($height/2) null null -($width/2))

@@ -1,0 +1,141 @@
+//////////////////////////////
+// CSS3
+//////////////////////////////
+
+
+//////////////////////////////
+// CSS3 재사용 믹스인 모듈
+// +prefix()
+=prefix($property, $value, $prefixes: ())
+	@each $prefix in $prefixes
+		-#{$prefix}-#{$property}: $value
+	#{$property}: $value
+
+
+//////////////////////////////
+// INDEX: A
+
+// +animation()
+=animation($arg)
+	+prefix('animation', $arg)
+
+
+//////////////////////////////
+// INDEX: B
+
+// +background-size()
+=background-size($width: 100%, $height: null)
+	@if ( type-of($width) == 'number' and $height != null )
+		// Safari 3-4
+		+prefix('background-size', $width $height, (webkit))
+	@else
+		// Chrome, Firefox 4+, IE 9+, Opera, Safari 5+
+		+prefix('background-size', $width, (webkit))
+
+// +border-radius-seperate()
+=border-radius-seperate($topLeftRadius: 4px, $topRightRadius: 4px, $bottomRightRadius: 4px, $bottomLeftRadius: 4px)
+	// Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
+	+prefix('border-top-left-radius', $topLeftRadius)
+	+prefix('border-top-right-radius', $topRightRadius)
+	+prefix('border-bottom-right-radius', $bottomRightRadius)
+	+prefix('border-bottom-left-radius', $bottomLeftRadius)
+
+// +box-shadow()
+=box-shadow($args...)
+	// Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
+	-webkit-box-shadow: $args
+	// Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+	box-shadow: $args
+
+// +box-sizing()
+=box-sizing($type: border-box)
+	// webkit   : Android ≤ 2.3, iOS ≤ 4
+	// moz      : Firefox ≤ 28
+	// standard : Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
+	+prefix('box-sizing', $type, (webkit, moz))
+
+
+//////////////////////////////
+// INDEX: F
+
+// +font-face()
+=font-face($font-name, $file-name, $weight: normal, $style: normal)
+	// WOFF : Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+	// TTF  : Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5
+	@font-face
+		font-family: $font-name
+		src: url($file-name + '.eot')
+		src: url($file-name + '.eot?#iefix') format('embedded-opentype'), url($file-name + '.woff') format('woff'), url($file-name + '.ttf') format('truetype'), url($file-name + '.svg##{$font-name}') format('svg')
+		font-weight: $weight
+		font-style: $style
+
+
+//////////////////////////////
+// INDEX: K
+
+// +keyframes()
+=keyframes($animation-name)
+	@-webkit-keyframes $animation-name
+		@content
+	@keyframes $animation-name
+		@content
+
+
+//////////////////////////////
+// INDEX: O
+
+// +opacity()
+=opacity($opacity)
+	// MS IE
+	$opacity-ie: $opacity * 100
+	filter: alpha(opacity=$opacity-ie)
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})"
+	// Standard
+	opacity: $opacity
+
+
+//////////////////////////////
+// INDEX: T
+
+// +transform-style()
+=transform-style($style: preserve-3d)
+	+prefix('transform-style', $style, (webkit, ms))
+
+// +transform()
+=transform($prop, $value)
+	+prefix('transform', unquote("#{$prop}(#{$value})"), (webkit, ms))
+
+// +rotate()
+=rotate($degree: 0)
+	// webkit   : Chrome, Opera 15+, Safari 3.1+
+	// ms       : IE 9
+	// standard : Firefox 16+, IE 10+, Opera
+	+transform('rotate', $degree + deg)
+	// +prefix('transform', rotate($degree + deg), (webkit, ms))
+
+// +scale()
+=scale($width, $height: null)
+	// webkit   : Chrome, Opera 15+, Safari 3.1+
+	// ms       : IE 9
+	// standard : Firefox 16+, IE 10+, Opera
+	@if type-of($width) == 'number' and $height != null
+		+transform('scale', unquote("#{$width}, #{$height}"))
+	@else
+		+transform('scale', $width)
+
+// +transition()
+=transition($args...)
+	// Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6
+	-webkit-transition: $args
+	// Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+
+	transition: $args
+
+// +text-shadow()
+=text-shadow($color: rgba(#000, 0.4), $x: 1px, $y: 1px, $blur: null)
+	// Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+
+	text-shadow: $x $y $blur $color
+
+// +tab-size()
+=tab-size($size: 2)
+	// Firefox 4+
+	+prefix(tab-size, $size, (moz))

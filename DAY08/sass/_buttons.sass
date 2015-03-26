@@ -1,0 +1,66 @@
+%button-reset
+	display: inline-block
+	text-align: center
+	text-decoration: none
+
+
+=fancy-button($w: 60px, $h: 22px, $c: #000, $r: 3px, $a: 0.3)
+	// display: inline-block
+	// text-align: center
+	// text-decoration: none
+	@extend %button-reset
+	width: $w
+	height: $h
+	border: 1px solid $c
+	border-radius: $r
+	background: rgba($c, $a)
+	line-height: $h
+	color: #fff
+	&:hover, &:focus
+		background: rgba($c, 1)
+
+
+=flaxable-button($fz: 12px, $c: #000, $pt: 0.3em, $pl: 0.6em)
+	+fancy-button(null, null, $c)
+	padding: $pt $pl
+	font-size: $fz
+
+
+
+
+
+//////////////////////////////
+// Buttons 풀이
+
+// .button
+// 	$h: 32px
+// 	display: inline-block
+// 	width: 90px
+// 	height: $h
+// 	border-radius: 3px
+// 	text-align: center
+// 	text-decoration: none
+// 	line-height: $h
+// 	transition: background 0.3s ease-out
+
+// 	&.red
+// 		$button-bg-color: #E20066
+// 		border: 1px solid $button-bg-color
+// 		background: rgba($button-bg-color, 0.4)
+// 		color: #fff
+// 		&:hover, &:focus
+// 			background: rgba($button-bg-color, 1)
+// 	&.green
+// 		$button-bg-color: #1DE166
+// 		border: 1px solid $button-bg-color
+// 		background: rgba($button-bg-color, 0.4)
+// 		color: #fff
+// 		&:hover, &:focus
+// 			background: rgba($button-bg-color, 1)
+// 	&.blue
+// 		$button-bg-color: #4200DB
+// 		border: 1px solid $button-bg-color
+// 		background: rgba($button-bg-color, 0.4)
+// 		color: #fff
+// 		&:hover, &:focus
+// 			background: rgba($button-bg-color, 1)
