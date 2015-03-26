@@ -12,3 +12,4 @@
 - [5일차 수업내용 보기](DAY05/README.md)
 - [6일차 수업내용 보기](DAY06/README.md)
 - [7일차 수업내용 보기](DAY07/README.md)
+- [8일차 수업내용 보기](DAY08/README.md)
