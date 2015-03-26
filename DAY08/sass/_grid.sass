@@ -1,22 +1,28 @@
-////////////////////////////////
-// 그리드 시스템 기본 설정
-$page-width: 960px !default
-$column-count: 12 !default
-$gutter: 20px !default
-$col-width: ( $page-width - ( $gutter * ($column-count - 1) ) ) / $column-count !default
-
-
 /////////////////////////////////
-// grid-width, grid-width-rwd 함수
+// calc-col-width 함수
+@function calc-col-width($pw: $page-width, $cc: $column-count, $g: $gutter)
+	@return ( $pw - ( $g * ($cc - 1) ) ) / $cc
+
+// grid-width 함수
 @function grid-width($n: 1)
 	@return $col-width * $n + $gutter * ($n - 1)
 
+// grid-width-rwd 함수
 @function grid-width-rwd($n: 1, $floor: false)
 	$percent: percentage( grid-width($n) / $page-width )
 	@if $floor == true
 		@return floor( $percent )
 	@else
 		@return $percent
+
+
+////////////////////////////////
+// 그리드 시스템 기본 설정
+$page-width: 960px !default
+$column-count: 12 !default
+$gutter: 20px !default
+$col-width: calc-col-width($page-width, $column-count, $gutter) !default
+
 
 ////////////////////////////////
 // container 믹스인

@@ -141,9 +141,11 @@ body
 // Grid 호출
 @import grid
 
+$page-width: 1200px
+$col-width: calc-col-width($page-width)
 
 #page
-	+container(1200px)
+	+container($page-width)
 
 	.main, .sidebar
 		margin:
