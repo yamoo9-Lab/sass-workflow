@@ -11,6 +11,10 @@
 		-#{$prefix}-#{$property}: $value
 	#{$property}: $value
 
+// +rgba-fallback()
+=rgba-fallback($property: color, $color: #000, $opacity: 1)
+	#{$property}: $color
+	#{$property}: rgba($color, $opacity)
 
 //////////////////////////////
 // INDEX: A
