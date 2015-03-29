@@ -14,6 +14,12 @@
 @function rem($px, $base: $base-font-size)
 	@return px-to-rem($px, $base)
 
+//
+ * --------------------------------
+ * em 함수
+@function em($px)
+	@return ($px/16px) * 1em
+
 // 단위 벗기기 함수
 @function strip-units($value)
 	@return ($value / ($value * 0 + 1))

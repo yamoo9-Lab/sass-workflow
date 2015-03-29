@@ -198,5 +198,23 @@ td, th {
  * 기본 스타일
  * --------------------------------
  */
+body {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+#page {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+#page .article {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/**
+ * if() 함수: Sass 조건 3항식
+ * --------------------------------
+ */
 
 /*# sourceMappingURL=style.css.map */

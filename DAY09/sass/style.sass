@@ -11,3 +11,67 @@
  * 기본 스타일
  * --------------------------------
  */
+
+// html
+// 	font-size: 10px
+
+// body
+// 	font-size: 1rem
+
+// 	div
+// 		font-size: 0.8em //
+// 		font-size: 0.7rem
+
+// 		div
+// 			font-size: 0.7em // ???
+// 			font-size: 1.1rem
+
+// px, em, %, pt
+
+// rem = root em
+
+
+
+body
+	// font-size: em(14px)
+	+font-size(14px)
+
+
+#page
+	+font-size(22px)
+
+	.article
+		+font-size(18px)
+
+
+
+//
+ * --------------------------------
+ * 조건문 @if, @else, @else if
+ * --------------------------------
+
+
+
+@if false
+	// @debug '조건은 참입니다.'
+
+@if 3 == 3
+	// @debug '3은 3입니다.'
+
+$num: 'soda'
+
+@if $num == 'milk'
+	// @debug '$num은 milk입니다.'
+
+@if type-of($num) == string
+	// @debug "$num은 문자 데이터로 값은 #{$num}입니다."
+
+@if type-of($num) == string and type-of($num) != number
+	// @debug '$num은 문자이면서 숫자이다.'
+
+
+/**
+ * if() 함수: Sass 조건 3항식
+ * --------------------------------
+ */
+// if($condition, $if-true, $if-false)
