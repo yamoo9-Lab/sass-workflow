@@ -1,0 +1,50 @@
+//////////////////////////////
+// REM
+//////////////////////////////
+
+// +px-fallback()
+=px-fallback($property, $pxValues...)
+	$max: length($pxValues)
+	$pxValue: ''
+	$remValue: ''
+
+	@for $i from 1 through $max
+		$value: strip-units(nth($pxValues, $i))
+		$pxValue: #{$pxValue + $value}px
+		$remValue: #{$remValue + ($value/strip-units($base-font-size))}rem
+
+		@if $i < $max
+			$pxValue: #{$pxValue + ' '}
+			$remValue: #{$remValue + ' '}
+
+	#{$property}: $pxValue
+	#{$property}: $remValue
+
+
+// +rem-fallback()
+=rem-fallback($property, $values...)
+	$max: length($values)
+	$remValue: ''
+	$pxValue: ''
+
+	@for $i from 1 through $max
+		$value: strip-units( nth($values, $i) )
+		$remValue: #{$remValue + $value}rem
+		$pxValue: #{$pxValue + $value * strip-units($base-font-size)}px
+
+		// $max 값보다 $i가 작을 때까지 수행
+		@if $i < $max
+			$remValue: #{$remValue + ' '}
+			$pxValue: #{$pxValue + ' '}
+
+	// 출력 결과
+	#{$property}: $pxValue
+	#{$property}: $remValue
+
+
+=font-size($px)
+	+px-fallback('font-size', $px)
+	// font-size: $px
+	// function REM 활용: parts/functions/_functions.sass 확인
+	// font-size: rem($px)
+
