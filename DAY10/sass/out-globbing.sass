@@ -1,0 +1,13 @@
+// @import "sass-globbing/in-globbing-a"
+// @import "sass-globbing/in-globbing-b"
+@import "sass-globbing/*"
+
+body
+	content: $in-globbing-a
+
+	@at-root
+		#page
+			content: in-globbing-b
+
+			.article
+				width: 200px

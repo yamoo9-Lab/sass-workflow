@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/**
+ * --------------------------------
+ * @each문
+ * --------------------------------
+ */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+.play {
+  background: url("images/icons/play.png");
+  width: 30px;
+  height: 20px;
+}
+
+.pause {
+  background: url("images/icons/pause.png");
+  width: 32px;
+  height: 24px;
+}
+
+.next {
+  background: url("images/icons/next.png");
+  width: 21px;
+  height: 32px;
+}
+
+.prev {
+  background: url("images/icons/prev.png");
+  width: 44px;
+  height: 30px;
+}
+
+.stop {
+  background: url("images/icons/stop.png");
+  width: 90px;
+  height: 90px;
+}
+
+/*# sourceMappingURL=each.css.map */
