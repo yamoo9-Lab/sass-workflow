@@ -8,16 +8,19 @@ Sass 스크립트 ~ @for, @each 반복문
 __Compass 레퍼런스: 사용법__<br>
 Compass 프레임워크 ~ 설치/활용
 
-__Jade 레퍼런스: 사용법__<br>
+- Compass __설치__ `gem install compass`
+- Compass __프로젝트 생성__ `compass create {project_name}`
+
+<!-- __Jade 레퍼런스: 사용법__<br>
 Jade ~ 설치/활용
 
 - Node.js & NPM __환경 설정__ `Install Node.js`
-- Jade __Jade 컴파일 명령__ `jade -w -P index.jade`
+- Jade __Jade 컴파일 명령__ `jade -w -P index.jade` -->
 
 -
 
 ### 수업자료 PDF 다운로드
-<!-- [네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3985) -->
+[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3987)
 
 -
 

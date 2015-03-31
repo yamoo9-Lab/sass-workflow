@@ -2,10 +2,10 @@ body {
   content: "A File";
 }
 #page {
-  content: in-globbing-b;
+  content: "B File";
 }
 #page .article {
   width: 200px;
 }
 
-/*# sourceMappingURL=out.css.map */
+/*# sourceMappingURL=out-globbing.css.map */
