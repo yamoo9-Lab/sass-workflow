@@ -6,12 +6,16 @@ Sass 스크립트 ~ @for, @each 반복문
 - Sass __반복문을 활용한 그리드 시스템__ `Grid System`
 
 __Sass 애드온: sass-globbing__<br>
-sass-globbing 설치 및 사용법 ~ `sass -r sass-globbing -w sass:css`
+sass-globbing ~ 설치/활용
+
+- sass-globbing __설치__ `gem install sass-globbing`
+- sass-globbing __사용__ `sass -r sass-globbing -w sass:css`
 
 __Sass 애드온: Compass__<br>
 Compass 프레임워크 ~ 설치/활용
 
 - Compass __설치__ `gem install compass`
+- Compass __설정__ `compass config`
 - Compass __프로젝트 생성__ `compass create {project_name}`
 
 <!-- __Jade 레퍼런스: 사용법__<br>
