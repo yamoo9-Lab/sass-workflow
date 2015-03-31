@@ -23,7 +23,7 @@ Jade ~ 설치/활용
 -
 
 ### 수업자료 PDF 다운로드
-[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3987)
+[네이버 카페 게시글 첨부자료](http://cafe.naver.com/webstandardproject/3988)
 
 -
 
