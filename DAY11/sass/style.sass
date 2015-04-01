@@ -1,0 +1,91 @@
+// 에릭 마이어의 reset.css 파일 호출
+// @import compass/reset
+// @import compass/reset/utilities
+
+// Compass 프레임워크의 모든 것을 사용
+// @import compass
+
+/**
+ * --------------------------------
+ * 기본 스타일 정의
+ * --------------------------------
+ */
+
+// %reset-box-model
+// 	+reset-box-model
+
+// %reset-font
+// 	+reset-font
+
+//
+ * --------------------------------
+ * 전체 초기화
+// +global-reset
+
+//
+ * --------------------------------
+ * 부분 초기화
+// html
+// 	+reset-body
+
+// body
+// 	@extend %reset-box-model
+// 	@extend %reset-font
+
+// nav ul, nav ol
+// 	@extend %reset-box-model
+// 	+reset-list-style
+
+// #page
+// 	+nested-reset
+
+
+//
+ * --------------------------------
+ * CSS3
+ *
+
+// Compass의 CSS3 모듈 호출
+@import compass/css3
+
+.box
+	// border-radius
+	+border-radius(9px)
+	+animation(fade-in 0.2s ease-out)
+	&:hover
+		+animation(fade-out 0.4s ease-in 0.3s)
+
+
+// keyframes
++keyframes(blink)
+	0%
+		opacity: 0
+	10%
+		opacity: 1
+	20%
+		opacity: 0
+	30%
+		opacity: 1
+	40%
+		opacity: 0
+	50%
+		opacity: 1
+	80%
+		opacity: 0
+	100%
+		opacity: 1
+
+
++keyframes(fade-in)
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+// $default-animation-name: 'default-anim'
+
++keyframes(fade-out)
+	from
+		opacity: 1
+	to
+		opacity: 0
