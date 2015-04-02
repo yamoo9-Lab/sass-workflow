@@ -1,0 +1,24 @@
+.sprite-sprite, .sprite-button, .sprite-cloud-hamberger, .sprite-half-sun, .sprite-logo, .sprite-moon {
+  background-image: url('../_/images/sprite-s3bbb1ac13d.png');
+  background-repeat: no-repeat;
+}
+
+.sprite-button {
+  background-position: 0 0;
+}
+
+.sprite-cloud-hamberger {
+  background-position: 0 -104px;
+}
+
+.sprite-half-sun {
+  background-position: 0 -176px;
+}
+
+.sprite-logo {
+  background-position: 0 -285px;
+}
+
+.sprite-moon {
+  background-position: 0 -365px;
+}

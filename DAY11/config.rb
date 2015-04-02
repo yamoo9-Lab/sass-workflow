@@ -20,12 +20,12 @@ environment = :development
 
 # ------------------------------------------------------------------------
 # 프로젝트 폴더 경로 지정
-http_path       = "http://yamoo9.net"
+http_path       = "/"
 css_dir         = "css"
 sass_dir        = "sass"
 javascripts_dir = "js"
-images_dir      = "images"
-fonts_dir       = "fonts"
+images_dir      = "_/images"
+fonts_dir       = "_/fonts"
 
 # ------------------------------------------------------------------------
 # SASS => CSS 변경 시에 변경되는 아웃풋 스타일 설정
@@ -50,7 +50,8 @@ preferred_syntax = :sass
 
 # ------------------------------------------------------------------------
 # Sourcemap 사용 유무
-sourcemap = true
+# sourcemap = true
+sourcemap = false
 
 # ------------------------------------------------------------------------
 # 스프라이트 이미지 설정

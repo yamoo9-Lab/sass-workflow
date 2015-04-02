@@ -1,9 +1,12 @@
-@charset "UTF-8";
-/**
- * --------------------------------
- * 기본 스타일 정의
- * --------------------------------
- */
+@font-face {
+  font-family: "SD Neo Gothic";
+  src: url('../_/fonts/SD_Neo_Gothic.eot') format('embedded-opentype'), url('../_/fonts/SD_Neo_Gothic.woff') format('woff');
+}
+body {
+  font-family: "SD Neo Gothic";
+  font-size: 1.5em;
+}
+
 .box {
   -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
@@ -16,6 +19,10 @@
   -moz-animation: fade-out 0.4s ease-in 0.3s;
   -webkit-animation: fade-out 0.4s ease-in 0.3s;
   animation: fade-out 0.4s ease-in 0.3s;
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 @-moz-keyframes blink {
@@ -144,5 +151,8 @@
     opacity: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+#sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6 {
+  font-size: 1rem;
+  color: #34c0ff;
+  text-shadow: 0 1px 0 #006390;
+}

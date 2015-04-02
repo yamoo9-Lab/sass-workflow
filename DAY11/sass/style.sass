@@ -1,21 +1,49 @@
-// 에릭 마이어의 reset.css 파일 호출
+//
+ * --------------------------------
+ * Compass 호출 방법
+ * --------------------------------
+
+//
+ * --------------------------------
+ * Compass 모든 모듈 사용
+@import compass
+
+//
+ * --------------------------------
+ * Compass Reset 모듈 사용
 // @import compass/reset
 // @import compass/reset/utilities
 
-// Compass 프레임워크의 모든 것을 사용
-// @import compass
-
-/**
+//
  * --------------------------------
- * 기본 스타일 정의
- * --------------------------------
- */
+ * Compass CSS3 모듈 사용
+// @import compass/css3
 
-// %reset-box-model
-// 	+reset-box-model
+//
+ * ------------------------------------
+ * Compass/CSS3 웹 브라우저 벤더프리픽스 설정
+ * ------------------------------------
+$experimental-support-for-mozilla: true
+$experimental-support-for-webkit: true
+$support-for-original-webkit-gradients: false
+$experimental-support-for-opera: false
+$experimental-support-for-microsoft: false
+$experimental-support-for-khtml: false
 
-// %reset-font
-// 	+reset-font
+// 구형 IE 버전 지원 여부 설정
+$legacy-support-for-ie6: false
+$legacy-support-for-ie7: false
+$legacy-support-for-ie8: true
+
+
+//
+ * ---------------------------------------------
+ * Compass 믹스인 ⇒ 플레이스홀더 선택자 재정의(코드 효율성)
+ * ---------------------------------------------
+%reset-box-model
+	+reset-box-model
+%reset-font
+	+reset-font
 
 //
  * --------------------------------
@@ -42,18 +70,19 @@
 
 //
  * --------------------------------
- * CSS3
- *
+ * Compass @font-face 모듈
+@import fontface
 
-// Compass의 CSS3 모듈 호출
-@import compass/css3
-
+//
+ * --------------------------------
+ * Compass 프레임워크 CSS3 모듈 사용
 .box
 	// border-radius
 	+border-radius(9px)
 	+animation(fade-in 0.2s ease-out)
 	&:hover
 		+animation(fade-out 0.4s ease-in 0.3s)
+		+transform( scale(1.5) )
 
 
 // keyframes
@@ -75,17 +104,25 @@
 	100%
 		opacity: 1
 
-
 +keyframes(fade-in)
 	from
 		opacity: 0
 	to
 		opacity: 1
 
-// $default-animation-name: 'default-anim'
-
 +keyframes(fade-out)
 	from
 		opacity: 1
 	to
 		opacity: 0
+
+//
+ * --------------------------------
+ * Compass 헬퍼 함수 - 제목
+ * Helpers - headings
+#sidebar
+	$text-color: #34c0ff
+	#{headings()}
+		font-size: 1rem
+		color: $text-color
+		text-shadow: 0 1px 0 darken($text-color, 32%)
