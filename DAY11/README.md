@@ -6,8 +6,8 @@ Compass 프레임워크 ~ 설치/활용
 - Compass __관찰__ `compass watch`
 - Compass __스프라이트 이미지 생성__ `compass sprite`
 - Compass __초기화(Reset)__ `@import compass/reset`
-- Compass __CSS3__ `@import compass/reset`
-- Compass __헬퍼(Helpers)__ `compass/helpers`
+- Compass __CSS3__ `@import compass/css3`
+- Compass __헬퍼(Helpers)__: `Selectors`, `URLs`, `Sprites`
 
 -
 
