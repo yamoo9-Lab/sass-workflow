@@ -2,3 +2,66 @@
  * --------------------------------
  * Compass 타이포그래피 모듈
  * --------------------------------
+
+%hover-link
+	+hover-link
+
+%unstyled-link
+	+unstyled-link
+
+%no-bullets
+	+no-bullets
+
+//
+ * --------------------------------
+ * #page
+#page
+	ul
+		// @extend %no-bullets
+		// +pretty-bullets('icon/user.png', 16px, 16px)
+	a
+		// +link-colors($normal, $hover, $active, $visited, $focus)
+		// +link-colors(#26adff, darken(#26adff, 20%), $focus: darken(#26adff, 20%))
+		// @extend %unstyled-link
+		// +unstyled-link
+		// @extend %hover-link
+		// +hover-link
+
+header
+	ul
+		// @extend %no-bullets
+
+footer
+	a
+		// @extend %hover-link
+		// +hover-link
+
+
+//
+ * --------------------------------
+ * Icon Design
+// .icon-contact
+	$icon-contact: 'icon/contact.png'
+	background: image-url($icon-contact) no-repeat
+	width: image-width($icon-contact)
+	height: image-height($icon-contact)
+
+// .icon-twitter
+	$icon-twitter: 'icon/twitter.png'
+	background: image-url($icon-twitter) no-repeat
+	width: image-width($icon-twitter)
+	height: image-height($icon-twitter)
+
+/**
+ * --------------------------------
+ * 아이콘 디자인
+ * --------------------------------
+ */
+// Sass Each문 활용
+$icons: twitter, fackbook, user, contact, google-plus, loading, work, ellipse, dribbble
+@each $icon-name in $icons
+	.icon-#{$icon-name}
+		$icon: "icon/#{$icon-name}.png"
+		background: image-url($icon) no-repeat
+		width: image-width($icon)
+		height: image-height($icon)
