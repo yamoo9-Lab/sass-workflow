@@ -4,8 +4,8 @@ Compass 프레임워크 ~ 설치/활용
 
 - Compass __헬퍼(Helpers) > Typography > links__
 	- `hover-link`
-	- `link-colors`
-	- `unstyled-link($normal, $hover, $active, $visited, $focus)`
+	- `unstyled-link`
+	- `link-colors($normal, $hover, $active, $visited, $focus)`
 
 
 - Compass __헬퍼(Helpers) > Typography > lists__
