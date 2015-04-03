@@ -1,6 +1,6 @@
 @font-face {
   font-family: "SD Neo Gothic";
-  src: url('../_/fonts/SD_Neo_Gothic.eot') format('embedded-opentype'), url('../_/fonts/SD_Neo_Gothic.woff') format('woff');
+  src: url('/_/fonts/SD_Neo_Gothic.eot') format('embedded-opentype'), url('/_/fonts/SD_Neo_Gothic.woff') format('woff');
 }
 body {
   font-family: "SD Neo Gothic";
