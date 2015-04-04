@@ -1,19 +1,56 @@
 //
+ * -----------------------------------------------------------
+ * Compass Sprites 환경설정
+ * http://compass-style.org/reference/compass/helpers/sprites/
+ * -----------------------------------------------------------
+$icon-spacing: 2px
+// $icon-repeat: repeat-x
+// $icon-position: 0px
+$icon-sprite-dimensions: true
+$icon-sprite-base-class: '.icon-sprite'
+
+
+//
  * --------------------------------
  * Compass Sprites 모듈
  * --------------------------------
 
-
 //
  * --------------------------------
  * 스프라이트 이미지 자동 생성
-
+@import icon/*.png
++all-icon-sprites
 
 //
  * --------------------------------
  * 스프라이트 이미지 사용자 정의
+// .facebook
+// 	+icon-sprite('fackbook')
+// 	width: icon-sprite-width('fackbook')
+// 	height: icon-sprite-height('fackbook')
+
+// .twitter
+// 	+icon-sprite('twitter')
+// 	width: icon-sprite-width('twitter')
+// 	height: icon-sprite-height('twitter')
+
 
 
 //
  * --------------------------------
  * 스프라이트 맵 사용자 정의 설정
+// 폴더에 이미지만 추가하면 자동으로 스프라이트 이미지 생성
+// 스프라이트 맵 정의
+
+=yamoo9-sprite($folder, $prefix: null)
+	$icon-map: sprite-map("#{$folder}/*.png")
+
+	// @each 반복문을 통해 스프라이트 이미지 코드 생성
+	@each $icon in sprite-names($icon-map)
+		.icon-sprites
+			.#{$prefix}-#{$icon}
+				+icon-sprite(#{$icon})
+				width: +icon-sprite-width(#{$icon})
+				height: +icon-sprite-height(#{$icon})
+
+// +yamoo9-sprite('icon', 'yamoo9')

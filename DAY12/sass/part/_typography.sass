@@ -17,8 +17,17 @@
  * #page
 #page
 	ul
+		// +delimited-list($separator: ' | ')
+		// +inline-list
+		// +inline-block-list($padding: 9px)
+		// +horizontal-list(6px)
+		// +horizontal-list-container
+		// li
+			// +horizontal-list-item(10px)
 		// @extend %no-bullets
 		// +pretty-bullets('icon/user.png', 16px, 16px)
+		li
+			// +inline-block-list-item($padding: 5px)
 	a
 		// +link-colors($normal, $hover, $active, $visited, $focus)
 		// +link-colors(#26adff, darken(#26adff, 20%), $focus: darken(#26adff, 20%))
@@ -58,10 +67,14 @@ footer
  * --------------------------------
  */
 // Sass Each문 활용
-$icons: twitter, fackbook, user, contact, google-plus, loading, work, ellipse, dribbble
-@each $icon-name in $icons
-	.icon-#{$icon-name}
-		$icon: "icon/#{$icon-name}.png"
-		background: image-url($icon) no-repeat
-		width: image-width($icon)
-		height: image-height($icon)
+// $iconList: user work contact fackbook twitter dribbble
+
+// =print-icon-list($map, $extension: 'png')
+	@each $iconName in $map
+		.icon-#{$iconName}
+			$icon: "icon/#{$iconName}.#{$extension}"
+			background: image-url($icon) no-repeat
+			width: image-width($icon)
+			height: image-height($icon)
+
+// +print-icon-list($iconList)
