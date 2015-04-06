@@ -1,0 +1,126 @@
+/**
+ * --------------------------------
+ * Vertical Rhythm
+ * --------------------------------
+ */
+html {
+  font-size: 87.5%;
+  line-height: 1.5em;
+}
+
+body {
+  margin: 0;
+  color: #1a1818;
+}
+
+p {
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem;
+}
+
+#ad-area {
+  line-height: 21px;
+  line-height: 1.5rem;
+  line-height: 42px;
+  line-height: 3rem;
+}
+
+footer p {
+  font-size: 32px;
+  font-size: 12px;
+  font-size: 0.85714rem;
+  line-height: 27px;
+  line-height: 1.95rem;
+}
+
+/**
+ * --------------------------------
+ * Susy Grid System
+ * --------------------------------
+ */
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  margin: 0;
+  background: #fc4a54;
+  letter-spacing: -0.042em;
+}
+
+#page {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjQ1Ii8+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(255, 255, 255, 0.45)), color-stop(5%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.45) 5%, rgba(255, 255, 255, 0) 5%);
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.45) 5%, rgba(255, 255, 255, 0) 5%);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.45) 5%, rgba(255, 255, 255, 0) 5%);
+  -moz-background-size: 100% 1.5rem;
+  -o-background-size: 100% 1.5rem;
+  -webkit-background-size: 100% 1.5rem;
+  background-size: 100% 1.5rem;
+  background-position: left top;
+}
+#page:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#page * {
+  margin: 0;
+}
+#page h1 {
+  padding-top: 21px;
+  padding-top: 1.5rem;
+  padding-bottom: 21px;
+  padding-bottom: 1.5rem;
+  position: relative;
+  top: 1px;
+  padding-left: 0.4rem;
+}
+#page header {
+  height: 84px;
+  background: rgba(215, 0, 31, 0.4);
+}
+#page header h1 {
+  padding-top: 42px;
+  padding-top: 3rem;
+}
+#page main div {
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem;
+  font-size: 23px;
+  font-size: 1.64286rem;
+  line-height: 42px;
+  line-height: 3rem;
+  height: 210px;
+  line-height: 210px;
+  background: rgba(255, 237, 46, 0.5);
+  text-align: center;
+  font-weight: 800;
+}
+#page main div:nth-of-type(2) {
+  width: 47.05882%;
+  float: left;
+  margin-right: 5.88235%;
+}
+#page main div:nth-of-type(3) {
+  width: 47.05882%;
+  float: right;
+  margin-right: 0;
+}
+#page main div:last-of-type {
+  clear: both;
+}
+#page footer {
+  height: 84px;
+  background: rgba(215, 0, 31, 0.4);
+}
+
+/*# sourceMappingURL=style.css.map */

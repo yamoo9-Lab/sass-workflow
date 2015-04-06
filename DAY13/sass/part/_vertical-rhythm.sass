@@ -1,0 +1,50 @@
+//
+ * --------------------------------
+ * Compass Vertical Rhythm
+ * 문서의 수직 방향으로의 운율(리듬)
+ * --------------------------------
+
+$base-font-size       : 14px
+$base-line-height     : $base-font-size * 1.5
+$rhythm-unit          : "rem"
+$rem-with-px-fallback : true
+
+// $default-rhythm-border-width: 1px
+// $default-rhythm-border-style: dashed #FC4A54
+
+//
+ * --------------------------------
+ * 글꼴 크기에 따른 행간 리듬 설정
++establish-baseline
+
+body
+	// +reset-box-model
+	margin: 0
+	color: #1a1818
+	// 베이스라인 초기화 사용
+	// +reset-baseline
+	// Compass 그리드(베이스라인)
+	// +baseline-grid-background(21px, #34c0ff)
+	// +debug-vertical-alignment
+
+p
+	+leader
+	+trailer
+
+#ad-area
+	+reset-baseline(12px)
+	+adjust-leading-to(2)
+
+footer
+	p
+		font-size: 32px
+		+adjust-font-size-to(12px, 1.3)
+
+
+
+
+
+
+
+
+
