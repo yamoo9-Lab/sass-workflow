@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[@include ${1:스프라이트 폴더 이름}-sprite(${2:가져올 배경이미지 파일 이름});
+width: ${1:스프라이트 폴더 이름}-sprite-width(${2:가져올 배경이미지 파일 이름});
+height: ${1:스프라이트 폴더 이름}-sprite-height(${2:가져올 배경이미지 파일 이름});]]></content>
+    <tabTrigger>compass-sprite-single</tabTrigger>
+    <scope>source.scss</scope>
+    <description>Compass - 스프라이트 이미지 생성: Single</description>
+</snippet>

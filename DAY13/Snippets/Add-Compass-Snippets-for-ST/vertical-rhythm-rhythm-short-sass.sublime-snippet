@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[+rhythm(${1:\$leader}, ${2:\$padding-leader}, ${3:\$padding-trailer}, ${4:\$trailer}, ${5:\$font-size})
+$0]]></content>
+    <tabTrigger>compass-vr-rhythm</tabTrigger>
+    <scope>source.sass</scope>
+    <description>Compass - Vertical Rhythm: Rhythm Shortcode</description>
+</snippet>

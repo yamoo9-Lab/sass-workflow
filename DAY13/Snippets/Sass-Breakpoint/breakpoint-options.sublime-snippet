@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[///////////////////////////////////
+// em 단위로 breakpoint를 사용할 때 옵션
+///////////////////////////////////
+\$breakpoint-no-queries: ${1:false};
+\$breakpoint-no-query-fallbacks: ${2:true};
+
+///////////////////////////////////
+// em 단위로 breakpoint를 사용할 때 옵션
+///////////////////////////////////
+\$breakpoint-to-ems: ${3:true};
+
+///////////////////////////////////
+// 해상도(Resolution) 설정
+///////////////////////////////////
+\$hidpi: min-resolution ${4:1.5dppx};
+\$cross-resolution: max-resolution ${5:143dpi};]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>breakpoint-options</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.scss, source.sass</scope>
+	<description>Breakpoint: 옵션 설정</description>
+</snippet>
