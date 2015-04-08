@@ -1,0 +1,33 @@
+$susy: (
+
+	flow               : ltr,         // ltr | rtl
+	math               : fluid,       // fluid | static
+	column-width       : false,       // false | <length>
+	output             : float,       // float | isolate
+
+	container          : auto,        // auto | <length>, %
+	container-position : center,      // center | left | right | <length> [*2]
+	columns            : 4,           // <length>
+	gutters            : .25,         // <gutter-width>/<column-width>
+	gutter-position    : after,       // after | before | split | inside | inside-static
+
+	global-box-sizing  : content-box, // content-box | border-box
+	last-flow          : to,          // from | to
+
+	debug: (
+		image  : hide,            // hide | show | show-baseline | show-columns
+		color  : rgba(#66f, .25), // <color>
+		output : background,      // background | overlay
+		toggle : top right        // <top|bottom> <right|left>
+	),
+
+	use-custom: (
+		background-image   : true,
+		background-options : false,
+		box-sizing         : true,
+		clearfix           : false,
+		rem                : true,
+		breakpoint         : true,
+	)
+
+);

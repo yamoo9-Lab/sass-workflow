@@ -24,7 +24,8 @@
 ### 반응형 웹 디자인 참고문서
 - [반응형웹: 브레이크 포인트 설정방법](DAY13/RWD+Breakpoint.md)
 
--
+### Sass 버전에 따른 기능 호환성 체크
+- [Sass Compatibility](http://sass-compatibility.github.io/)
 
 ### Dash 대체 도구
 - [devdocs.io(온라인)](http://devdocs.io/)
