@@ -5,9 +5,9 @@
 # ------------------------------------------------------------------------
 # Compass 플러그인 추가
 require 'compass/import-once/activate'
-# require 'sass-globbing'
-# require 'breakpoint'
-# require 'susy'
+require 'sass-globbing'
+require 'breakpoint'
+require 'susy'
 
 # ------------------------------------------------------------------------
 # 기본 언어 인코딩 설정

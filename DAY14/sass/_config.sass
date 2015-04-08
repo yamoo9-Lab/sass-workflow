@@ -2,7 +2,7 @@
  * --------------------------------
  * Sass 프레임워크 호출
  * --------------------------------
-// @import breakpoint
+@import breakpoint
 @import compass
 @import susy
 
@@ -11,22 +11,22 @@
  * 사용자 정의 라이브러리 호출
  * --------------------------------
 // 반응형 콘텐츠 처리: rwd >> functions에 의존
-@import part/functions/functions
-@import part/rwd/rwd
+// @import part/functions/functions
+// @import part/rwd/rwd
 
 // 믹스인 오버라이딩 (플레이스홀더 활용)
-@import part/placeholders/placeholders
-@import part/mixins/mixin/layout
+// @import part/placeholders/placeholders
+// @import part/mixins/mixin/layout
 
 // 브라우저 초기화: 노멀라이즈
-@import part/normalize/normalize
+// @import part/normalize/normalize
 
 //
  * --------------------------------
  * Susy 그리드 시스템 글로벌 설정
 // $susy: (flow: ltr, output: float, math: fluid, column-width: false, container: auto, container-position: center, last-flow: to, columns: 4, gutters: #25, gutter-position: after, global-box-sizing: content-box, debug: (image: hide, color: rgba(#6666ff, 0#25), output: background, toggle: top right), use-custom: (background-image: true, background-options: false, box-sizing: true, clearfix: false, rem: true))
 
-// @import part/grid/susy-grid
+@import part/grid/susy-grid
 
 
 //

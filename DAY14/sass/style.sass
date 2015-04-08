@@ -2,9 +2,83 @@
  * --------------------------------
  * 프로젝트 환경설정 파일 호출
  * --------------------------------
-// @import config
+@import config
 
 //
  * --------------------------------
  * Susy 그리드 시스템
+ * + Bourbon
+ * 주요 믹스인
+ * +container()
+ * +span()
+ *
+ * 주요 함수
+ * container()
+ * span()
  * --------------------------------
+
+$tablet: 50rem
+$desktop: 68.75rem
+
+body
+	margin: 0
+
+#page
+
+	$bg-color: #fc4a54
+
+	// Mobile
+	+container
+	min-height: 100vh
+	background: $bg-color
+	color: #fff
+
+
+	*
+		margin:
+			top: 0
+			bottom: 0
+
+	header
+		height: 6.25rem
+		background: lighten($bg-color, 20%)
+
+#hero
+	+container
+	> *
+		margin: 0
+		// height: span(2) + gutter()
+
+#one
+	+span(1 of 2 1/8)
+	background: darken($bg-color, 10%)
+
+#two
+	+span(1 of 2 last 1/8)
+	background: darken($bg-color, 20%)
+
+#content
+	// +break
+	+container
+
+	div
+		+span(2)
+		height: 6.25rem
+		margin-bottom: gutter()
+		background: darken($bg-color, 40%)
+		&:nth-child(2n)
+			+last()
+
+		+breakpoint(34.375rem)
+			&:nth-child(1)
+				+span(1 of 3)
+			&:nth-child(2)
+				+span(1 of 3)
+			&:nth-child(3)
+				+span(1 of 3 last)
+			&:nth-child(4)
+				+span(1 of 2 1/22)
+			&:nth-child(5)
+				+span(last 1 of 2 1/22)
+			&:nth-child(6)
+				+full
