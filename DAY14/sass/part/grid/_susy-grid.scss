@@ -1,5 +1,9 @@
 $susy: (
+	gutter-position: inside,
 	last-flow: from,
-	// flow: rtl,
-	gutters: .1
+	debug: (
+		image: show,
+		output: overlay,
+		toggle: top left
+	),
 );

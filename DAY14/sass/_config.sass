@@ -6,20 +6,6 @@
 @import compass
 @import susy
 
-//
- * --------------------------------
- * 사용자 정의 라이브러리 호출
- * --------------------------------
-// 반응형 콘텐츠 처리: rwd >> functions에 의존
-// @import part/functions/functions
-// @import part/rwd/rwd
-
-// 믹스인 오버라이딩 (플레이스홀더 활용)
-// @import part/placeholders/placeholders
-// @import part/mixins/mixin/layout
-
-// 브라우저 초기화: 노멀라이즈
-// @import part/normalize/normalize
 
 //
  * --------------------------------
@@ -27,6 +13,23 @@
 // $susy: (flow: ltr, output: float, math: fluid, column-width: false, container: auto, container-position: center, last-flow: to, columns: 4, gutters: #25, gutter-position: after, global-box-sizing: content-box, debug: (image: hide, color: rgba(#6666ff, 0#25), output: background, toggle: top right), use-custom: (background-image: true, background-options: false, box-sizing: true, clearfix: false, rem: true))
 
 @import part/grid/susy-grid
+
+
+//
+ * --------------------------------
+ * 사용자 정의 라이브러리 호출
+ * --------------------------------
+// 반응형 콘텐츠 처리: rwd >> functions에 의존
+@import part/functions/functions
+@import part/rwd/rwd
+
+// 믹스인 오버라이딩 (플레이스홀더 활용)
+@import part/placeholders/placeholders
+@import part/mixins/mixin/layout
+
+// 브라우저 초기화: 노멀라이즈
+@import part/normalize/normalize
+
 
 
 //
@@ -47,7 +50,11 @@ $link-color       : #e95e4c
 $link-hover-color : darken($link-color, 6%)
 
 // 타이포그래피
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700)
+
 $nanum-gothic     : "Nanum Gothic", Dotum, Sans-Serief
+$lato             : "Lato", Sans-Serief
 $base-font-size   : 16px !default
 $base-line-height : $base-font-size * 1.6
 
