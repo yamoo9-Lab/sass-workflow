@@ -1,9 +1,18 @@
 html {
+  -webkit-font-smoothing: antialiased;
   background: white;
 }
 
 body {
   margin: 0;
+}
+
+#page > * {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: linear-gradient(rgba(252, 74, 84, 0.2), rgba(252, 74, 84, 0.6)), rgba(252, 74, 84, 0.4);
+  background-clip: content-box, border-box;
+  border-bottom: 1px solid rgba(252, 74, 84, 0.9);
 }
 
 /*# sourceMappingURL=style.css.map */

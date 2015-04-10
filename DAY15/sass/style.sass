@@ -2,7 +2,7 @@
  * --------------------------------------
  * 프로젝트 환경설정 파일 호출
  * --------------------------------------
-@import config
+// @import config
 
 
 //
@@ -21,7 +21,7 @@
 //
  * --------------------------------
  * Susy 프레임워크 호출
-// @import susy
+@import susy
 
 
 
@@ -37,6 +37,17 @@ html
 
 body
 	margin: 0
+
+#page
+
+	// header, main, aside, footer
+	> *
+		padding:
+			top: 1rem
+			bottom: 1rem
+		background: linear-gradient( rgba($pink, 0.2), rgba($pink, 0.6) ), rgba($pink, 0.4)
+		background-clip: content-box, border-box
+		border-bottom: 1px solid rgba($pink, 0.9)
 
 
 
