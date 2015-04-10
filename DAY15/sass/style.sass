@@ -133,16 +133,36 @@ body
 
 +global-box-sizing
 
-$susy: ( columns: 12, gutters: (20px/80px), math: static, column-width: 80px )
+// $susy: ( columns: 12, gutters: (20px/80px), math: static, column-width: 80px )
+$susy: ( columns: 12, gutters: (20px/80px) )
 
 #page
-	+container
+	+container(1100px show)
 	header
 		+span(full)
 	main
-		+span(4 of 12)
+		+span(10 of 12)
+
+		article
+			+span(1 of 4 1/8 inside)
+			height: 100px
+			// float: left
+			// width: span(1)
+			background: darken($pink, 20%)
+
+			div
+				+span(1 of 2 inside)
+				&:first-of-type
+					background: darken($pink, 10%)
+				&:last-of-type
+					background: darken($pink, 30%)
+
+			&:last-of-type
+				+last
+				// +span(1 of 4 last)
+
 	aside
-		+span(8 of 12 last)
+		+span(2 of 12 last)
 	footer
 		+full
 

@@ -22,9 +22,14 @@ body {
 }
 
 #page {
-  width: 1180px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
+  background-size: 8.47458%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
 }
 #page:after {
   content: " ";
@@ -38,12 +43,42 @@ body {
   margin-right: 0;
 }
 #page main {
-  width: 380px;
+  width: 83.05085%;
   float: left;
-  margin-right: 20px;
+  margin-right: 1.69492%;
+}
+#page main article {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  height: 100px;
+  background: #dc0410;
+}
+#page main article div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#page main article div:first-of-type {
+  background: #fb1825;
+}
+#page main article div:last-of-type {
+  background: #aa030c;
+}
+#page main article:last-of-type {
+  float: right;
+  margin-right: 0;
 }
 #page aside {
-  width: 780px;
+  width: 15.25424%;
   float: right;
   margin-right: 0;
 }
