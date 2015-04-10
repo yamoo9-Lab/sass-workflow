@@ -134,37 +134,43 @@ body
 +global-box-sizing
 
 // $susy: ( columns: 12, gutters: (20px/80px), math: static, column-width: 80px )
-$susy: ( columns: 12, gutters: (20px/80px) )
+// $susy: ( columns: 12, gutters: (20px/80px) )
 
-#page
-	+container(1100px show)
-	header
-		+span(full)
-	main
-		+span(10 of 12)
 
-		article
-			+span(1 of 4 1/8 inside)
-			height: 100px
-			// float: left
-			// width: span(1)
-			background: darken($pink, 20%)
 
-			div
-				+span(1 of 2 inside)
-				&:first-of-type
-					background: darken($pink, 10%)
-				&:last-of-type
-					background: darken($pink, 30%)
 
-			&:last-of-type
-				+last
-				// +span(1 of 4 last)
+// #page
+// 	+container()
 
-	aside
-		+span(2 of 12 last)
-	footer
-		+full
+// 	header
+// 		+span(full)
+
+// 	main
+// 		// +span(10 of 12)
+
+// 		// article
+// 			// +span(1 of 4 1/8 inside)
+// 			// height: 100px
+// 			// float: left
+// 			// width: span(1)
+// 			// background: darken($pink, 20%)
+
+// 			// div
+// 				// +span(1 of 2 inside)
+// 				// &:first-of-type
+// 				// 	background: darken($pink, 10%)
+// 				// &:last-of-type
+// 				// 	background: darken($pink, 30%)
+
+// 			// &:last-of-type
+// 			// 	+last
+// 				// +span(1 of 4 last)
+
+// 	aside
+// 		+span(2 of 12 last)
+
+// 	footer
+// 		+full
 
 
 
@@ -202,6 +208,24 @@ $susy: ( columns: 12, gutters: (20px/80px) )
  * +gallery(1 of 10)
  * --------------------------------------
 
+// $susy: layout(12 1/8)
+
+// #page
+// 	+container(1100px)
+
+// 	> *
+// 		display: none
+
+// 	main
+// 		display: block
+// 		+span(full)
+
+// 	article
+// 		+gallery(1 of 4)
+// 		margin-bottom: gutter()
+// 		height: 230px
+// 		background: darken($pink, 20%)
+
 
 
 
@@ -210,7 +234,23 @@ $susy: ( columns: 12, gutters: (20px/80px) )
  * 비정형 레이아웃(Asymmetric Grid)
  * $susy: layout( (1 2 3 2 1) isolate show )
  * --------------------------------------
+// $susy: layout( (1 2 3 2 1) .2 split show)
 
+// #page
+// 	+container(1000px)
+
+// 	header
+// 		+span(full)
+
+// 	main
+// 		+span(2 at 2)
+
+// 	aside
+// 		display: none
+// 		// +span(2 at 3)
+
+// 	footer
+// 		+full
 
 
 
@@ -222,3 +262,28 @@ $susy: ( columns: 12, gutters: (20px/80px) )
  * ※ 적응형 웹이 아니라, 적응형 레이아웃입니다.
  * +susy-breakpoint($breakpoint, $layout)
  * --------------------------------------
+
+$susy: layout(2 1/5 show)
+
+$rem30: layout(4 1/6 show)
+
+$rem40: layout(6 1/7 show)
+
+$rem68_75: layout(12 1/8 show)
+
+$rem81: layout(16 1/9 show)
+
+#page
+	+container
+
+	+susy-breakpoint(30rem, $rem30)
+		+container
+
+	+susy-breakpoint(40rem, $rem40)
+		+container(40rem)
+
+	+susy-breakpoint(68.75rem, $rem68_75)
+		+container(68.75rem)
+
+	+susy-breakpoint(81.25rem, $rem81)
+		+container(81.25rem)
