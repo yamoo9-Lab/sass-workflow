@@ -1,0 +1,71 @@
+//////////////////////////////
+// FUNCTIONS
+//////////////////////////////
+
+$base-font-size: 16px !default
+
+// PX to REM 함수
+@function px-to-rem($px, $base: $base-font-size)
+	@return ($px / $base) * 1rem
+
+// PX to REM 함수
+@function rem-to-px($rem, $base: $base-font-size)
+	@return ($px * $base) * 1px
+
+// rem 단축 함수
+@function rem($px, $base: $base-font-size)
+	@return px-to-rem($px, $base)
+
+//
+ * --------------------------------
+ * em 함수
+@function em($px)
+	@return ($px/$base-font-size) * 1em
+
+// 단위 벗기기 함수
+@function strip-units($value)
+	@return ($value / ($value * 0 + 1))
+
+// Photoshop 자간 간격 설정
+@function ps-ls($em: 0)
+	@return ( strip-units($em) / 1000 ) + em
+
+
+// +px-fallback()
+=px-fallback($property, $pxValues...)
+	$max: length($pxValues)
+	$pxValue: ''
+	$remValue: ''
+
+	@for $i from 1 through $max
+		$value: strip-units(nth($pxValues, $i))
+		$pxValue: #{$pxValue + $value}px
+		$remValue: #{$remValue + ($value/strip-units($base-font-size))}rem
+
+		@if $i < $max
+			$pxValue: #{$pxValue + ' '}
+			$remValue: #{$remValue + ' '}
+
+	#{$property}: $pxValue
+	#{$property}: $remValue
+
+
+// +rem-fallback()
+=rem-fallback($property, $values...)
+	$max: length($values)
+	$remValue: ''
+	$pxValue: ''
+
+	@for $i from 1 through $max
+		$value: strip-units( nth($values, $i) )
+		$remValue: #{$remValue + $value}rem
+		$pxValue: #{$pxValue + $value * strip-units($base-font-size)}px
+
+		// $max 값보다 $i가 작을 때까지 수행
+		@if $i < $max
+			$remValue: #{$remValue + ' '}
+			$pxValue: #{$pxValue + ' '}
+
+	// 출력 결과
+	#{$property}: $pxValue
+	#{$property}: $remValue

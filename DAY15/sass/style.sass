@@ -1,0 +1,131 @@
+//
+ * --------------------------------------
+ * 프로젝트 환경설정 파일 호출
+ * --------------------------------------
+@import config
+
+
+//
+ * --------------------------------
+ * Palceholder
+
+%cf::after
+	content: ''
+	display: table
+	clear: both
+
+=clearfix()
+	@extend %cf
+
+
+//
+ * --------------------------------
+ * Susy 프레임워크 호출
+// @import susy
+
+
+
+//
+ * --------------------------------------
+ * 기본 스타일
+ * --------------------------------------
+$pink: #fc4a54
+
+html
+	-webkit-font-smoothing: antialiased
+	background: white
+
+body
+	margin: 0
+
+
+
+
+
+
+
+
+//
+ * --------------------------------------
+ * Susy 그리드 시스템
+ * --------------------------------------
+
+//
+ * 전역 설정
+ * $susy: ()
+ *
+ * 단축 설정
+ * layout()
+ * --------------------------------------
+
+
+
+
+
+//
+ * 전역 Box Sizing 설정: padding-box
+ * +global-box-sizing
+ *
+ * 전역 Box Sizing 설정: border-box
+ * +border-box-sizing
+ *
+ * Susy 전역 설정 - global-box-sizing
+ * $susy: (global-box-sizing: border-box)
+ * +global-box-sizing
+ * --------------------------------------
+
+
+
+
+
+//
+ * 패딩 고정 inside-static
+ * ※ column-width 설정 필요!
+ * +span()
+ * --------------------------------------
+
+
+
+
+
+//
+ * 중첩 레이아웃
+ * 큰 레이아웃 안에 작은 레이아웃!
+ * --------------------------------------
+
+
+
+
+
+//
+ * isolate 레이아웃 테크닉
+ *
+ * 문제
+ * http://ejohn.org/blog/sub-pixel-problems-in-css/
+ *
+ * 해결책
+ * http://thelucid.com/2010/12/03/the-solution-to-fluid-inconsistencies-and-equal-height-columns/
+ *
+ * +gallery(1 of 10)
+ * --------------------------------------
+
+
+
+
+
+//
+ * 비정형 레이아웃(Asymmetric Grid)
+ * $susy: layout( (1 2 3 2 1) isolate show )
+ * --------------------------------------
+
+
+
+
+
+//
+ * 반응형 웹 디자인 레이아웃
+ *
+ * 반응형 레이아웃 vs 적응형 레이아웃
+ * ※ 적응형 웹이 아니라, 적응형 레이아웃입니다.
+ * +susy-breakpoint($breakpoint, $layout)
+ * --------------------------------------

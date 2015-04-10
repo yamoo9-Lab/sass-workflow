@@ -1,21 +1,5 @@
-/**
- * --------------------------------
- * RWD: Mobile
- * --------------------------------
- */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
-html {
-  min-width: 320px;
-  min-width: 20rem;
-}
-
-img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
 /* Normalize v3.0.1 | MIT License | git.io/normalize */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -209,6 +193,22 @@ td, th {
   padding: 0;
 }
 
+/**
+ * --------------------------------
+ * RWD: Mobile
+ * --------------------------------
+ */
+html {
+  min-width: 320px;
+  min-width: 20rem;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -356,8 +356,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
 }
 
 #one {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 33.33333%;
   float: left;
@@ -368,8 +368,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
 }
 
 #two {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 66.66667%;
   float: left;
@@ -377,8 +377,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
   padding-right: 0.98039%;
 }
 #two div {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 25%;
   float: left;
@@ -393,8 +393,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
   clear: both;
 }
 #content div {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%;
   float: left;
@@ -410,8 +410,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
 }
 @media (min-width: 50rem) {
   #content div:nth-child(1) {
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
@@ -420,8 +420,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
     background: rgba(104, 24, 31, 0.3);
   }
   #content div:nth-child(2) {
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
@@ -430,8 +430,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
     background: rgba(104, 24, 31, 0.5);
   }
   #content div:nth-child(3) {
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
@@ -440,8 +440,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
     background: rgba(104, 24, 31, 0.7);
   }
   #content div:nth-child(4) {
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
@@ -450,8 +450,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
     background: rgba(104, 24, 31, 0.9);
   }
   #content div:nth-child(5) {
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
@@ -461,8 +461,8 @@ head:hover ~ #hero:before, head:hover ~ body #hero:before {
   }
   #content div:nth-child(6) {
     clear: both;
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     float: left;

@@ -1,0 +1,37 @@
+//
+ * --------------------------------
+ * headings 함수
+@function headings($from: all, $to: null)
+	@if $from == all
+		@return 'h1, h2, h3, h4, h5, h6'
+	@else
+		@if type-of($from) != number
+			@error "첫번째 인자 값으로 all 또는 숫자만 적용가능합니다."
+		$heading-list: ''
+		@for $i from $from through $to
+			$heading-list: $heading-list + "h#{$i}, "
+		@return $heading-list
+
+
+//
+ * --------------------------------
+ * printHeadings 믹스인
+=printHeadings($from, $to, $base-size, $divide)
+	@for $i from $from through $to
+		h#{$i}
+			+font-size($base-size)
+			$base-size: $base-size - $divide
+//
+ * --------------------------------
+ * setHeadings 믹스인
+
+=setHeadings($from: all, $to: null, $color: #313131, $base-size: 20px, $divide: 2)
+	// 색상 공통
+	#{headings($from, $to)}
+		color: $color
+
+	// h1, h2, h3, h4, h5, h6
+	@if $from == all
+		+printHeadings(1, 6, $base-size, $divide)
+	@else
+		+printHeadings($from, $to, $base-size, $divide)

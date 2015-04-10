@@ -1,0 +1,19 @@
+//////////////////////////////
+// DIM
+//////////////////////////////
+
+=dim($opacity, $color)
+	background: $color
+	background: rgba($color, $opacity)
+	@if lightness($color) > 50
+		color: #000
+	@else
+		color: #fff
+
+=dim-black($opacity)
+	+dim($opacity, #000)
+	// color: #fff
+
+=dim-white($opacity)
+	+dim($opacity, #fff)
+	// color: #000
