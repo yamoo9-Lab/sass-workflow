@@ -45,6 +45,7 @@ body
 		padding:
 			top: 1rem
 			bottom: 1rem
+		// background: $pink
 		background: linear-gradient( rgba($pink, 0.2), rgba($pink, 0.6) ), rgba($pink, 0.4)
 		background-clip: content-box, border-box
 		border-bottom: 1px solid rgba($pink, 0.9)
@@ -69,6 +70,46 @@ body
  * layout()
  * --------------------------------------
 
+$mobile: layout(2 1/6)
+$tablet: layout(6 1/8)
+$desktop: layout(16 1/6 static 3.75rem inside-static)
+
+// $susy: (debug: (image: show) )
+
+// @debug layout(12 (60px 20px) before)
+
+// $susy: layout(12 (60px 20px) before)
+
+// #page
+// 	+container(show)
+
+// 	header
+// 		+span(full)
+
+
+// 	main
+// 		+span(first 2)
+
+// 	aside
+// 		+span(10)
+
+// 	footer
+// 		// +break
+// 		+full
+
+
+
+	// // Mobile portrait 320px+, 20rem+
+	// +container(show)
+
+	// // Mobile landscape 480px+, 30rem+
+	+susy-breakpoint(30rem)
+		+container(4 show)
+
+	// // Tablet portrait 768px+, 48rem+
+	// +susy-breakpoint(48rem)
+	// 	+container(6 show)
+
 
 
 
@@ -84,6 +125,26 @@ body
  * $susy: (global-box-sizing: border-box)
  * +global-box-sizing
  * --------------------------------------
+// $susy: (columns: 12, gutters: .1, gutter-position: inside, global-box-sizing: border-box)
+// $susy: layout(12 0.1 inside border-box)
+
+
+// +border-box-sizing
+
++global-box-sizing
+
+$susy: ( column-width: 60px )
+
+#page
+	+container(1200px 12 show)
+	header
+		+span(full)
+	main
+		+span(4 of 12 inside-static)
+	aside
+		+span(8 of 12 last inside-static)
+	footer
+		+full
 
 
 
@@ -94,6 +155,7 @@ body
  * ※ column-width 설정 필요!
  * +span()
  * --------------------------------------
+
 
 
 

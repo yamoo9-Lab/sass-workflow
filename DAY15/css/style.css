@@ -15,4 +15,57 @@ body {
   border-bottom: 1px solid rgba(252, 74, 84, 0.9);
 }
 
+*, *:before, *:after {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+#page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
+  background-size: 8.47458%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+#page:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#page header {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#page main {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+#page aside {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: right;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+#page footer {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
