@@ -234,23 +234,24 @@ body
  * 비정형 레이아웃(Asymmetric Grid)
  * $susy: layout( (1 2 3 2 1) isolate show )
  * --------------------------------------
-// $susy: layout( (1 2 3 2 1) .2 split show)
+$susy: layout( (1 2 3 2 1) .2 show)
 
-// #page
-// 	+container(1000px)
+#page
+	+container(1000px)
 
-// 	header
-// 		+span(full)
+	header
+		+span(full)
 
-// 	main
-// 		+span(2 at 2)
+	main
+		+span(1)
 
-// 	aside
-// 		display: none
-// 		// +span(2 at 3)
+	aside
+		+span(2 at 4)
 
-// 	footer
-// 		+full
+
+	footer
+		// +full
+		+span(1 at 2)
 
 
 
@@ -263,27 +264,27 @@ body
  * +susy-breakpoint($breakpoint, $layout)
  * --------------------------------------
 
-$susy: layout(2 1/5 show)
+// $susy: layout(2 1/5 show)
 
-$rem30: layout(4 1/6 show)
+// $rem30: layout(4 1/6 show)
 
-$rem40: layout(6 1/7 show)
+// $rem40: layout(6 1/7 show)
 
-$rem68_75: layout(12 1/8 show)
+// $rem68_75: layout(12 1/8 show)
 
-$rem81: layout(16 1/9 show)
+// $rem81: layout(16 1/9 show)
 
-#page
-	+container
+// #page
+// 	+container
 
-	+susy-breakpoint(30rem, $rem30)
-		+container
+// 	+susy-breakpoint(30rem, $rem30)
+// 		+container
 
-	+susy-breakpoint(40rem, $rem40)
-		+container(40rem)
+// 	+susy-breakpoint(40rem, $rem40)
+// 		+container(40rem)
 
-	+susy-breakpoint(68.75rem, $rem68_75)
-		+container(68.75rem)
+// 	+susy-breakpoint(68.75rem, $rem68_75)
+// 		+container(68.75rem)
 
-	+susy-breakpoint(81.25rem, $rem81)
-		+container(81.25rem)
+// 	+susy-breakpoint(81.25rem, $rem81)
+// 		+container(81.25rem)

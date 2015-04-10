@@ -22,11 +22,10 @@ body {
 }
 
 #page {
-  max-width: 100%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 83.33333%, transparent 83.33333%);
-  background-size: 54.54545%;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 10.20408%, transparent 10.20408%, transparent 12.2449%, rgba(102, 102, 255, 0.25) 12.2449%, rgba(179, 179, 255, 0.25) 32.65306%, transparent 32.65306%, transparent 34.69388%, rgba(102, 102, 255, 0.25) 34.69388%, rgba(179, 179, 255, 0.25) 65.30612%, transparent 65.30612%, transparent 67.34694%, rgba(102, 102, 255, 0.25) 67.34694%, rgba(179, 179, 255, 0.25) 87.7551%, transparent 87.7551%, transparent 89.79592%, rgba(102, 102, 255, 0.25) 89.79592%, rgba(179, 179, 255, 0.25));
   background-origin: content-box;
   background-clip: content-box;
   background-position: left top;
@@ -36,73 +35,26 @@ body {
   display: block;
   clear: both;
 }
-@media (min-width: 30rem) {
-  #page {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 85.71429%, transparent 85.71429%);
-    background-size: 25.92593%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
-  }
-  #page:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
+#page header {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
-@media (min-width: 40rem) {
-  #page {
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 87.5%, transparent 87.5%);
-    background-size: 17.02128%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
-  }
-  #page:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
+#page main {
+  width: 10.20408%;
+  float: left;
+  margin-right: 2.04082%;
 }
-@media (min-width: 68.75rem) {
-  #page {
-    max-width: 68.75rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 88.88889%, transparent 88.88889%);
-    background-size: 8.41121%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
-  }
-  #page:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
+#page aside {
+  width: 32.65306%;
+  float: right;
+  margin-right: 0;
 }
-@media (min-width: 81.25rem) {
-  #page {
-    max-width: 81.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 90.0%, transparent 90.0%);
-    background-size: 6.28931%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
-  }
-  #page:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
+#page footer {
+  width: 20.40816%;
+  float: left;
+  margin-right: 2.04082%;
 }
 
 /*# sourceMappingURL=style.css.map */
