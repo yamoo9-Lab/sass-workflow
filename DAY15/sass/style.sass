@@ -70,9 +70,9 @@ body
  * layout()
  * --------------------------------------
 
-$mobile: layout(2 1/6)
-$tablet: layout(6 1/8)
-$desktop: layout(16 1/6 static 3.75rem inside-static)
+// $mobile: layout(2 1/6)
+// $tablet: layout(6 1/8)
+// $desktop: layout(16 1/6 static 3.75rem inside-static)
 
 // $susy: (debug: (image: show) )
 
@@ -133,16 +133,16 @@ $desktop: layout(16 1/6 static 3.75rem inside-static)
 
 +global-box-sizing
 
-$susy: ( column-width: 60px )
+$susy: ( columns: 12, gutters: (20px/80px), math: static, column-width: 80px )
 
 #page
-	+container(1200px 12 show)
+	+container
 	header
 		+span(full)
 	main
-		+span(4 of 12 inside-static)
+		+span(4 of 12)
 	aside
-		+span(8 of 12 last inside-static)
+		+span(8 of 12 last)
 	footer
 		+full
 

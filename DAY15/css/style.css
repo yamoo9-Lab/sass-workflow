@@ -22,14 +22,9 @@ body {
 }
 
 #page {
-  max-width: 1200px;
+  width: 1180px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
-  background-size: 8.47458%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
 }
 #page:after {
   content: " ";
@@ -43,22 +38,14 @@ body {
   margin-right: 0;
 }
 #page main {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
+  width: 380px;
   float: left;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  margin-right: 20px;
 }
 #page aside {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 66.66667%;
+  width: 780px;
   float: right;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  margin-right: 0;
 }
 #page footer {
   clear: both;
