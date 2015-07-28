@@ -67,4 +67,9 @@ gem source --remove https://rubygems.org/
 $ ruby --version # ruby -v
 $ gem -v
 $ gem list
+
+$ gem install sass # gem i sass
+$ gem list sass
+$ gem uninstall sass
 ```
+
