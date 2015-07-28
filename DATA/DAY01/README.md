@@ -59,3 +59,12 @@ windows 8.1 사용자의 경우, openWithST3.bat 파일 위에 마우스 오른�
 gem source --add https://s3.amazonaws.com/production.s3.rubygems.org/
 gem source --remove https://rubygems.org/
 ```
+
+---
+
+### 수업 때 사용한 명령어 모음
+```sh
+$ ruby --version # ruby -v
+$ gem -v
+$ gem list
+```
