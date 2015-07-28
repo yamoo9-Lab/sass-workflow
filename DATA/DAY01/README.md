@@ -60,6 +60,11 @@ gem source --add https://s3.amazonaws.com/production.s3.rubygems.org/
 gem source --remove https://rubygems.org/
 ```
 
+### Windows 환경에서 한글(CP949) 오류 발생 시 언어 인코딩 UTF-8로 설정
+```sh
+$ sass -E utf-8 sass/style.scss css/style.css # 인코딩 옵션 설정 -E utf-8
+```
+
 ---
 
 ### 수업 때 사용한 명령어 모음
@@ -80,6 +85,7 @@ $ gem uninstall sass # 제거
 ```sh
 $ cd     # change directory
 $ mkdir  # make directory
+$ touch  # make file(s)
 $ ls     # list view
 $ ls -1  # list view - vertical
 $ rm     # remove file(s)
