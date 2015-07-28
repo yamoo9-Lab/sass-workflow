@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[+leader(${1:행간}, ${2:서체크기(옵션)}, ${3:마진/패딩(옵션)})
-$0]]></content>
-    <tabTrigger>compass-vr-leader</tabTrigger>
-    <scope>source.sass</scope>
-    <description>Compass - Vertical Rhythm: Leader</description>
-</snippet>

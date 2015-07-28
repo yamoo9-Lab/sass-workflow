@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[+adjust-font-size-to(${1:변경할 서체크기}, ${2:행간설정(옵션)}, ${3:기준 서체크기(옵션)})
-$0]]></content>
-    <tabTrigger>compass-vr-adjust-font-size-to</tabTrigger>
-    <scope>source.sass</scope>
-    <description>Compass - Vertical Rhythm: Adjust Font Size To</description>
-</snippet>
