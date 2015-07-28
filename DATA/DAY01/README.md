@@ -68,8 +68,23 @@ $ ruby --version # ruby -v
 $ gem -v
 $ gem list
 
-$ gem install sass # gem i sass
-$ gem list sass
-$ gem uninstall sass
+$ gem update --system # 시스템 업데이트
+
+$ gem install sass   # gem i sass 설치
+$ gem list sass      # 설치 목록 확인
+$ gem uninstall sass # 제거
 ```
 
+### CLI 명령어 모음
+
+```sh
+$ cd     # change directory
+$ mkdir  # make directory
+$ ls     # list view
+$ ls -1  # list view - vertical
+$ rm     # remove file(s)
+$ rmdir  # remove directory (only empty)
+$ rm -r  # 하위 디렉토리 지우는 옵션
+$ rm -f  # 강제 제거 옵션
+$ rm -rf # 하위 디렉토리까지 강제로 제거 옵션
+```
