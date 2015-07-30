@@ -9,3 +9,4 @@
 ## 수업 진행내용 요약
 
 - [1일차](DATA/DAY01/README.md)
+- [2일차](DATA/DAY02/README.md)
