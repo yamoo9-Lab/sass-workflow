@@ -83,6 +83,7 @@ $ gem uninstall sass # 제거
 $ sass -h # 도움말 보기
 $ sass [options] [INPUT] [OUTPUT] # 컴파일 (1회)
 $ sass --watch [INPUT]:[OUTPUT] # sass -w [INPUT]:[OUTPUT], 지속적 관찰
+$ sass -w -t compact [INPUT]:[OUTPUT] # nested expanded compact compressed
 ```
 
 -
