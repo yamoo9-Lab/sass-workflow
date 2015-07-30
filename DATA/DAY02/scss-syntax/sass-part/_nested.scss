@@ -1,0 +1,52 @@
+// * --------------------------------
+// * Sass 중첩 규칙
+// * --------------------------------
+
+#app {
+	margin-top: 10px;
+
+	// * --------------------------------
+	// * header
+	header {
+		background: #333;
+	}
+
+	h1 {
+		color: #fff;
+	}
+
+	// * --------------------------------
+	// * nav
+	nav {
+		ul {
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			padding-left: 0;
+			list-style: none;
+		}
+		a {
+			$link-color: #FC4A54;
+			$link-bg-color: #67171F;
+
+			color: $link-color;
+			background: $link-bg-color;
+
+			&::before,
+			&::after {
+				content: 'pseudo content';
+			}
+
+			&:hover,
+			&:focus {
+				color: $link-bg-color;
+				background: $link-color;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+} // #app
