@@ -62,6 +62,7 @@ __수업 진행을 위한 환경설정__<br>
 ---
 
 #### Ruby 버전 확인 및 Gem을 활용한 Sass 설치/제거 명령
+
 ```sh
 $ ruby --version # ruby -v
 $ gem -v
@@ -72,6 +73,16 @@ $ gem update --system # 시스템 업데이트
 $ gem install sass   # gem i sass 설치
 $ gem list sass      # 설치 목록 확인
 $ gem uninstall sass # 제거
+```
+
+-
+
+#### Sass 명령어
+
+```sh
+$ sass -h # 도움말 보기
+$ sass [options] [INPUT] [OUTPUT] # 컴파일 (1회)
+$ sass --watch [INPUT]:[OUTPUT] # sass -w [INPUT]:[OUTPUT], 지속적 관찰
 ```
 
 -
