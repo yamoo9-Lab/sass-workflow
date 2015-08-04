@@ -1,0 +1,14 @@
+@import "page/header";
+@import "page/footer";
+
+/**
+ * #page
+ * --------------------------------
+ */
+#page {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	max-width: 1100px;
+}
