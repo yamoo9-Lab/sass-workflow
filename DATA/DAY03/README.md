@@ -75,3 +75,6 @@ $ sass [options] [input] [output]
 
 $ sass -w -t compact -E utf-8 scss:css
 ```
+
+### OOCSS + Sass = Awesome!!!
+[OOCSS Plus Sass Is The Best Way To Css](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/)

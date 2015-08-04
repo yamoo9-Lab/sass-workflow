@@ -86,7 +86,9 @@
 #gnb {
 
 	ul {
+		// %reset-list 모듈 상속(확장) ≪ modules/reset
 		@extend %reset-list;
+		// %cf 모듈 상속(확장) ≪ modules/clearfix
 		@extend %cf;
 	}
 
@@ -107,13 +109,21 @@
 }
 
 nav ul {
+	// %reset-list 모듈 상속(확장) ≪ modules/reset
 	@extend %reset-list;
 }
 
 footer ol {
+	// %reset-list 모듈 상속(확장) ≪ modules/reset
 	@extend %reset-list;
 }
 
+@import "modules/widgets/seam";
+@import "modules/widgets/valley";
+
 aside .menu {
+	@extend %seam;
+	@extend %valley;
+	// %cf 모듈 상속(확장) ≪ modules/clearfix
 	@extend %cf;
 }

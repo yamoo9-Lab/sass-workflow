@@ -1,0 +1,29 @@
+%lip
+	clear: both
+	display: block
+	height: 5px
+	background: url('/public/images/patterns/lip/lip.png') no-repeat
+	background-size: 100% 100%
+
+%reversed-lip
+	@extend %lip
+	background-image: url('/public/images/patterns/lip/reversed-lip.png')
+
+
+
+%valley
+	position: relative
+	overflow: hidden
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+	&::before
+		@extend %lip
+		top: 0
+	&::after
+		@extend %reversed-lip
+		bottom: 0
