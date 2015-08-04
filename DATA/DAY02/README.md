@@ -51,3 +51,13 @@ $ sass -w --sourcemap=none sass/style.scss:css/style.css # --sourcemap=none
 $ gem update --system # 시스템 업데이트
 $ gem install compass # Compass 설치
 ```
+
+-
+
+### [[OSX] Permission denied](http://superuser.com/questions/717663/permission-denied-when-trying-to-cd-usr-local-bin-from-terminal)[#](http://unix.stackexchange.com/questions/164185/changed-terminal-permissions)
+
+```sh
+$ sudo chown -R $(whoami) /usr/local
+$ sudo chown -R $(whoami) /usr/local/bin
+$ sudo chmod -R 755 /usr/local/bin
+```
