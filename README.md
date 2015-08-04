@@ -10,3 +10,4 @@
 
 - [1일차](DATA/DAY01/README.md)
 - [2일차](DATA/DAY02/README.md)
+- [3일차](DATA/DAY03/README.md)
