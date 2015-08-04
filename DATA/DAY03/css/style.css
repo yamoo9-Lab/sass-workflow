@@ -20,12 +20,14 @@
 
 .button-warnning { background: #FC414B; }
 
-/** clearfix -------------------------------- */
-.clearfix::after { content: ''; display: block; clear: both; }
-.lt-ie8 .clearfix { zoom: 1; }
+/** clearfix, reset -------------------------------- */
+#gnb ul::before, aside .menu::before, #gnb ul::after, aside .menu::after { content: ''; display: table; }
+#gnb ul::after, aside .menu::after { clear: both; }
+.lt-ie8 #gnb ul, #gnb .lt-ie8 ul, .lt-ie8 aside .menu, aside .lt-ie8 .menu { zoom: 1; }
 
-.cf::before, .cf::after { content: ''; display: table; }
-.cf::after { clear: both; }
-.lt-ie8 .cf { zoom: 1; }
+#gnb ul, nav ul, footer ol { margin-top: 0; margin-bottom: 0; padding-left: 0; list-style: none; }
+
+#gnb li { float: left; margin-right: 3px; }
+#gnb a { display: block; padding-top: 0.3em; padding-right: 0.6em; padding-bottom: 0.2em; padding-left: 0.8em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -73,7 +73,47 @@
 @import "modules/button";
 
 /**
- * clearfix
+ * clearfix, reset
  * --------------------------------
  */
 @import "modules/clearfix";
+@import "modules/reset";
+
+
+// * --------------------------------
+// * gnb
+// * --------------------------------
+#gnb {
+
+	ul {
+		@extend %reset-list;
+		@extend %cf;
+	}
+
+	li {
+		float: left;
+		margin-right: 3px;
+	}
+
+	a {
+		display: block;
+		padding: {
+			top:    0.3em;
+			right:  0.6em;
+			bottom: 0.2em;
+			left:   0.8em;
+		}
+	}
+}
+
+nav ul {
+	@extend %reset-list;
+}
+
+footer ol {
+	@extend %reset-list;
+}
+
+aside .menu {
+	@extend %cf;
+}

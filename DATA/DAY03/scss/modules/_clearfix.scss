@@ -1,5 +1,5 @@
 // Legacy Clearfix
-.clearfix {
+%clearfix {
 	&::after {
 		content: '';
 		display: block;
@@ -9,7 +9,7 @@
 }
 
 // Micro Clearfix
-.cf {
+%cf {
 	&::before,
 	&::after {
 		content: '';
