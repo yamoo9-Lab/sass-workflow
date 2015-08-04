@@ -67,3 +67,11 @@ a { color: green; }
 ---
 
 ## 3일차 수업 내용 요약
+
+### Sass 명령어 정리
+
+```sh
+$ sass [options] [input] [output]
+
+$ sass -w -t compact -E utf-8 scss:css
+```
