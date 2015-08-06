@@ -76,5 +76,29 @@ $ sass [options] [input] [output]
 $ sass -w -t compact -E utf-8 scss:css
 ```
 
-### OOCSS + Sass = Awesome!!!
+-
+
+### OOCSS + Sass = Awesome!!! ~ [[플레이스 홀더 선택자(`%`)]]
 [OOCSS Plus Sass Is The Best Way To Css](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/)
+
+-
+
+### Sass 스타일 모듈 관리
+
+스타일을 한 덩어리로 관리하는 것보다, 카테고리를 분류(조직화)하여 작성/관리하는 것이 효율적이다.
+
+```sh
+.
+└── sass
+    ├── common
+    │   ├── _common.sass
+    │   ├── _print.sass
+    │   └── part
+    │       ├── _clearfix.sass
+    │       └── _defaults.sass
+    ├── page
+    │   ├── _footer.scss
+    │   ├── _header.scss
+    │   └── _page.scss
+    └── style.scss
+```
