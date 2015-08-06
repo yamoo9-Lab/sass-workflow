@@ -8,6 +8,42 @@
 @import part/contents
 @import part/footer
 
+@import grid
+
+//
+ * --------------------------------
+ * 페이지 기본 설정
+
+::-moz-selection
+	background: $selection-bg-color
+	color: $selection-fg-color
+	text-shadow: none
+
+::selection
+	background: $selection-bg-color
+	color: $selection-fg-color
+	text-shadow: none
+
 body
-	margin: 0
 	background: $bg-color
+
+body,
+body *,
+body::before,
+body *::before,
+body::after,
+body *::after
+	box-sizing: border-box
+
+/**
+ * --------------------------------
+ * #page
+ * --------------------------------
+ */
+#page
+	position: relative
+	max-width: 1200px
+	min-height: 100vh
+	margin:
+		left: auto
+		right: auto

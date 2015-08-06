@@ -2,9 +2,11 @@
  * --------------------------------
  * 환경설정(_config.sass)
  * --------------------------------
-$bg-color: #003652
-$color-chip: #7f6162
-$footer-bg: #141728
+$bg-color:           #003652
+$selection-bg-color: lighten($bg-color, 30%)
+$selection-fg-color: darken($bg-color, 30%)
+$color-chip:         #7f6162
+$footer-bg:          #141728
 
 
 //
@@ -22,4 +24,4 @@ $footer-bg: #141728
  * 프린트 환경
  * --------------------------------
 @media print
-	@import part/print
+	@import common/part/print
