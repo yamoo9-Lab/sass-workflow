@@ -29,8 +29,8 @@ Sass 중고급(Advanced)에 들어가기에 앞서 공부한 Sass 기본기(Basi
 │   ├── style.css
 │   └── style.css.map
 ├── images
-│	├── guide
-│	├── header
+│   ├── guide
+│   ├── header
 │   ├── icons
 │   ├── page
 │   ├── photos
