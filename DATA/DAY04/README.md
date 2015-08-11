@@ -21,3 +21,39 @@ Sass 중고급(Advanced)에 들어가기에 앞서 공부한 Sass 기본기(Basi
 ![PSD2Sass](../../IMAGES/psd2sass.png)
 
 -
+
+### PSD → HTML+Sass 워크플로우
+```sh
+.
+├── css
+│   ├── style.css
+│   └── style.css.map
+├── images
+│	├── guide
+│	├── header
+│   ├── icons
+│   ├── page
+│   ├── photos
+├── index.html
+├── js
+│   └── grid.js
+└── sass
+    ├── common
+    │   ├── _common.sass
+    │   └── part
+    │       ├── _classes.scss
+    │       ├── _normalize.scss
+    │       └── _print.scss
+    ├── grid
+    │   ├── _grid-guide.sass
+    │   └── _gs-1200-10-80-10.scss
+    ├── page
+    │   ├── _page.sass
+    │   └── part
+    │       ├── _contents.sass
+    │       ├── _cta.sass
+    │       ├── _footer.sass
+    │       ├── _header.sass
+    │       └── _nav.sass
+    └── style.sass
+```
