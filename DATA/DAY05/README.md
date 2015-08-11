@@ -1,5 +1,7 @@
 ### .bashrc 문서에 별칭(Alias) 등록
 
+`.bashrc`의 위치: 사용자 계정(`~/`)
+
 ```sh
 # Alias
 alias ls='ls -ph --show-control-chars'
