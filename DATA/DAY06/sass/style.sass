@@ -2,3 +2,42 @@
  * --------------------------------
  * style.sass
  * --------------------------------
+
+body
+	margin: 0
+
+.container
+	max-width: 1200px
+	margin:
+		left: auto
+		right: auto
+
+.row
+	&::after
+		content: ''
+		display: block
+		clear: both
+	.lt-ie8 &
+		zoom: 1
+
+.center-box
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 300px
+	height: 240px
+	margin-left: (-300px/2)
+	margin-top: (-240px/2)
+
+
+//
+ * --------------------------------
+ * #page
+
+#page
+	position: relative
+	min-height: 100vh
+
+	h1
+		background: #FC414B
+		color: #fff
