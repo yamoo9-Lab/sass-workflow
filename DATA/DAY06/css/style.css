@@ -2,61 +2,18 @@ body {
   margin: 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 621px) and (max-width: 800px) {
-  .container {
-    max-width: 82.63%;
-    margin-left: 8.685%;
-    margin-right: 8.685%;
-  }
-}
-@media screen and (max-width: 620px) {
-  .container {
-    max-width: 91.3%;
-    margin-left: 4.35%;
-    margin-right: 4.35%;
-  }
-}
-
-.row::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.lt-ie8 .row {
-  zoom: 1;
-}
-
-.center-box, h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 210px;
-  height: 280px;
-  margin-left: -105px;
-  margin-top: -140px;
-}
-.center-box.rounded, h1.rounded {
-  border-radius: 50%;
-  height: 210px;
-  line-height: 210px !important;
-}
-
 #page {
-  position: relative;
-  min-height: 100vh;
+  padding: 10%;
 }
-
-h1 {
-  overflow: hidden;
-  background: #FC414B;
-  color: #6f0208;
-  text-align: center;
-  line-height: 280px;
+@media screen and (min-width: 640px) {
+  #page {
+    padding: 1.25rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  #page {
+    padding: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
