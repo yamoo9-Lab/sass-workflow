@@ -7,6 +7,20 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 621px) and (max-width: 800px) {
+  .container {
+    max-width: 82.63%;
+    margin-left: 8.685%;
+    margin-right: 8.685%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    max-width: 91.3%;
+    margin-left: 4.35%;
+    margin-right: 4.35%;
+  }
+}
 
 .row::after {
   content: "";
@@ -17,7 +31,7 @@ body {
   zoom: 1;
 }
 
-.center-box {
+.center-box, h1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,10 +40,10 @@ body {
   margin-left: -105px;
   margin-top: -140px;
 }
-.center-box.rounded {
+.center-box.rounded, h1.rounded {
   border-radius: 50%;
   height: 210px;
-  line-height: 210px;
+  line-height: 210px !important;
 }
 
 #page {

@@ -2,13 +2,7 @@
  * --------------------------------
  * 변수 Variables
  * --------------------------------
-$container-width:      1200px
-$container-both-width: auto
-
-$center-box-width:    210px
-$center-box-height:   280px
-$center-box-bg-color: #FC414B
-$center-box-fg-color: darken($center-box-bg-color, 40%)
+@import var
 
 //
  * --------------------------------
@@ -19,10 +13,30 @@ body
 	margin: 0
 
 .container
+	// Desktop
 	max-width: $container-width
 	margin:
 		left: $container-both-width
 		right: $container-both-width
+
+	// Tablet
+	@media screen and (min-width: $mobile+1) and (max-width: $tablet)
+		$max-width: 82.63%
+		$margins: (100% - $max-width)/2
+		max-width: $max-width
+		margin:
+			left: $margins
+			right: $margins
+
+	// Mobile
+	@media screen and (max-width: $mobile)
+		$max-width: 91.3%
+		$margins: (100% - $max-width)/2
+		max-width: $max-width
+		margin:
+			left: $margins
+			right: $margins
+
 
 .row
 	&::after
@@ -44,7 +58,7 @@ body
 	&.rounded
 		border-radius: 50%
 		height: $center-box-width
-		line-height: $center-box-width
+		line-height: $center-box-width !important
 
 
 //
@@ -56,8 +70,12 @@ body
 	min-height: 100vh
 
 h1
+	@extend .center-box
 	overflow:    hidden
 	background:  $center-box-bg-color
 	color:       $center-box-fg-color
 	text-align:  center
 	line-height: $center-box-height
+
+.box1
+	// @extend h1
