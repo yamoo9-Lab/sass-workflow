@@ -1,5 +1,17 @@
 //
  * --------------------------------
+ * 변수 Variables
+ * --------------------------------
+$container-width:      1200px
+$container-both-width: auto
+
+$center-box-width:    210px
+$center-box-height:   280px
+$center-box-bg-color: #FC414B
+$center-box-fg-color: darken($center-box-bg-color, 40%)
+
+//
+ * --------------------------------
  * style.sass
  * --------------------------------
 
@@ -7,10 +19,10 @@ body
 	margin: 0
 
 .container
-	max-width: 1200px
+	max-width: $container-width
 	margin:
-		left: auto
-		right: auto
+		left: $container-both-width
+		right: $container-both-width
 
 .row
 	&::after
@@ -24,10 +36,15 @@ body
 	position: absolute
 	top: 50%
 	left: 50%
-	width: 300px
-	height: 240px
-	margin-left: (-300px/2)
-	margin-top: (-240px/2)
+	width: $center-box-width
+	height: $center-box-height
+	margin-left: (-$center-box-width/2)
+	margin-top: (-$center-box-height/2)
+
+	&.rounded
+		border-radius: 50%
+		height: $center-box-width
+		line-height: $center-box-width
 
 
 //
@@ -38,6 +55,9 @@ body
 	position: relative
 	min-height: 100vh
 
-	h1
-		background: #FC414B
-		color: #fff
+h1
+	overflow:    hidden
+	background:  $center-box-bg-color
+	color:       $center-box-fg-color
+	text-align:  center
+	line-height: $center-box-height
