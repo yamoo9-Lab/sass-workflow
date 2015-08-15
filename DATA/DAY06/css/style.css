@@ -1,5 +1,36 @@
+article, nav, header, footer, main, section, figure, figcaption {
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+}
+nav a:hover, nav a:focus {
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid red;
+}
+
+footer a {
+  text-decoration: none;
+}
+footer a:hover, footer a:focus {
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid #333;
+}
+
+aside li a {
+  text-decoration: none;
+}
+aside li a:hover, aside li a:focus {
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid #333;
+}
+
 body {
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #page {

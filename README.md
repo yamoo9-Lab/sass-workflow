@@ -13,3 +13,4 @@
 - [3일차](DATA/DAY03/README.md)
 - [4일차](DATA/DAY04/README.md)
 - [5일차](DATA/DAY05/README.md)
+- [6일차](DATA/DAY06/README.md)
