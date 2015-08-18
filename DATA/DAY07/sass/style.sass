@@ -29,45 +29,12 @@ a
 		color: $link-hover-color
 
 #page
-	// 가운데 정렬하는 모듈 확장(상속)
-	// @extend %align-center
-	// width: 80%
-	// min-width: 960px
-	// max-width: 1340px
 
-	// 믹스인 호출
-	+container(1320px)
+	nav
+		+navigation(0.8em)
 
-	*
-		+box-sizing
+	#gnb
+		+navigation(1.2rem)
 
-	.box
-		// 믹스인 호출
-		// Scss
-		// @include size;
-		+size(1000px)
-
-	table
-		@extend %reset-table
-
-	header
-		+wrapper
-
-	footer
-		+wrapper(800px)
-
-	aside
-		+wrapper(700px)
-
-	.row
-		+wrapper(1000px)
-
-	nav,
-	#gnb,
-	#lnb,
-	#utils-menu
-		// +navigation()
-		ul
-			@extend %reset-list
-		a
-			@extend %reset-link
+	#lnb
+		+navigation(20px)
