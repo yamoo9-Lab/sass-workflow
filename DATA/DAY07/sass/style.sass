@@ -1,0 +1,22 @@
+//
+ * --------------------------------
+ * 모듈 호출
+ * --------------------------------
+@import modules/vars, modules/mixins, modules/classes
+
+/**
+ * 문서 기본형
+ * --------------------------------
+ */
+body
+	margin: 0
+	font: $base+px/1.5 $sans-serief-ko
+	color: $text-color
+
+a
+	color: $link-color
+	&:hover,
+	&:focus
+		color: $link-hover-color
+
+#page

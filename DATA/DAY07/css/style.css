@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/**
+ * 문서 기본형
+ * --------------------------------
+ */
+body {
+  margin: 0;
+  font: 16px/1.5 "Nanum Gothic", Dotum, Sans-Serief;
+  color: #181817;
+}
+
+a {
+  color: #fc414b;
+}
+a:hover, a:focus {
+  color: #a1030b;
+}
+
+/*# sourceMappingURL=style.css.map */
