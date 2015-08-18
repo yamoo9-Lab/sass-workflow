@@ -4,13 +4,22 @@
  * --------------------------------
 @import modules/vars, modules/mixins, modules/classes
 
+//
+ * --------------------------------
+ * 웹폰트 모듈 호출
+ * 보간법(Interpolation)
+ * 사용 시, 주의할 점!
+ * 보간법을 사용할 경우는 url() 사용
+ * --------------------------------
+@import url('http://fonts.googleapis.com/css?family=#{$webfont}')
+
 /**
  * 문서 기본형
  * --------------------------------
  */
 body
 	margin: 0
-	font: $base+px/1.5 $sans-serief-ko
+	font: $base+px/1.5 $noto
 	color: $text-color
 
 a
@@ -20,3 +29,23 @@ a
 		color: $link-hover-color
 
 #page
+	// 가운데 정렬하는 모듈 확장(상속)
+	@extend %align-center
+	width: 80%
+	min-width: 960px
+	max-width: 1340px
+
+	.box
+		// 믹스인 호출
+		// Scss
+		// @include size;
+		+size(1000px)
+
+	table
+		@extend %reset-table
+
+	nav
+		ul
+			@extend %reset-list
+		a
+			@extend %reset-link
