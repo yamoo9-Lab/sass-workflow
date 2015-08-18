@@ -11,6 +11,26 @@
  * +믹스인_이름()
  * --------------------------------
 
+// Dimension
+=wrapper($width: auto)
+	width: $width
+	// margin:
+	// 	left: auto
+	// 	right: auto
+	@extend %align-center
+
+=container($width: auto, $left: auto, $right: $left)
+	max-width: $width
+	margin:
+		left: $left
+		right: $right
+
 =size($width: null, $height: null)
 	width: $width
 	height: $height
+
+// CSS3 Categries
+=box-sizing($size: border-box)
+	-webkit-box-sizing: $size
+	-moz-box-sizing: $size
+	box-sizing: $size

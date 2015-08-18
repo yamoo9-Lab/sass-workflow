@@ -1,18 +1,27 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700");
-#page {
+#page header, #page footer, #page aside, #page .row {
   margin-left: auto;
   margin-right: auto;
 }
 
-#page nav a {
+#page nav a,
+#page #gnb a,
+#page #lnb a,
+#page #utils-menu a {
   text-decoration: none;
 }
-#page nav a:focus {
+#page nav a:focus,
+#page #gnb a:focus,
+#page #lnb a:focus,
+#page #utils-menu a:focus {
   outline: none;
 }
 
-#page nav ul {
+#page nav ul,
+#page #gnb ul,
+#page #lnb ul,
+#page #utils-menu ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -42,11 +51,28 @@ a:hover, a:focus {
 }
 
 #page {
-  width: 80%;
-  min-width: 960px;
-  max-width: 1340px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #page .box {
+  width: 1000px;
+}
+#page header {
+  width: auto;
+}
+#page footer {
+  width: 800px;
+}
+#page aside {
+  width: 700px;
+}
+#page .row {
   width: 1000px;
 }
 
