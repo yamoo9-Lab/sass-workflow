@@ -1,30 +1,9 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700");
-#page nav a, #page #gnb a, #page #lnb a {
-  text-decoration: none;
-}
-#page nav a:focus, #page #gnb a:focus, #page #lnb a:focus {
-  outline: none;
-}
-
-#page nav ul, #page #gnb ul, #page #lnb ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-#page nav li, #page #gnb li, #page #lnb li {
-  float: left;
-}
-
-#page nav ul::after, #page #gnb ul::after, #page #lnb ul::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.lt-ie8 #page nav ul, #page nav .lt-ie8 ul, .lt-ie8 #page #gnb ul, #page #gnb .lt-ie8 ul, .lt-ie8 #page #lnb ul, #page #lnb .lt-ie8 ul {
-  zoom: 1;
+#page footer table th, #page footer table td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
 /**
@@ -35,6 +14,18 @@ body {
   margin: 0;
   font: 16px/1.5 "Noto Sans";
   color: #181817;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-height: inherit;
+  top: 0;
+  left: 0;
+  background: linear-gradient(transparent 96%, #333);
+  background-size: 24px 24px;
 }
 
 a {
@@ -44,14 +35,28 @@ a:hover, a:focus {
   color: #a1030b;
 }
 
-#page nav li {
-  margin-right: 0.8em;
+section, article, nav, header, footer, aside, main, figure, figcaption {
+  display: block;
 }
-#page #gnb li {
-  margin-right: 1.2rem;
+
+#page {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
 }
-#page #lnb li {
-  margin-right: 20px;
+#page h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 64px;
+}
+#page p {
+  color: #8A2BE2;
+  margin-top: 24px;
+  line-height: 1.45;
 }
 
 /*# sourceMappingURL=style.css.map */

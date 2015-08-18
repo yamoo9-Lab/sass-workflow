@@ -11,6 +11,21 @@
  * +믹스인_이름()
  * --------------------------------
 
+// Grid-System
+=baseline($line-height: 21px)
+	min-height: 100vh
+
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		width: 100%
+		min-height: inherit
+		top: 0
+		left: 0
+		background: linear-gradient(transparent 96%, #333)
+		background-size: $line-height $line-height
+
 // Dimension
 =wrapper($width: auto)
 	width: $width
@@ -40,3 +55,14 @@
 	@extend %setting-navigation
 	li
 		margin-right: $gap
+
+// HTML5
+// 믹스인을 정의할 때
+// 믹스인 확장(전달인자 설정)
+// 믹스인 오류 방지(전달인자 기본 값 설정)
+// 믹스인 혼합
+// - 보간법 #{$변수}
+// - @extend 상속(값이 변경되지는 않고, 공통으로 사용되는 모듈) %플레이스홀더-선택자
+=reset-html5-block
+	#{$html5-block}
+		display: block

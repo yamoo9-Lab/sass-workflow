@@ -22,19 +22,34 @@ body
 	font: $base+px/1.5 $noto
 	color: $text-color
 
+	+baseline(24px)
+
 a
 	color: $link-color
 	&:hover,
 	&:focus
 		color: $link-hover-color
 
++reset-html5-block
+
 #page
+	+container(960px)
+	margin-top: 45px
 
-	nav
-		+navigation(0.8em)
+	h1
+		margin-top: 0
+		margin-bottom: 0
+		line-height: 1
+		font-family: $noto
+		font-weight: 400
+		font-size: 64px
 
-	#gnb
-		+navigation(1.2rem)
+	p
+		color: #8A2BE2
+		margin-top: 24px
+		line-height: 1.45
 
-	#lnb
-		+navigation(20px)
+	footer
+		table
+			th, td
+				@extend %reset-table-cell
