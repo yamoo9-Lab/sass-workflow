@@ -1,0 +1,17 @@
+// * --------------------------------
+// * CSS3 배경 패턴
+// * --------------------------------
+
+// * --------------------------------
+// * Seigaiha
+@mixin bg-pattern-seigaiha($color: #F5F5F5) {
+	background-color: $color;
+	background-image:
+	radial-gradient(circle at 100% 150%, $color 24%, white 25%, white 28%, $color 29%, $color 36%, white 36%, white 40%, transparent 40%, transparent),
+	radial-gradient(circle at 0    150%, $color 24%, white 25%, white 28%, $color 29%, $color 36%, white 36%, white 40%, transparent 40%, transparent),
+	radial-gradient(circle at 50%  100%, white 10%, $color 11%, $color 23%, white 24%, white 30%, $color 31%, $color 43%, white 44%, white 50%, $color 51%, $color 63%, white 64%, white 71%, transparent 71%, transparent),
+	radial-gradient(circle at 100% 50%, white 5%, $color 6%, $color 15%, white 16%, white 20%, $color 21%, $color 30%, white 31%, white 35%, $color 36%, $color 45%, white 46%, white 49%, transparent 50%, transparent),
+	radial-gradient(circle at 0    50%, white 5%, $color 6%, $color 15%, white 16%, white 20%, $color 21%, $color 30%, white 31%, white 35%, $color 36%, $color 45%, white 46%, white 49%, transparent 50%, transparent);
+	background-size: 100px 50px;
+}
+

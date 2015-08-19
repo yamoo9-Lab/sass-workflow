@@ -13,43 +13,69 @@
  * --------------------------------
 @import url('http://fonts.googleapis.com/css?family=#{$webfont}')
 
+//
+ * --------------------------------
+ * CSS3 BG Pattern
+ * --------------------------------
+@import modules/_css3_patterns
+
 /**
  * 문서 기본형
  * --------------------------------
  */
+
++reset-html5-block
+
 body
 	margin: 0
-	font: $base+px/1.5 $noto
-	color: $text-color
+	font:   $base+px/1.5 $noto-sans
+	color:  $text-color
 
-	+baseline(24px)
+	+bg-pattern-seigaiha
+	+baseline(24px, $color: #AFA484)
 
 a
+	+hover-link(2px, 1px solid)
 	color: $link-color
 	&:hover,
 	&:focus
 		color: $link-hover-color
 
-+reset-html5-block
+table
+	@extend %reset-table
+	th, td
+		@extend %reset-table-cell
+
+
+/**
+ * --------------------------------
+ * #page
+ * --------------------------------
+ */
+
++selection
 
 #page
 	+container(960px)
-	margin-top: 45px
+
+	.banner
+		+position($top: 10px, $left: 40px, $z-index: 100)
 
 	h1
-		margin-top: 0
-		margin-bottom: 0
-		line-height: 1
-		font-family: $noto
-		font-weight: 400
-		font-size: 64px
+		+position(relative, $top: 48px)
+		+size($height: 40px)
+		+letter-spacing(-20)
+		+margin(0, $bottom: 0)
+		font: 100 54+px/1 $monoton
+		color: #b19d6f
+
+	a
+		+hover-link(2px, 1px dashed)
 
 	p
-		color: #8A2BE2
-		margin-top: 24px
-		line-height: 1.45
-
-	footer
-		table
-			th, td
-				@extend %reset-table-cell
+		+position($top: 96px)
+		+size(700px)
+		+margin(24px, $bottom: 24px)
+		font-size: 12px
+		line-height: 2
+		color: #666

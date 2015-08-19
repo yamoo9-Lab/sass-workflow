@@ -1,68 +1,97 @@
 //
  * --------------------------------
  * 믹스인
- *
- * Scss
- * @mixin 믹스인_이름(전달인자) { 정의 코드 }
- * @include 믹스인_이름()
- *
- * Sass
- * =믹스인_이름(전달인자)
- * +믹스인_이름()
  * --------------------------------
 
 // Grid-System
-=baseline($line-height: 21px)
+=baseline($width: 21px, $height: $width, $color: #22b7df, $deg: 180deg)
 	min-height: 100vh
-
 	&::before
-		content: ''
-		position: absolute
-		z-index: -1
-		width: 100%
-		min-height: inherit
-		top: 0
-		left: 0
-		background: linear-gradient(transparent 96%, #333)
-		background-size: $line-height $line-height
+		+position($z-index: -100, $top: 0, $left: 0)
+		content:         ''
+		width:           100%
+		min-height:      inherit
+		background:      linear-gradient($deg, transparent 96%, $color)
+		background-size: $width $height
 
-// Dimension
+// 래퍼
 =wrapper($width: auto)
 	width: $width
-	// margin:
-	// 	left: auto
-	// 	right: auto
 	@extend %align-center
 
-=container($width: auto, $left: auto, $right: $left)
-	max-width: $width
+// 컨테이너
+=container($max-width: auto, $left: auto, $right: $left)
+	width: 100%
+	max-width: $max-width
 	margin:
-		left: $left
+		left:  $left
 		right: $right
 
+// 가로 세로 크기
 =size($width: null, $height: null)
-	width: $width
+	width:  $width
 	height: $height
 
-// CSS3 Categries
+// 마진
+=margin($top: null, $right: null, $bottom: null, $left: null)
+	margin-top:    $top
+	margin-right:  $right
+	margin-bottom: $bottom
+	margin-left:   $left
+
+// 패딩
+=padding($top: null, $right: null, $bottom: null, $left: null)
+	padding-top:    $top
+	padding-right:  $right
+	padding-bottom: $bottom
+	padding-left:   $left
+
+// 포지션
+=position($method: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: null)
+	position: $method
+	z-index:  $z-index
+	top:      $top
+	right:    $right
+	bottom:   $bottom
+	left:     $left
+
+// CSS3
 =box-sizing($size: border-box)
 	-webkit-box-sizing: $size
 	-moz-box-sizing: $size
 	box-sizing: $size
 
-// Navigation
+=box-shadow($value...)
+	-webkit-box-shadow: $value
+	-moz-box-shadow: $value
+	box-shadow: $value
+
+=selection($background: #F1E4BE, $color: #69634F)
+	::-moz-selection
+		background: $background
+		color: $color
+	::selection
+		background: $background
+		color: $color
+
+// 내비게이션
 =navigation($gap: 10px)
 	@extend %setting-navigation
 	li
 		margin-right: $gap
 
+// 링크
+=hover-link($padding-bottom, $border-bottom)
+	text-decoration: none
+	&:hover, &:focus
+		padding-bottom: $padding-bottom
+		border-bottom: $border-bottom
+
 // HTML5
-// 믹스인을 정의할 때
-// 믹스인 확장(전달인자 설정)
-// 믹스인 오류 방지(전달인자 기본 값 설정)
-// 믹스인 혼합
-// - 보간법 #{$변수}
-// - @extend 상속(값이 변경되지는 않고, 공통으로 사용되는 모듈) %플레이스홀더-선택자
 =reset-html5-block
 	#{$html5-block}
 		display: block
+
+// Photoshop 값 설정과 동일한 결과 처리
+=letter-spacing($value: -10)
+	letter-spacing: $value/1000+em
