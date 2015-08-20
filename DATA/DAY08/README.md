@@ -1,3 +1,42 @@
+## Sass Script 3
+
+#### yamoo9 - Sass Library 활용
+
+```sh
+.
+├── _yamoo9.sass
+└── part
+    ├── functions
+    │   ├── _functions.sass
+    │   └── part
+    │       ├── _photoshop.sass
+    │       └── _unit.sass
+    ├── mixins
+    │   ├── _mixins.sass
+    │   └── part
+    │       ├── _baseline.sass
+    │       ├── _css3.sass
+    │       ├── _css3_bg_patterns.scss
+    │       ├── _dim.sass
+    │       ├── _layout.sass
+    │       ├── _modernizr.sass
+    │       ├── _mq.sass
+    │       ├── _navigation.sass
+    │       ├── _rem.sass
+    │       ├── _ribbon.scss
+    │       ├── _square.sass
+    │       └── _triangle.scss
+    └── placeholders
+        ├── _placeholders.sass
+        └── part
+            ├── _accessible.sass
+            ├── _align.sass
+            ├── _clearfix.sass
+            ├── _image-replace.sass
+            └── _reset.sass
+```
+
+```sass
 //
  * --------------------------------
  * 모듈 호출
@@ -29,7 +68,40 @@ body
 
 .triangle_up
 	+triangle-up(10px, #2CC2BE)
+```
 
+-
+
+#### [Bourbon](http://bourbon.io) 라이브러리 활용
+
+```sh
+# Bourbon 설치
+$ gem install bourbon
+
+# Bourbon 라이브러리 호출
+$ sass -r bourbon -w -t compact sass:css
+```
+
+```sass
+//
+ * --------------------------------
+ * Bourbon 믹스인 라이브러리 호출
+@import bourbon
+
+#app
+	+position(absolute, 10px null null 200px)
+	+size(90% 100vh)
+	+triangle(12px, gray, down)
+
+	$width: 60%
+	+calc(width, "#{$width} - 80px")
+```
+
+-
+
+#### 변수 스코프와 `@content`
+
+```sass
 //
  * --------------------------------
  * 변수 스코프와 @content
@@ -48,7 +120,13 @@ $color: red
 		// $color 전역 변수 사용 됨.
 		color: $color
 		font-size: 12px
+```
 
+-
+
+#### Sass 조건문 `@if`, `@else if`, `@else`
+
+```sass
 //
  * --------------------------------
  * Sass 조건문 @if, @else if, @else
@@ -83,3 +161,4 @@ $light-fg-color: darken($light-bg-color, 40%)
 #app
 	margin: 10px
 	+set-theme('coffee')
+```

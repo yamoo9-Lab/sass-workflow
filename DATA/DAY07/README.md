@@ -1,4 +1,4 @@
-### Sass Script 2
+## Sass Script 2
 
 #### Sass 모듈 호출 [#](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#import)
 

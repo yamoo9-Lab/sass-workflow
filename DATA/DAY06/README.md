@@ -1,4 +1,4 @@
-### Sass Script
+## Sass Script 1
 
 1. 변수(Variables)
 

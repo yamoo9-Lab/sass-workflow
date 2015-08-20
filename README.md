@@ -15,3 +15,4 @@
 - [5일차](DATA/DAY05/README.md)
 - [6일차](DATA/DAY06/README.md)
 - [7일차](DATA/DAY07/README.md)
+- [8일차](DATA/DAY08/README.md)
