@@ -3,26 +3,83 @@
  * 모듈 호출
  * --------------------------------
 // @import libs/normalize/normalize
-@import libs/yamoo9/yamoo9
+// @import libs/yamoo9/yamoo9
 
-body
-	// margin: 0
-	+margin($top: PX2REM(100px), $bottom: PX2REM(120px))
+// body
+// 	// margin: 0
+// 	+margin($top: PX2REM(100px), $bottom: PX2REM(120px))
 
-.wrapper
-	+container( PX2REM(1200px) )
-	+position(relative, $top: -10px)
-	// width: 1200px
-	// margin:
-	// 	left: auto
-	// 	right: auto
+// .wrapper
+// 	+container( PX2REM(1200px) )
+// 	+position(relative, $top: -10px)
+// 	// width: 1200px
+// 	// margin:
+// 	// 	left: auto
+// 	// 	right: auto
 
-	[id]
-		+position($top: -20px, $bottom: -20px)
+// 	[id]
+// 		+position($top: -20px, $bottom: -20px)
 
-#demo1
-	+square(100px, #FC414B)
+// #demo1
+// 	+square(100px, #FC414B)
 
-#demo2
-	+triangle(20px, $direction: left)
-	// +square-center-pos(200px, #25A04D)
+// #demo2
+// 	+triangle(20px, $direction: left)
+// 	// +square-center-pos(200px, #25A04D)
+
+// .triangle_up
+// 	+triangle-up(10px, #2CC2BE)
+
+//
+ * --------------------------------
+ * 변수 스코프와 @content
+ * --------------------------------
+// 전역 (Global Scope)
+$color: red
+
+=local-scope($color: hotpink)
+	@content
+	// $color는 지역 변수가 사용 됨.
+	background: $color
+
+
+.tester
+	+local-scope
+		// $color 전역 변수 사용 됨.
+		color: $color
+		font-size: 12px
+
+//
+ * --------------------------------
+ * Sass 조건문 @if, @else if, @else
+ * --------------------------------
+
+// 'light', 'red', 'green', 'blue', 'gray', 'dark'
+$assign-theme: 'dark'
+$dark-bg-color: #091918
+$dark-fg-color: lighten($dark-bg-color, 40%)
+$light-bg-color: #B6EEEA
+$light-fg-color: darken($light-bg-color, 40%)
+
+=set-theme($theme: dark)
+	@debug $theme
+	// content: $theme
+	@if $theme == 'dark'
+		background: $dark-bg-color
+		color: $dark-fg-color
+	@else if $theme == 'light'
+		background: adjust-hue($light-bg-color, 215deg)
+		color: rgba($light-fg-color, 30%)
+	@else if $theme == 'red'
+		background: adjust-hue($light-bg-color, 35deg)
+		color: rgba($light-fg-color, 60%)
+	@else if $theme == 'green'
+		background: adjust-hue($light-bg-color, 85deg)
+		color: rgba($light-fg-color, 90%)
+	@else
+		background: adjust-hue($light-bg-color, 125deg)
+		color: rgba($light-fg-color, 10%)
+
+#app
+	margin: 10px
+	+set-theme('coffee')

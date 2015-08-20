@@ -37,5 +37,17 @@
 			left:   $half-base solid $bgcolor;
 		}
 	}
+}
 
+@mixin triangle-up($base, $bgcolor) {
+	@include triangle($base, $bgcolor, top);
+}
+@mixin triangle-down($base, $bgcolor) {
+	@include triangle($base, $bgcolor, bottom);
+}
+@mixin triangle-left($base, $bgcolor) {
+	@include triangle($base, $bgcolor, left);
+}
+@mixin triangle-right($base, $bgcolor) {
+	@include triangle($base, $bgcolor, right);
 }
