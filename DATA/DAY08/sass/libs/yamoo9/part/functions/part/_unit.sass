@@ -1,26 +1,26 @@
 // PX → REM 함수
 @function PX2REM($px, $base: 16)
-	@return ($px / $base) * 1rem
+	@return (deUnit($px) / $base) * 1rem
 
 // REM → PX 함수
 @function REM2PX($rem, $base: 16)
-	@return ($rem * $base) * 1px
+	@return (deUnit($rem) * $base) * 1px
 
 // REM 단축 함수
 @function REM($px, $base: 16)
-	@return PX2REM($px, $base)
+	@return PX2REM(deUnit($px), $base)
 
 // PX → EM 함수
 @function PX2EM($px, $base: 16)
-	@return ($px / $base) * 1em
+	@return (deUnit($px) / $base) * 1em
 
 // EM → PX 함수
 @function EM2PX($px, $base: 16)
-	@return ($px * $base) * 1px
+	@return (deUnit($px) * $base) * 1px
 
 // EM → PX 함수
 @function EM2PX($px, $base: 16)
-	@return ($px * $base) * 1px
+	@return (deUnit($px) * $base) * 1px
 
 // 단위 제거 함수
 @function deUnit($value)
