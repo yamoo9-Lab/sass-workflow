@@ -1,0 +1,19 @@
+//
+ * --------------------------------
+ * Float
+%fl
+	float: left
+%fr
+	float: right
+
+//////////////////////////////////////
+// float 적용 요소 감싸는 클래스 - clearfix
+//////////////////////////////////////
+%cf
+	&::before, &::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+	.lt-ie8 &
+		zoom: 1
