@@ -3,4 +3,26 @@
  * 모듈 호출
  * --------------------------------
 // @import libs/normalize/normalize
-// @import libs/yamoo9/yamoo9
+@import libs/yamoo9/yamoo9
+
+body
+	// margin: 0
+	+margin($top: PX2REM(100px), $bottom: PX2REM(120px))
+
+.wrapper
+	+container( PX2REM(1200px) )
+	+position(relative, $top: -10px)
+	// width: 1200px
+	// margin:
+	// 	left: auto
+	// 	right: auto
+
+	[id]
+		+position($top: -20px, $bottom: -20px)
+
+#demo1
+	+square(100px, #FC414B)
+
+#demo2
+	+triangle(20px, $direction: left)
+	// +square-center-pos(200px, #25A04D)
