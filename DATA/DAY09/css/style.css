@@ -1,11 +1,11 @@
-.container::before, .container::after {
+body > div::before, body > div::after {
   content: "";
   display: table;
 }
-.container::after {
+body > div::after {
   clear: both;
 }
-.lt-ie8 .container {
+.lt-ie8 body > div {
   zoom: 1;
 }
 
@@ -29,7 +29,7 @@ body > div > div {
   line-height: 100px;
 }
 
-.container {
+body > div {
   width: 100%;
   max-width: 1560px;
   margin-left: auto;
@@ -37,58 +37,30 @@ body > div > div {
   width: 1560px;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+body > div > div, #page > div, #asymaticalies div:nth-child(2), #asymaticalies div:last-child, #note > div, #asymaticalies div:first-child {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
 }
 
-.col-1 {
+body > div > div {
   width: 100px;
 }
 
-.col-2 {
+#page > div, #asymaticalies div:nth-child(2) {
   width: 230px;
 }
 
-.col-3 {
+#asymaticalies div:last-child {
   width: 360px;
 }
 
-.col-4 {
+#note > div {
   width: 490px;
 }
 
-.col-5 {
-  width: 620px;
-}
-
-.col-6 {
-  width: 750px;
-}
-
-.col-7 {
+#asymaticalies div:first-child {
   width: 880px;
-}
-
-.col-8 {
-  width: 1010px;
-}
-
-.col-9 {
-  width: 1140px;
-}
-
-.col-10 {
-  width: 1270px;
-}
-
-.col-11 {
-  width: 1400px;
-}
-
-.col-12 {
-  width: 1530px;
 }
 
 /*# sourceMappingURL=style.css.map */

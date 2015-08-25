@@ -21,14 +21,30 @@ body
 body
 	margin-top: 30px
 	> div
+		@extend %container
 		// background: #eaeaea
 		margin-bottom: 15px
 		> div
+			@extend %col-1
 			background: #3c3c3c
 			text-align: center
 			color: #fff
 			height: 100px
 			line-height: 100px
+
+#page > div
+	@extend %col-2
+
+#note > div
+	@extend %col-4
+
+#asymaticalies
+	div:first-child
+		@extend %col-7
+	div:nth-child(2)
+		@extend %col-2
+	div:last-child
+		@extend %col-3
 
 //
  * --------------------------------
@@ -42,7 +58,7 @@ $total-columns: 12
 $gutter: 15px
 $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)) / $total-columns
 
-.container
+%container
 	+container($page-width)
 	width: $page-width
 	@extend %cf
@@ -58,7 +74,7 @@ $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)
 // Sass 반복 구문 처리
 @while $i <= $total-columns
 
-	.col-#{$i}
+	%col-#{$i}
 		@extend %col
 		width: $column-width * $i + ( ($gutter*2) * ($i - 1) )
 
