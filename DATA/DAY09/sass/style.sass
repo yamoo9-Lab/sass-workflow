@@ -46,6 +46,17 @@ body
 	div:last-child
 		@extend %col-3
 
+#push-pull
+	> div
+		@extend %col-4
+
+		&:first-child
+			@extend %pull-1
+
+		&:last-child
+			background: #34C0FF
+			@extend %push-4
+
 //
  * --------------------------------
  * Grid System
@@ -57,6 +68,9 @@ $page-width: 1560px
 $total-columns: 12
 $gutter: 15px
 $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)) / $total-columns
+
+%pos-r
+	position: relative
 
 %container
 	+container($page-width)
@@ -77,5 +91,13 @@ $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)
 	%col-#{$i}
 		@extend %col
 		width: $column-width * $i + ( ($gutter*2) * ($i - 1) )
+
+	%push-#{$i}
+		@extend %pos-r
+		left: $column-width * $i + ( ($gutter*2) * $i )
+
+	%pull-#{$i}
+		@extend %pos-r
+		left: -1 * ($column-width * $i + ( ($gutter*2) * $i ))
 
 	$i: $i + 1
