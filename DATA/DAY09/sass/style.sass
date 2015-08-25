@@ -11,6 +11,39 @@
  * --------------------------------
 body
 	+container(560px)
-	$bg-color: #1B6B1B
+	$bg-color: lighten(#1B6B1B, 30%)
 	background: $bg-color
 	color: text-contrast( $bg-color, 60% )
+	border: 3px solid if(lightness($bg-color) > 50%, #333, #cacece)
+
+//
+ * --------------------------------
+ * Grid System
+
+
+
+
+
+// 변수 반복자
+$i: 1
+$page-width: 1200px
+$total-columns: 24
+$gutter: 10px
+$column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)) / $total-columns
+
+// 그리드 시스템의 공통 모듈
+// 컬럼 디자인
+%col
+	float: left
+	margin:
+		left: $gutter
+		right: $gutter
+
+// Sass 반복 구문 처리
+@while $i <= $total-columns
+
+	.col-#{$i}
+		@extend %col
+		width: $column-width * $i + ( ($gutter*2) * ($i - 1) )
+
+	$i: $i + 1
