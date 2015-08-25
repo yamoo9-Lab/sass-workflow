@@ -33,10 +33,6 @@ body > div > div {
   background: #34C0FF;
 }
 
-#push-pull > div:first-child, #push-pull > div:last-child {
-  position: relative;
-}
-
 body > div {
   width: 100%;
   max-width: 1560px;
@@ -55,8 +51,8 @@ body > div > div {
   width: 100px;
 }
 
-#push-pull > div:first-child {
-  left: -130px;
+#push-pull > div:last-child {
+  padding-left: 130px;
 }
 
 #page > div, #asymaticalies div:nth-child(2) {
@@ -67,12 +63,12 @@ body > div > div {
   width: 360px;
 }
 
-#note > div, #push-pull > div {
-  width: 490px;
+#push-pull > div:last-child {
+  padding-right: 390px;
 }
 
-#push-pull > div:last-child {
-  left: 520px;
+#note > div, #push-pull > div {
+  width: 490px;
 }
 
 #asymaticalies div:first-child {

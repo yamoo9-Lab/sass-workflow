@@ -51,11 +51,13 @@ body
 		@extend %col-4
 
 		&:first-child
-			@extend %pull-1
+			// @extend %pull-1
 
 		&:last-child
 			background: #34C0FF
-			@extend %push-4
+			// @extend %push-4
+			@extend %prefix-1
+			@extend %sufix-3
 
 //
  * --------------------------------
@@ -99,5 +101,11 @@ $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)
 	%pull-#{$i}
 		@extend %pos-r
 		left: -1 * ($column-width * $i + ( ($gutter*2) * $i ))
+
+	%prefix-#{$i}
+		padding-left: $column-width * $i + ( ($gutter*2) * $i )
+
+	%sufix-#{$i}
+		padding-right: $column-width * $i + ( ($gutter*2) * $i )
 
 	$i: $i + 1
