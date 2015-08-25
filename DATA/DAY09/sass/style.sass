@@ -2,7 +2,7 @@
  * --------------------------------
  * 모듈 호출
  * --------------------------------
-@import libs/normalize/normalize
+// @import libs/normalize/normalize
 @import libs/yamoo9/yamoo9
 
 //
@@ -10,4 +10,7 @@
  * 수업 실습
  * --------------------------------
 body
-	color: text-contrast( #333 )
+	+container(560px)
+	$bg-color: #1B6B1B
+	background: $bg-color
+	color: text-contrast( $bg-color, 60% )

@@ -7,4 +7,9 @@
 		@warn "첫번째 전달인자 값은 컬러 값이어야 합니다. 예) #fff, red, rgba()"
 		@debug "사용자가 전달한 값은 #{$bg-color}입니다."
 
-	@return null
+	@if lightness($bg-color) > 50%
+		$value: darken($bg-color, $val)
+	@else
+		$value: lighten($bg-color, $val)
+	// 함수 결과 값을 반환
+	@return $value
