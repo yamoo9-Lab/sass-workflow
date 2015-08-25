@@ -10,26 +10,42 @@
  * 수업 실습
  * --------------------------------
 body
-	+container(560px)
-	$bg-color: lighten(#1B6B1B, 30%)
+	margin: 0
+	// +container(560px)
+	$bg-color: #FE4940
 	background: $bg-color
 	color: text-contrast( $bg-color, 60% )
-	border: 3px solid if(lightness($bg-color) > 50%, #333, #cacece)
+	// border: 3px solid if(lightness($bg-color) > 50%, #333, #cacece)
+
+
+body
+	margin-top: 30px
+	> div
+		// background: #eaeaea
+		margin-bottom: 15px
+		> div
+			background: #3c3c3c
+			text-align: center
+			color: #fff
+			height: 100px
+			line-height: 100px
 
 //
  * --------------------------------
  * Grid System
 
 
-
-
-
 // 변수 반복자
 $i: 1
-$page-width: 1200px
-$total-columns: 24
-$gutter: 10px
+$page-width: 1560px
+$total-columns: 12
+$gutter: 15px
 $column-width: (($page-width - ($gutter*2)) - ($gutter*2) * ($total-columns - 1)) / $total-columns
+
+.container
+	+container($page-width)
+	width: $page-width
+	@extend %cf
 
 // 그리드 시스템의 공통 모듈
 // 컬럼 디자인

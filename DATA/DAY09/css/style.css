@@ -1,113 +1,94 @@
-body {
-  width: 100%;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #4dd24d;
-  color: black;
-  border: 3px solid #333;
+.container::before, .container::after {
+  content: "";
+  display: table;
+}
+.container::after {
+  clear: both;
+}
+.lt-ie8 .container {
+  zoom: 1;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+body {
+  margin: 0;
+  background: #FE4940;
+  color: #0c0100;
+}
+
+body {
+  margin-top: 30px;
+}
+body > div {
+  margin-bottom: 15px;
+}
+body > div > div {
+  background: #3c3c3c;
+  text-align: center;
+  color: #fff;
+  height: 100px;
+  line-height: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1560px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1560px;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .col-1 {
-  width: 30px;
+  width: 100px;
 }
 
 .col-2 {
-  width: 80px;
-}
-
-.col-3 {
-  width: 130px;
-}
-
-.col-4 {
-  width: 180px;
-}
-
-.col-5 {
   width: 230px;
 }
 
+.col-3 {
+  width: 360px;
+}
+
+.col-4 {
+  width: 490px;
+}
+
+.col-5 {
+  width: 620px;
+}
+
 .col-6 {
-  width: 280px;
+  width: 750px;
 }
 
 .col-7 {
-  width: 330px;
-}
-
-.col-8 {
-  width: 380px;
-}
-
-.col-9 {
-  width: 430px;
-}
-
-.col-10 {
-  width: 480px;
-}
-
-.col-11 {
-  width: 530px;
-}
-
-.col-12 {
-  width: 580px;
-}
-
-.col-13 {
-  width: 630px;
-}
-
-.col-14 {
-  width: 680px;
-}
-
-.col-15 {
-  width: 730px;
-}
-
-.col-16 {
-  width: 780px;
-}
-
-.col-17 {
-  width: 830px;
-}
-
-.col-18 {
   width: 880px;
 }
 
-.col-19 {
-  width: 930px;
+.col-8 {
+  width: 1010px;
 }
 
-.col-20 {
-  width: 980px;
+.col-9 {
+  width: 1140px;
 }
 
-.col-21 {
-  width: 1030px;
+.col-10 {
+  width: 1270px;
 }
 
-.col-22 {
-  width: 1080px;
+.col-11 {
+  width: 1400px;
 }
 
-.col-23 {
-  width: 1130px;
-}
-
-.col-24 {
-  width: 1180px;
+.col-12 {
+  width: 1530px;
 }
 
 /*# sourceMappingURL=style.css.map */
