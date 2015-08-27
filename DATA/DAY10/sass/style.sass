@@ -1,0 +1,25 @@
+//
+ * --------------------------------
+ * Compass Project
+ * --------------------------------
+@import compass/reset/utilities
+
+// +global-reset
+
+body
+	+reset-body
+
+#page
+	// +nested-reset
+	table
+		+reset-table
+		th, td
+			+reset-table-cell
+
+	q, blockquote
+		+reset-quotation
+
+nav, [role=navigation]
+	ul, ol
+		+reset-box-model
+		+reset-list-style

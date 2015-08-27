@@ -1,0 +1,27 @@
+body {
+  line-height: 1;
+}
+
+#page table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#page table th, #page table td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+#page q, #page blockquote {
+  quotes: none;
+}
+#page q:before, #page q:after, #page blockquote:before, #page blockquote:after {
+  content: "";
+  content: none;
+}
+
+nav ul, nav ol, [role=navigation] ul, [role=navigation] ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
