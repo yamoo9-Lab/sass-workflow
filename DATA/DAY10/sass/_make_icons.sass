@@ -1,0 +1,13 @@
+$cop-prefix: ameba !default
+
+=icons($icon-map)
+	@if type-of($icon-map) != map
+		@warn "전달인자 값을 맵을 전달해야 합니다."
+	@else
+		@each $name, $dimension in $icon-map
+			$width: nth($dimension, 1)
+			$height: nth($dimension, 2)
+			.#{$cop-prefix}-icon-#{$name}
+				background-image: url("images/icons/#{$name}.png")
+				width: $width
+				height: $height

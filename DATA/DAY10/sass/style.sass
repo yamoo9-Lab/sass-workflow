@@ -8,6 +8,7 @@
 // @import compass/css3/opacity
 // 사용자 정의 믹스인
 @import css3
+@import make_icons
 
 //
  * --------------------------------
@@ -20,16 +21,24 @@ $icon-list: play, pause, stop, next-frame, prev-frame, auto-play, show-me-the-mo
 // @debug type-of($icon-list)
 // @debug type-of($icon-map)
 
-$icon-map: (play: 22px 32px, pause: 32px 12px, stop: 100px 45px )
+// $icon-map: (play: 22px 32px, pause: 32px 12px, stop: 100px 45px)
 
-@each $icon-name in $icon-map
-	$name: nth($icon-name, 1)
-	$width: nth( nth($icon-name, 2), 1 )
-	$height: nth( nth($icon-name, 2), 2 )
-	.#{$cop-prefix}-icon-#{$name}
-		background-image: url("images/icons/#{$name}.png")
-		width: $width
-		height: $height
+// @each $name, $dimension in $icon-map
+// 	$width: nth($dimension, 1)
+// 	$height: nth($dimension, 2)
+// 	.#{$cop-prefix}-icon-#{$name}
+// 		background-image: url("images/icons/#{$name}.png")
+// 		width: $width
+// 		height: $height
+
+// @each $icon-name in $icon-map
+// 	$name: nth($icon-name, 1)
+// 	$width: nth( nth($icon-name, 2), 1 )
+// 	$height: nth( nth($icon-name, 2), 2 )
+// 	.#{$cop-prefix}-icon-#{$name}
+// 		background-image: url("images/icons/#{$name}.png")
+// 		width: $width
+// 		height: $height
 
 // @each $icon-name in $icon-list
 // 	.#{$cop-prefix}-icon-#{$icon-name}
@@ -83,3 +92,5 @@ $icon-map: (play: 22px 32px, pause: 32px 12px, stop: 100px 45px )
 // 	ul, ol
 // 		+reset-box-model
 // 		+reset-list-style
+
+@import use_icons

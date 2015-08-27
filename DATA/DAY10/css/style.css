@@ -15,3 +15,33 @@
   width: 100px;
   height: 45px;
 }
+
+.ameba-icon-next-frame {
+  background-image: url("images/icons/next-frame.png");
+  width: 12px;
+  height: 14px;
+}
+
+.ameba-icon-prev-frame {
+  background-image: url("images/icons/prev-frame.png");
+  width: 14px;
+  height: 20px;
+}
+
+.ameba-icon-auto-play {
+  background-image: url("images/icons/auto-play.png");
+  width: 15px;
+  height: 19px;
+}
+
+.ameba-icon-show-me-the-money {
+  background-image: url("images/icons/show-me-the-money.png");
+  width: 32px;
+  height: 32px;
+}
+
+.ameba-icon-black-sheep-wall {
+  background-image: url("images/icons/black-sheep-wall.png");
+  width: 132px;
+  height: 132px;
+}

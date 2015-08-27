@@ -1,0 +1,12 @@
+$map: (
+	play:              22px 32px,
+	pause:             32px 12px,
+	stop:              100px 45px,
+	next-frame:        12px 14px,
+	prev-frame:        14px 20px,
+	auto-play:         15px 19px,
+	show-me-the-money: 32px 32px,
+	black-sheep-wall:  132px 132px
+);
+
+@include icons( $map );
