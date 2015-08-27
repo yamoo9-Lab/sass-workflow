@@ -3,18 +3,49 @@
  * Compass Project
  * --------------------------------
 @import compass/reset/utilities
+@import compass/css3/animation
+@import css3
 
 // +global-reset
 
 body
 	+reset-body
 
++keyframes('bounce-top-bottom')
+	0%
+		top: 0
+	25%
+		top: 20px
+	50%
+		top: -20px
+	75%
+		top: 20px
+	100%
+		top: 0
+
++keyframes('fade-out')
+	from
+		opacity: 1
+	to
+		opacity: 0
+
++keyframes('fade-in')
+	from
+		opacity: 0
+	to
+		opacity: 1
+
 #page
+	+animation(bounce-top-bottom 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite both)
+
 	// +nested-reset
 	table
 		+reset-table
 		th, td
 			+reset-table-cell
+
+	.circle
+		+rounded(50%)
 
 	q, blockquote
 		+reset-quotation
