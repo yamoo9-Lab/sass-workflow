@@ -1,4 +1,4 @@
-$map: (
+$icons-map: (
 	play:              22px 32px,
 	pause:             32px 12px,
 	stop:              100px 45px,
@@ -9,4 +9,3 @@ $map: (
 	black-sheep-wall:  132px 132px
 );
 
-@include icons( $map );
