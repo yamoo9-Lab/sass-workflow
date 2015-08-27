@@ -3,54 +3,83 @@
  * Compass Project
  * --------------------------------
 @import compass/reset/utilities
+@import compass/css3
 @import compass/css3/animation
+// @import compass/css3/opacity
+// 사용자 정의 믹스인
 @import css3
+
+//
+ * --------------------------------
+ * 반복문 @each $변수  in 리스트 or 맵
+ * --------------------------------
+$cop-prefix: ameba
+$icon-list: play, pause, stop, next-frame, prev-frame, auto-play, show-me-the-money
+
+
+// @debug type-of($icon-list)
+// @debug type-of($icon-map)
+
+$icon-map: (play: 22px 32px, pause: 32px 12px, stop: 100px 45px )
+
+@each $icon-name in $icon-map
+	$name: nth($icon-name, 1)
+	$width: nth( nth($icon-name, 2), 1 )
+	$height: nth( nth($icon-name, 2), 2 )
+	.#{$cop-prefix}-icon-#{$name}
+		background-image: url("images/icons/#{$name}.png")
+		width: $width
+		height: $height
+
+// @each $icon-name in $icon-list
+// 	.#{$cop-prefix}-icon-#{$icon-name}
+// 		background-image: url("images/icons/#{$icon-name}.png")
 
 // +global-reset
 
-body
-	+reset-body
+// body
+// 	+reset-body
 
-+keyframes('bounce-top-bottom')
-	0%
-		top: 0
-	25%
-		top: 20px
-	50%
-		top: -20px
-	75%
-		top: 20px
-	100%
-		top: 0
+// +keyframes('bounce-top-bottom')
+// 	0%
+// 		top: 0
+// 	25%
+// 		top: 20px
+// 	50%
+// 		top: -20px
+// 	75%
+// 		top: 20px
+// 	100%
+// 		top: 0
 
-+keyframes('fade-out')
-	from
-		opacity: 1
-	to
-		opacity: 0
+// +keyframes('fade-out')
+// 	from
+// 		+opacity(1)
+// 	to
+// 		+opacity(0)
 
-+keyframes('fade-in')
-	from
-		opacity: 0
-	to
-		opacity: 1
+// +keyframes('fade-in')
+// 	from
+// 		+opacity(0)
+// 	to
+// 		+opacity(1)
 
-#page
-	+animation(bounce-top-bottom 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite both)
+// #page
+// 	+animation(bounce-top-bottom 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite both)
 
-	// +nested-reset
-	table
-		+reset-table
-		th, td
-			+reset-table-cell
+// 	// +nested-reset
+// 	table
+// 		+reset-table
+// 		th, td
+// 			+reset-table-cell
 
-	.circle
-		+rounded(50%)
+// 	.circle
+// 		+rounded(50%)
 
-	q, blockquote
-		+reset-quotation
+// 	q, blockquote
+// 		+reset-quotation
 
-nav, [role=navigation]
-	ul, ol
-		+reset-box-model
-		+reset-list-style
+// nav, [role=navigation]
+// 	ul, ol
+// 		+reset-box-model
+// 		+reset-list-style
