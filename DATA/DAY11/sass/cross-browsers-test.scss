@@ -3,29 +3,31 @@
 // ------------------------------------------------------------
 
 // 브라우저 지원 설정
-// $supported-browsers: (
-// 	"chrome",
-// 	"ie",
-// 	"firefox"
-// );
+$supported-browsers: (
+	"chrome",
+	"ie",
+	// "ie-mobile",
+	"firefox"
+);
 
 
 // 임계치 설정 참고
 // https://gist.github.com/chriseppstein/db821931dc50b624c84c
 // https://gist.github.com/chriseppstein/66b89cac2c6e08fc8ce4
 // 기능 향상 브라우저 사용률 임계치 설정 (1-1000)
-// $graceful-usage-threshold: 0.1; // 0.1+ -webkit-, -moz-, -o- || 5+ -webkit-
+$graceful-usage-threshold: 500; // 0.1+ -webkit-, -moz-, -o- || 5+ -webkit-
 // 기능 저하 브라우저 사용률 임계치 설정 (1-1000)
-// $critical-usage-threshold: 0.01; // 0.3+ zoom 속성 사라짐. IE 8+
+$critical-usage-threshold: 0.3; // 0.3+ zoom 속성 사라짐. IE 8+
 
 // 브라우저 최소 지원 버전 설정
-// $browser-minimum-versions: (
-// 	"chrome"  : "39",
-// 	"firefox" : "34",
-// 	"ie"      : "11"
-// );
+$browser-minimum-versions: (
+	"chrome"  : "39",
+	"firefox" : "34",
+	"ie"      : "11"
+);
 
 @import "compass";
+@import "bourbon";
 
 // [디버깅] 브라우저 지원 정보 출력 설정
 // $debug-browser-support: true;
@@ -40,94 +42,38 @@
 // * 테스트
 // * ------------------------------------------------------------
 
-/* IE */
-.ie-test {
-	@if support-legacy-browser(ie, "7") {
-		content: 'ie7';
+// @debug type-of(#{headings(2, 4)});
+
+.special-area {
+	$icon: 'sprites/bg-shadow-01.png';
+	$icon-url: image-url($icon, false, false);
+	$icon-path: image-url($icon, true, false);
+	// @debug $icon-path;
+	#{headings(2, 4)} {
+		font-weight: 100;
+		font-size: rem(34px);
+		background: $icon-url no-repeat;
+		width: image-width($icon-path);
+		height: image-height($icon-path);
 	}
-	@else {
-		content: 'ie8+';
+}
+
+$icons-list: (
+	bg-shadow-01,
+	bg-shadow-02,
+	bg-shadow-03,
+	icon-ball,
+	icon-bag,
+	icon-btn-drag
+);
+
+@each $icon in $icons-list {
+	$icon-string-path: 'sprites/#{$icon}.png';
+	$icon-url: image-url($icon-string-path, false, false);
+	$icon-path: image-url($icon-string-path, true, false);
+	.#{$icon} {
+		background: $icon-url no-repeat;
+		width: image-width($icon-path);
+		height: image-height($icon-path);
 	}
-}
-
-.inline-block {
-	@include inline-block();
-}
-
-.clearfix {
-	@include clearfix;
-}
-
-.opacity {
-	@include opacity(.5);
-}
-
-/* CSS3 */
-* {
-	@include input-placeholder {
-		color: #bfbfbf;
-		font-style: italic;
-	};
-	@include user-select(all);
-}
-
-.background-clip {
-	@include background-clip(border-box);
-}
-
-.background-origin {
-	@include background-origin(padding-box);
-}
-
-.background-size {
-	@include background-size(cover);
-}
-
-.background {
-	@include background(image-url("foo.png"),
-		linear-gradient(to bottom right, #333, #0c0),
-		radial-gradient(#c00, #fff 100px));
-}
-
-.border-radius {
-	@include border-radius(8px);
-}
-
-.box-shadow {
-	@include box-shadow(0 -2px 0px #4F87E2);
-}
-
-.box-sizing {
-	@include box-sizing(border-box);
-}
-
-.gradient {
-	@include background-image(linear-gradient(#ffffff, #f5f5f5 30%, #f5f5f5));
-}
-
-.transition {
-	@include transition(all 0.3s ease-out);
-}
-
-.animation {
-	@include animation(fade-in 0.4s);
-}
-
-.transform {
-	@include apply-origin(origin, false);
-	@include transform-origin();
-	@include transform( scale(1) rotate(45deg) );
-}
-
-.transform3d {
-	@include perspective(300);
-	@include perspective-origin();
-	@include transform-style(preserve-3d);
-	@include backface-visibility(visible);
-	@include transform3d( scale3d(1, 2, 1) rotate3d(10deg, 0deg, -20deg) );
-}
-
-.appearance {
-	// https://css-tricks.com/almanac/properties/a/appearance/
-	@include appearance(searchfield);
 }
