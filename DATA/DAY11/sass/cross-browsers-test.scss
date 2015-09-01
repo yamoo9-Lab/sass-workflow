@@ -1,0 +1,133 @@
+// ------------------------------------------------------------
+// 참고 URL: http://compass-style.org/reference/compass/support/
+// ------------------------------------------------------------
+
+// 브라우저 지원 설정
+// $supported-browsers: (
+// 	"chrome",
+// 	"ie",
+// 	"firefox"
+// );
+
+
+// 임계치 설정 참고
+// https://gist.github.com/chriseppstein/db821931dc50b624c84c
+// https://gist.github.com/chriseppstein/66b89cac2c6e08fc8ce4
+// 기능 향상 브라우저 사용률 임계치 설정 (1-1000)
+// $graceful-usage-threshold: 0.1; // 0.1+ -webkit-, -moz-, -o- || 5+ -webkit-
+// 기능 저하 브라우저 사용률 임계치 설정 (1-1000)
+// $critical-usage-threshold: 0.01; // 0.3+ zoom 속성 사라짐. IE 8+
+
+// 브라우저 최소 지원 버전 설정
+// $browser-minimum-versions: (
+// 	"chrome"  : "39",
+// 	"firefox" : "34",
+// 	"ie"      : "11"
+// );
+
+@import "compass";
+
+// [디버깅] 브라우저 지원 정보 출력 설정
+// $debug-browser-support: true;
+
+// @debug "$graceful-usage-threshold = #{$graceful-usage-threshold}";
+// @debug "$critical-usage-threshold = #{$critical-usage-threshold}";
+// @debug "$supported-browsers       = #{$supported-browsers}";
+// @debug "$browser-minimum-versions = #{$browser-minimum-versions}";
+
+
+// * ------------------------------------------------------------
+// * 테스트
+// * ------------------------------------------------------------
+
+/* IE */
+.ie-test {
+	@if support-legacy-browser(ie, "7") {
+		content: 'ie7';
+	}
+	@else {
+		content: 'ie8+';
+	}
+}
+
+.inline-block {
+	@include inline-block();
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.opacity {
+	@include opacity(.5);
+}
+
+/* CSS3 */
+* {
+	@include input-placeholder {
+		color: #bfbfbf;
+		font-style: italic;
+	};
+	@include user-select(all);
+}
+
+.background-clip {
+	@include background-clip(border-box);
+}
+
+.background-origin {
+	@include background-origin(padding-box);
+}
+
+.background-size {
+	@include background-size(cover);
+}
+
+.background {
+	@include background(image-url("foo.png"),
+		linear-gradient(to bottom right, #333, #0c0),
+		radial-gradient(#c00, #fff 100px));
+}
+
+.border-radius {
+	@include border-radius(8px);
+}
+
+.box-shadow {
+	@include box-shadow(0 -2px 0px #4F87E2);
+}
+
+.box-sizing {
+	@include box-sizing(border-box);
+}
+
+.gradient {
+	@include background-image(linear-gradient(#ffffff, #f5f5f5 30%, #f5f5f5));
+}
+
+.transition {
+	@include transition(all 0.3s ease-out);
+}
+
+.animation {
+	@include animation(fade-in 0.4s);
+}
+
+.transform {
+	@include apply-origin(origin, false);
+	@include transform-origin();
+	@include transform( scale(1) rotate(45deg) );
+}
+
+.transform3d {
+	@include perspective(300);
+	@include perspective-origin();
+	@include transform-style(preserve-3d);
+	@include backface-visibility(visible);
+	@include transform3d( scale3d(1, 2, 1) rotate3d(10deg, 0deg, -20deg) );
+}
+
+.appearance {
+	// https://css-tricks.com/almanac/properties/a/appearance/
+	@include appearance(searchfield);
+}
