@@ -11,9 +11,43 @@ body
 	min-height: 100vh
 
 #page
-	+container(800px)
+	+container(90%)
+	// +padding(1em)
+
+	+susy-breakpoint(600px, 4)
+		+container(80%)
+
+	*
+		box-siznig: border-box
+
+	> *
+		border-bottom: 1px solid #F9828B
+
+	img
+		width: auto
+		height: auto
+		max-width: 100%
+
+	main
+		height: 800px
+
+	aside
+		// +span(1 of 2)
+		height: 300px
+		background: $puma-main-color
+		+susy-breakpoint(600px, 4)
+			+span(3 of 4)
+
+	footer
+		// +span(1 of 2 last)
+		height: 300px
+		background: darken($puma-main-color	, 30%)
+		+susy-breakpoint(600px, 4)
+			+span(1 of 4 last)
+
 
 #page-header
+	height: 200px
 	h1
 		a
 			display: block
@@ -23,8 +57,15 @@ body
 #gnb
 	@extend %navigation
 
-#lnb
-	@extend %navigation
+	background: $puma-main-color
 
-#util-navbar
-	@extend %navigation
+	ul
+		+padding(30px null)
+
+	li
+		margin-right: .4em
+		a
+			&:hover,
+			&:focus
+				color: lighten($puma-main-color, 40%)
+

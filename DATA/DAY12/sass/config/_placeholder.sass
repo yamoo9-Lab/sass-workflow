@@ -1,11 +1,30 @@
+//
+ * --------------------------------
+ * image replacement tech.
 %ir
 	overflow: hidden
 	text-indent: -9999em
 
+//
+ * --------------------------------
+ * clearfix
+%cf
+	&::after,
+	&::before
+		content: ''
+		display: table
+	&:after
+		clear: both
+
+//
+ * --------------------------------
+ * module global navigation
 %navigation
 	ul
 		+margin(0 null)
 		padding-left: 0
+
+		@extend %cf
 
 		li
 			list-style: none
@@ -17,3 +36,7 @@
 
 			&:last-child
 				margin-right: 0
+
+	a
+		text-decoration: none
+		color: #272727
