@@ -1,0 +1,29 @@
+.one-sprite, .icon-map, .icon-bag, .icon-ball {
+  background-image: url('/images/one-sae1365173a.png');
+  background-repeat: no-repeat;
+}
+
+.icon-map {
+  background-position: 0 -2059px;
+  width: 133px;
+  height: 129px;
+}
+
+.icon-bag {
+  background-position: 0 -612px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-ball {
+  background-position: 0 -658px;
+  width: 46px;
+  height: 46px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
