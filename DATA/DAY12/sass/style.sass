@@ -15,18 +15,9 @@ body
 	+size(800px 100vh)
 	+margin(0 auto)
 
-	header h1
-		@extend %ir
-
-	#bag
-		@extend %ir
-		@extend %icon-bag
-		+position(absolute, 10px null null 500px)
-	#ball
-		@extend %ir
-		@extend %icon-ball
-		+position(fixed, 10px 10px null null)
-	#bus
-		@extend %ir
-		@extend %icon-bus
-		+position(absolute, null 100px 100px)
+	header
+		h1
+			a
+				display: block
+				@extend %ir
+				@extend %icon-puma-logo

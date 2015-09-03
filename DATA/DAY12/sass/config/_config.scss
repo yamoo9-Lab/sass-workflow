@@ -3,7 +3,9 @@
 // * --------------------------------
 @import "bourbon";
 @import "compass";
-// @import susy;
+@import "susy";
+
+// 사용자 정의 믹스인 & 플레이스홀더(모듈)
 @import "mixins";
 @import "placeholder";
 
