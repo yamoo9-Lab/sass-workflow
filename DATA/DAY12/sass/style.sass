@@ -2,12 +2,8 @@
  * --------------------------------
  * 환경설정 Configuration
  * --------------------------------
-@import config/config
-@import "sprites/sprites.css"
-
-.ir
-	overflow: hidden
-	text-indent: -9999em
+@import "config/config"
+@import "sprites/sprites"
 
 // bourbon 믹스인 테스트
 body
@@ -19,9 +15,18 @@ body
 	+size(800px 100vh)
 	+margin(0 auto)
 
-	.icon-bag
+	header h1
+		@extend %ir
+
+	#bag
+		@extend %ir
+		@extend %icon-bag
 		+position(absolute, 10px null null 500px)
-	.icon-ball
+	#ball
+		@extend %ir
+		@extend %icon-ball
 		+position(fixed, 10px 10px null null)
-	.icon-bus
+	#bus
+		@extend %ir
+		@extend %icon-bus
 		+position(absolute, null 100px 100px)

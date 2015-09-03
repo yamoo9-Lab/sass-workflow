@@ -44,7 +44,7 @@ $one-layout: smart
 $sprite-map: sprite-map("one/*.png")
 
 @each $sprite-name in sprite-names($sprite-map)
-	.#{$sprite-name}
+	%#{$sprite-name}
 		+one-sprite($sprite-name)
 		width: one-sprite-width($sprite-name)
 		height: one-sprite-height($sprite-name)

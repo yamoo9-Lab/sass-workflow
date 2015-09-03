@@ -1,7 +1,29 @@
-@import url(sprites/sprites.css);
-.ir {
+#page header h1, #page #bag, #page #ball, #page #bus {
   overflow: hidden;
   text-indent: -9999em;
+}
+
+.one-sprite, #page #bag, #page #ball, #page #bus {
+  background-image: url('../images/one-sb551436451.png');
+  background-repeat: no-repeat;
+}
+
+#page #bag {
+  background-position: -664px 0;
+  width: 46px;
+  height: 46px;
+}
+
+#page #ball {
+  background-position: -618px 0;
+  width: 46px;
+  height: 46px;
+}
+
+#page #bus {
+  background-position: -698px -174px;
+  width: 82px;
+  height: 82px;
 }
 
 body {
@@ -13,17 +35,17 @@ body {
   width: 800px;
   margin: 0 auto;
 }
-#page .icon-bag {
+#page #bag {
   position: absolute;
   top: 10px;
   left: 500px;
 }
-#page .icon-ball {
+#page #ball {
   position: fixed;
   top: 10px;
   right: 10px;
 }
-#page .icon-bus {
+#page #bus {
   position: absolute;
   right: 100px;
   bottom: 100px;
