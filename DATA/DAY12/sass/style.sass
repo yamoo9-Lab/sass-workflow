@@ -3,42 +3,25 @@
  * 환경설정 Configuration
  * --------------------------------
 @import config/config
+@import "sprites/sprites.css"
 
-//
- * --------------------------------
- * Compass 스프라이트 이미지 생성
-@import one/*.png
-
-// +all-one-sprites
-
-// 직접 스프라이트 이미지 모듈 생성
-// .img-ball
-// 	+one-sprite(icon-ball)
-// 	width: one-sprite-width(icon-ball)
-// 	height: one-sprite-height(icon-ball)
-
-// .img-bag
-// 	+one-sprite(icon-bag)
-// 	width: one-sprite-width(icon-bag)
-// 	height: one-sprite-height(icon-bag)
-
-// .img-map
-// 	+one-sprite(icon-map)
-// 	width: one-sprite-width(icon-map)
-// 	height: one-sprite-height(icon-map)
-
-
-$one-images: icon-map icon-bag icon-ball
-
-// @each ~ in문 사용해서 유지 보수
-@each $image in $one-images
-	.#{$image}
-		+one-sprite($image)
-		width: one-sprite-width($image)
-		height: one-sprite-height($image)
-
+.ir
+	overflow: hidden
+	text-indent: -9999em
 
 // bourbon 믹스인 테스트
 body
 	+margin(0)
-	+size(null 100vh)
+	// +size(null 100vh)
+
+
+#page
+	+size(800px 100vh)
+	+margin(0 auto)
+
+	.icon-bag
+		+position(absolute, 10px null null 500px)
+	.icon-ball
+		+position(fixed, 10px 10px null null)
+	.icon-bus
+		+position(absolute, null 100px 100px)

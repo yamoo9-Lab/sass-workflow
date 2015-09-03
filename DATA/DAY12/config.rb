@@ -39,7 +39,7 @@ output_style = (environment == :production) ? :compressed : :expanded
 
 # ------------------------------------------------------------------------
 # 상대 경로 지정 설정
-# relative_assets = true
+relative_assets = true
 
 # ------------------------------------------------------------------------
 # 변경된 내용 주석 처리 여부
