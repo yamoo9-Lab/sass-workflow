@@ -1,0 +1,30 @@
+@import "compass";
+
+/**
+ * --------------------------------
+ * Sprites Image 생성
+ * --------------------------------
+ */
+
+@import "sprites/*.png";
+// @include all-sprites-sprites;
+
+// .icon-bag {
+// 	@include sprites-sprite('icon-bag');
+// }
+
+// .icon-ball {
+// 	@include sprites-sprite('icon-ball');
+// }
+
+$sprites-map: sprite-map("sprites/*.png");
+@each $icon in sprite-names($sprites-map) {
+	.yamoo9 {
+		.#{$icon} {
+			@include sprites-sprite($icon);
+			width: sprites-sprite-width($icon);
+			height: sprites-sprite-height($icon);
+		}
+	}
+}
+

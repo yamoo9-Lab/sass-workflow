@@ -44,19 +44,19 @@ $browser-minimum-versions: (
 
 // @debug type-of(#{headings(2, 4)});
 
-.special-area {
-	$icon: 'sprites/bg-shadow-01.png';
-	$icon-url: image-url($icon, false, false);
-	$icon-path: image-url($icon, true, false);
-	// @debug $icon-path;
-	#{headings(2, 4)} {
-		font-weight: 100;
-		font-size: rem(34px);
-		background: $icon-url no-repeat;
-		width: image-width($icon-path);
-		height: image-height($icon-path);
-	}
-}
+// .special-area {
+// 	$icon: 'sprites/bg-shadow-01.png';
+// 	$icon-url: image-url($icon, false, false);
+// 	$icon-path: image-url($icon, true, false);
+// 	// @debug $icon-path;
+// 	#{headings(2, 4)} {
+// 		font-weight: 100;
+// 		font-size: rem(34px);
+// 		background: $icon-url no-repeat;
+// 		width: image-width($icon-path);
+// 		height: image-height($icon-path);
+// 	}
+// }
 
 $icons-list: (
 	bg-shadow-01,
@@ -67,13 +67,39 @@ $icons-list: (
 	icon-btn-drag
 );
 
-@each $icon in $icons-list {
-	$icon-string-path: 'sprites/#{$icon}.png';
-	$icon-url: image-url($icon-string-path, false, false);
-	$icon-path: image-url($icon-string-path, true, false);
-	.#{$icon} {
-		background: $icon-url no-repeat;
-		width: image-width($icon-path);
-		height: image-height($icon-path);
+@mixin automate-image ($image-list, $folder: '', $extension: 'png') {
+	@if type-of($image-list) != 'list' {
+		@error "전달된 인자 값은 리스트가 아닙니다. 리스트 데이터를 전달해주세요.";
+	}
+	@each $image in $image-list {
+		$image-string-path: '#{$folder}/#{$image}.#{$extension}';
+		$image-url: image-url($image-string-path, false, false);
+		$image-path: image-url($image-string-path, true, false);
+		.#{$image} {
+			background: $image-url no-repeat;
+			width: image-width($image-path);
+			height: image-height($image-path);
+		}
 	}
 }
+
+// @include automate-image( (
+// 	icon-ball,
+// 	icon-bag,
+// 	icon-btn-drag,
+// 	bg-shadow-01,
+// 	bg-shadow-02,
+// 	bg-shadow-03
+// ), 'sprites' );
+
+
+/**
+ * --------------------------------
+ * inline Image Data
+ * --------------------------------
+ */
+
+// .icon-bag {
+// 	// background: image-url('sprites/icon-bag.png', false, false) no-repeat;
+// 	background: inline-image('sprites/icon-bag.png') no-repeat;
+// }

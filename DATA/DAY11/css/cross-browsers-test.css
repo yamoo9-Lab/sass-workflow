@@ -1,43 +1,5 @@
-.special-area h2, .special-area h3, .special-area h4 {
-  font-weight: 100;
-  font-size: 2.125rem;
-  background: url('../images/sprites/bg-shadow-01.png') no-repeat;
-  width: 900px;
-  height: 30px;
-}
-
-.bg-shadow-01 {
-  background: url('../images/sprites/bg-shadow-01.png') no-repeat;
-  width: 900px;
-  height: 30px;
-}
-
-.bg-shadow-02 {
-  background: url('../images/sprites/bg-shadow-02.png') no-repeat;
-  width: 900px;
-  height: 60px;
-}
-
-.bg-shadow-03 {
-  background: url('../images/sprites/bg-shadow-03.png') no-repeat;
-  width: 900px;
-  height: 60px;
-}
-
-.icon-ball {
-  background: url('../images/sprites/icon-ball.png') no-repeat;
-  width: 46px;
-  height: 46px;
-}
-
-.icon-bag {
-  background: url('../images/sprites/icon-bag.png') no-repeat;
-  width: 46px;
-  height: 46px;
-}
-
-.icon-btn-drag {
-  background: url('../images/sprites/icon-btn-drag.png') no-repeat;
-  width: 42px;
-  height: 58px;
-}
+/**
+ * --------------------------------
+ * inline Image Data
+ * --------------------------------
+ */
