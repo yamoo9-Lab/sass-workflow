@@ -1,3 +1,19 @@
 %ir
 	overflow: hidden
 	text-indent: -9999em
+
+%navigation
+	ul
+		+margin(0 null)
+		padding-left: 0
+
+		li
+			list-style: none
+			white-space: nowrap
+			float: left
+
+			&:first-child
+				margin-left: 0
+
+			&:last-child
+				margin-right: 0

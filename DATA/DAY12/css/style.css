@@ -1,55 +1,54 @@
-#page header h1, #page #bag, #page #ball, #page #bus {
+#page-header h1 a {
   overflow: hidden;
   text-indent: -9999em;
 }
 
-.one-sprite, #page #bag, #page #ball, #page #bus {
+#gnb ul, #lnb ul, #util-navbar ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+#gnb ul li, #lnb ul li, #util-navbar ul li {
+  list-style: none;
+  white-space: nowrap;
+  float: left;
+}
+#gnb ul li:first-child, #lnb ul li:first-child, #util-navbar ul li:first-child {
+  margin-left: 0;
+}
+#gnb ul li:last-child, #lnb ul li:last-child, #util-navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.one-sprite, #page-header h1 a {
   background-image: url('../images/one-se1ab5f3836.png');
   background-repeat: no-repeat;
 }
 
-#page #bag {
-  background-position: -664px 0;
-  width: 46px;
-  height: 46px;
-}
-
-#page #ball {
-  background-position: -618px 0;
-  width: 46px;
-  height: 46px;
-}
-
-#page #bus {
-  background-position: -698px -174px;
-  width: 82px;
-  height: 82px;
+#page-header h1 a {
+  background-position: -153px -376px;
+  width: 194px;
+  height: 98px;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 #page {
-  height: 100vh;
-  width: 800px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
-#page #bag {
-  position: absolute;
-  top: 10px;
-  left: 500px;
+#page:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
-#page #ball {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
-#page #bus {
-  position: absolute;
-  right: 100px;
-  bottom: 100px;
-  left: 100px;
+
+#page-header h1 a {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

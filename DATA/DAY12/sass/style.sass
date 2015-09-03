@@ -8,16 +8,23 @@
 // bourbon 믹스인 테스트
 body
 	+margin(0)
-	// +size(null 100vh)
-
+	min-height: 100vh
 
 #page
-	+size(800px 100vh)
-	+margin(0 auto)
+	+container(800px)
 
-	header
-		h1
-			a
-				display: block
-				@extend %ir
-				@extend %icon-puma-logo
+#page-header
+	h1
+		a
+			display: block
+			@extend %ir
+			@extend %icon-puma-logo
+
+#gnb
+	@extend %navigation
+
+#lnb
+	@extend %navigation
+
+#util-navbar
+	@extend %navigation
