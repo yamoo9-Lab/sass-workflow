@@ -1,13 +1,13 @@
 //
  * --------------------------------
- * image replacement tech.
+ * 이미지 대체 모듈
 %ir
 	overflow: hidden
 	text-indent: -9999em
 
 //
  * --------------------------------
- * clearfix
+ * Clearfix 모듈
 %cf
 	&::after,
 	&::before
@@ -18,25 +18,15 @@
 
 //
  * --------------------------------
- * module global navigation
+ * 글로벌 내비게이션 모듈
 %navigation
 	ul
 		+margin(0 null)
 		padding-left: 0
-
 		@extend %cf
-
 		li
 			list-style: none
 			white-space: nowrap
 			float: left
-
-			&:first-child
-				margin-left: 0
-
-			&:last-child
-				margin-right: 0
-
 	a
 		text-decoration: none
-		color: #272727

@@ -11,14 +11,10 @@ body
 	min-height: 100vh
 
 #page
-	+container(90%)
-	// +padding(1em)
-
-	+susy-breakpoint(600px, 4)
-		+container(80%)
 
 	*
 		box-siznig: border-box
+		+margin(0 null)
 
 	> *
 		border-bottom: 1px solid #F9828B
@@ -42,13 +38,12 @@ body
 		// +span(1 of 2 last)
 		height: 300px
 		background: darken($puma-main-color	, 30%)
-		+susy-breakpoint(600px, 4)
-			+span(1 of 4 last)
 
 
 #page-header
-	height: 200px
+	height: 140px
 	h1
+		padding-top: 24px
 		a
 			display: block
 			@extend %ir
@@ -60,11 +55,15 @@ body
 	background: $puma-main-color
 
 	ul
-		+padding(30px null)
 
 	li
-		margin-right: .4em
+		+span(1 of 7)
+		&:hover
+			background: darken($puma-main-color, 40%)
 		a
+			display: block
+			text-align: center
+			+padding(1.4em 0)
 			&:hover,
 			&:focus
 				color: lighten($puma-main-color, 40%)

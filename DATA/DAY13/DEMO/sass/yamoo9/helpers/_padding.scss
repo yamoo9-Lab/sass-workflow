@@ -1,0 +1,13 @@
+@mixin padding($args: null) {
+	@if $args != null {
+		@each $dir in top, left, bottom, right {
+			$i: index($args, $dir);
+			@if $i {
+				padding-#{$dir}: nth($args, $i + 1);
+			}
+		}
+	}
+	@else {
+		padding: null;
+	}
+}

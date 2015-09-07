@@ -1,0 +1,22 @@
+// 참고 URL: https://netguru.co/blog/kick-off-ui-development-with-these-simple-steps
+@mixin position($position, $args) {
+	position: $position;
+	@if $args != null {
+		@each $dir in top, left, bottom, right {
+			$i: index($args, $dir);
+			@if $i {
+				#{$dir}: nth($args, $i + 1);
+			}
+		}
+	}
+}
+
+@mixin absolute($args: null) {
+	@include position(absolute, $args);
+}
+@mixin relative($args: null) {
+	@include position(relative, $args);
+}
+@mixin fixed($args: null) {
+	@include position(fixed, $args);
+}

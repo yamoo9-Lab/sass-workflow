@@ -9,13 +9,14 @@
 @import "mixins";
 @import "placeholder";
 @import "puma";
+@import "puma_layout";
 
 // susy 전역 설정
 $susy: (
 	columns: 2,
 	gutters: 1/12,
 	debug: (
-		image: show,
+		image: hide,
 		color: rgba(#66f, .75)
 	)
 );

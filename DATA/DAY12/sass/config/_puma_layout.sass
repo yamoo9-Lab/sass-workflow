@@ -1,0 +1,21 @@
+#page
+	+container
+
+	+susy-breakpoint(600px, 4)
+		+container(96%)
+
+	#gnb
+		li
+			+span(1 of 3)
+			&:nth-child(3n)
+				+last()
+			+susy-breakpoint(600px, 4)
+				+span(1 of 7)
+
+	aside
+		+susy-breakpoint(600px, 4)
+			+span(3)
+
+	footer
+		+susy-breakpoint(600px, 4)
+			+span(1 last)
