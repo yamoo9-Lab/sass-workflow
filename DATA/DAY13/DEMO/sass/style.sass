@@ -11,5 +11,16 @@ body
 	+container()
 	min-height: 100vh
 
-	img
-		@extend %hidden
+
+//
+ * --------------------------------
+ * RWD Settings
+ * --------------------------------
+img
+	+rwd-image(670px)
+
+iframe
+	border: 0
+
+.rwd-video
+	+rwd-video(true)

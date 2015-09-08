@@ -11,7 +11,8 @@ $rhythm-unit:      px;
 // 제목 설계
 @include headings(4) {
 	font-weight: 100;
-
+	@include leader();
+	@include trailer(2);
 }
 
 h1 {
