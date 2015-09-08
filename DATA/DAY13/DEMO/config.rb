@@ -5,10 +5,7 @@
 # ------------------------------------------------------------------------
 # Compass 플러그인 추가
 require 'compass/import-once/activate'
-require 'compass-normalize'
 require 'sass-globbing'
-require 'normalize-scss'
-require 'bourbon'
 require 'susy'
 
 # ------------------------------------------------------------------------
