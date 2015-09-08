@@ -1,3 +1,35 @@
+@import "compass/reset";
+
 // 본문 글자 크기/행간 설정
 $base-font-size:   16px;
 $base-line-height: $base-font-size * 1.5; // 21px
+$rhythm-unit:      px;
+
+// 기본이되는 베이스라인 수립(Establish)
+@include establish-baseline();
+
+// 제목 설계
+@include headings(4) {
+	font-weight: 100;
+
+}
+
+h1 {
+	@include adjust-font-size-to($base-font-size * 4);
+}
+h2 {
+	@include adjust-font-size-to($base-font-size * 3);
+}
+h3 {
+	@include adjust-font-size-to($base-font-size * 2);
+}
+h4 {
+	@include adjust-font-size-to($base-font-size * 1.5);
+}
+
+// 본문 설계
+p {
+	@include adjust-font-size-to($base-font-size);
+	// @include leader();
+	@include trailer();
+}
