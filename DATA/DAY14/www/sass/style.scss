@@ -1,0 +1,51 @@
+// * --------------------------------
+// * Sass 라이브러리 모듈 호출
+// * --------------------------------
+@import "libs/susy/susy";
+@import "libs/yamoo9/yamoo9";
+
+
+// * --------------------------------
+// * [Normalize] | 브라우저 CSS 초기화
+// * --------------------------------
+
+// [옵션]
+// IE 6, 7 브라우저를 지원하는 Normalize를
+// 사용하려면 아래 설정 값을 true로 변경합니다.
+// $legacy_browser_support: true;
+// @import "libs/normalize/normalize";
+
+
+// * --------------------------------
+// * 타이포그래피
+// * --------------------------------
+@import "libs/vertical-rhythms/vertical-rhythms";
+
+$rhythm-unit: px;
+$base-font-size: 14px;
+$base-line-height: $base-font-size * 1.5;
+
+@import "modules/typography";
+
+// * --------------------------------
+// * 레이아웃
+// * --------------------------------
+@import "modules/layout";
+
+
+#page {
+	@include container();
+	min-height: 100vh;
+
+	header {
+		@include span(4);
+		height: $base-line-height * 10;
+		@include bg-color(red, 0.4);
+	}
+}
+
+
+
+// * --------------------------------
+// * 스타일링
+// * --------------------------------

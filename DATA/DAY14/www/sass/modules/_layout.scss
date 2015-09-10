@@ -1,0 +1,44 @@
+// * --------------------------------
+// * Susy2 글로벌 레이아웃 설정
+// * 1200px, 12, 80px, 20px(10px, 10px)
+// * --------------------------------
+$susy: (
+
+	// 컨테이너의 가로 폭
+	container: 1200px,
+
+	// 컨테이너의 정렬(position)
+	// container-position: center,
+
+	// 컬럼의 총 개수
+	columns: 12,
+
+	// 거터 폭 설정
+	gutters: 20px/80px,
+
+	// 고정 폭 디자인을 위한 설정!!
+	math: static,
+
+	column-width: 80px,
+
+	// 디버그 모드
+	debug: (
+
+		// 디버깅 이미지 설정
+		// 안보이기(hide)
+		// 보이기(show) - 베이스라인, 컬럼
+		// 베이스라인 보이기 (show-baseline)
+		// 컬럼 보이기 (show-columns)
+		image: show,
+
+		// 컬럼 색상
+		color: rgba(#E5742F, 0.3),
+
+		// 디버깅 모드 아웃풋 설정
+		// output: overlay,
+
+		// 디버깅 그리드 토글 위치
+		toggle: right bottom,
+
+	)
+);
