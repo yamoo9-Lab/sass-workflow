@@ -5,16 +5,20 @@
 $susy: (
 
 	// 컨테이너의 가로 폭
-	container: 1120px,
+	container: 1100px,
 
 	// 컨테이너의 정렬(position)
 	// container-position: center,
 
 	// 컬럼의 총 개수
-	columns: 3 2,
+	columns: 1 2 3 2 1,
 
 	// 거터 폭 설정
 	gutters: 1/12,
+
+	// 출력 방식
+	// float | isolate
+	output: isolate,
 
 	// 거터의 방향
 	// after         (margin-right)
