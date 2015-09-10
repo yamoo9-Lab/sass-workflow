@@ -38,28 +38,42 @@ $bh: $base-line-height;
 	@include container();
 	min-height: 100vh;
 
-	.news {
-		@include span(1 at 2);
-		height: $bh * 8;
-		@include bg-color(#7045CF, 0.5);
+	> * {
+		&::before {
+			display: block;
+			content: attr(class);
+			text-align: center;
+			font-size: $bh * 3;
+			line-height: $bh * 8;
+		}
 	}
 
-	.banner {
+	.one {
 		@include span(1 at 1);
 		height: $bh * 8;
-		@include bg-color(#3CCA49, 0.5);
+		background: rgba(red, .3);
 	}
-
-	.samsung {
-		@include span(3 of 5);
+	.two {
+		@extend %hidden;
+		@include span(1 at 2);
 		height: $bh * 8;
-		@include bg-color(#2F22BE, 0.5);
+		background: rgba(cyan, .3);
 	}
-
-	.human {
-		@include span(2 of 5 last);
+	.three {
+		@include span(2 at 2);
 		height: $bh * 8;
-		@include bg-color(#DFC51D, 0.5);
+		background: rgba(magenta, .3);
+	}
+	.four {
+		@extend %hidden;
+		@include span(1 at 4);
+		height: $bh * 8;
+		background: rgba(yellow, .3);
+	}
+	.five {
+		@include span(2 at 4);
+		height: $bh * 8;
+		background: rgba(blue, .3);
 	}
 
 }
