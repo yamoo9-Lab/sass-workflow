@@ -12,7 +12,7 @@ $rhythm-unit:      px;
 @include headings(4) {
 	font-weight: 100;
 	@include leader();
-	@include trailer(2);
+	@include trailer();
 }
 
 h1 {

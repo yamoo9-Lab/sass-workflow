@@ -1,8 +1,43 @@
 // Susy Global Settings
 $susy: (
-	columns: 3,
+	// container: 1200px,
+	// container-position: left,
+	columns: 2 6 2 2,
+	// column-width: 80px,
+	gutters: 20px/80px,
+	gutter-position: split,
+	// math: static,
+	output: isolate,
 	debug: (
-		image: show-baseline,
+		image: show,
 		color: rgba(#50B6D1, 0.3)
 	)
 );
+
+#page {
+	@include container(1200px);
+	min-height: 100vh;
+
+	// > * {
+	// 	height: $base-line-height * 5;
+	// 	@include bg-color(#347CFF, 0.5);
+	// 	&::before {
+	// 		content: attr(class);
+	// 		text-align: center;
+	// 	}
+	// }
+
+	// .main {
+	// 	@include span(2 at 2);
+	// }
+	// .side {
+	// 	@include span(1 at 1);
+	// }
+	// .content {
+	// 	// @include span(1 at 3);
+	// }
+	// .banner {
+	// 	// @include span(1 at 4);
+	// }
+}
+
