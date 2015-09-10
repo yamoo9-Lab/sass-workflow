@@ -2,7 +2,7 @@
 
 `Gulp`, `Sass`, `Browser Sync` 등을 활용하는 **프로젝트 툴킷**입니다.
 
-![browsersync](http://www.browsersync.io/img/ezgif.com-optimize.gif)
+![browsersync](../../IMAGES/gulp-sass-browser-sync.jpg)
 
 ## 설치
 본 프로젝트 키트는 `Node.js`(필수사항), `Ruby`(선택사항) 환경에서 구동됩니다. 아래 목록의 플랫폼을 각각 설치해야 정상 작동됩니다. 프로젝트에 사용되는 `Sass` 엔진은 기본적으로 `Node Sass`를 사용합니다. 현재 `Node Sass`는 `Sass` 문법을 지원하지 않습니다. 오직 `Scss` 문법만 사용 가능합니다. `Sass` 문법을 사용하고자 한다면 `Ruby Sass`를 사용하세요. :-)
