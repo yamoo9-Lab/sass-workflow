@@ -25,6 +25,8 @@ $rhythm-unit: px;
 $base-font-size: 14px;
 $base-line-height: $base-font-size * 1.5;
 
+$bh: $base-line-height;
+
 @import "modules/typography";
 
 // * --------------------------------
@@ -32,16 +34,34 @@ $base-line-height: $base-font-size * 1.5;
 // * --------------------------------
 @import "modules/layout";
 
-
 #page {
 	@include container();
 	min-height: 100vh;
 
-	header {
-		@include span(4);
-		height: $base-line-height * 10;
-		@include bg-color(red, 0.4);
+	.news {
+		@include span(1 at 2);
+		height: $bh * 8;
+		@include bg-color(#7045CF, 0.5);
 	}
+
+	.banner {
+		@include span(1 at 1);
+		height: $bh * 8;
+		@include bg-color(#3CCA49, 0.5);
+	}
+
+	.samsung {
+		@include span(3 of 5);
+		height: $bh * 8;
+		@include bg-color(#2F22BE, 0.5);
+	}
+
+	.human {
+		@include span(2 of 5 last);
+		height: $bh * 8;
+		@include bg-color(#DFC51D, 0.5);
+	}
+
 }
 
 

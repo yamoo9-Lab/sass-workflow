@@ -5,21 +5,31 @@
 $susy: (
 
 	// 컨테이너의 가로 폭
-	container: 1200px,
+	container: 1120px,
 
 	// 컨테이너의 정렬(position)
 	// container-position: center,
 
 	// 컬럼의 총 개수
-	columns: 12,
+	columns: 3 2,
 
 	// 거터 폭 설정
-	gutters: 20px/80px,
+	gutters: 1/12,
+
+	// 거터의 방향
+	// after         (margin-right)
+	// before        (margin-left)
+	// split         (margin-left, margin-right)
+	// inside        (padding-left, padding-right)
+	// inside-static (padding)
+	// gutter-position: inside-static,
 
 	// 고정 폭 디자인을 위한 설정!!
-	math: static,
+	// math: static,
 
-	column-width: 80px,
+	// 고정 폭 디자인을 위한 Math 설정 시,
+	// 반드시 column-width 설정이 필요하다.
+	// column-width: 80px,
 
 	// 디버그 모드
 	debug: (
@@ -38,7 +48,7 @@ $susy: (
 		// output: overlay,
 
 		// 디버깅 그리드 토글 위치
-		toggle: right bottom,
+		// toggle: right bottom,
 
 	)
 );
