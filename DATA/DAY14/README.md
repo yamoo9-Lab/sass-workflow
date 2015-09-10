@@ -1,4 +1,4 @@
-# Gulp with Sass + Browser-sync ProjectKit `v0.0.2`
+# Sass + Browser-sync ProjectKit `v0.0.2`
 
 `Gulp`, `Sass`, `Browser Sync` 등을 활용하는 **프로젝트 툴킷**입니다.
 
