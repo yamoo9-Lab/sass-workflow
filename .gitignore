@@ -1,5 +1,8 @@
 # User
-_Class_1
+_Class_*
+
+
+
 
 # Logs
 logs
@@ -36,9 +39,3 @@ node_modules
 
 # PSD
 # .psd
-
-#temp
-nAct-fix-by-yamoo9-v1.3.zip
-DAY03/prepros.cfg
-
-DAY13/sass/part/_susy-grid.scss
