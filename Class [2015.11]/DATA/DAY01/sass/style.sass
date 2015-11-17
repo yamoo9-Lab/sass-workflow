@@ -1,0 +1,57 @@
+//
+ * --------------------------------
+ * 브라우저 노멀라이징
+ * --------------------------------
+@import common/normalize
+
+//
+ * --------------------------------
+ * 사용자 정의 초기화
+ * --------------------------------
+html
+	overflow-y: scroll
+	-webkit-font-smoothing: antialiased
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
+
+body
+	width: 840px
+	margin: 25px auto
+	font: 87.5%/1.5 "Source Sans Pro", Dotum, Sans-Serif
+	color: #313131
+
+p
+	margin-top: 0
+	letter-spacing: -.02em
+
+//
+ * --------------------------------
+ * 사용자 정의 모듈
+ * --------------------------------
+.columns-2
+	-webkit-column-count: 2
+	column-count: 2
+	-webkit-column-gap: 15px
+	column-gap: 15px
+
+.columns-3
+	margin-top: 1em
+	-webkit-column-count: 3
+	-webkit-column-gap: 14px
+	column-count: 3
+	column-gap: 14px
+
+.clearfix:before,
+.clearfix:after
+	content: ''
+	display: table
+
+.clearfix:after
+	clear: both
+
+//
+ * --------------------------------
+ * 페이지 구조 스타일 모듈 호출
+ * --------------------------------
+@import pages/header
+@import pages/navigation
+@import pages/main
