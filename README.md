@@ -7,3 +7,6 @@
 ---
 
 ## 수업 진행내용
+
+[DAY 01](Class [2015.11]/DATA/DAY01/README.md)
+[DAY 02](Class [2015.11]/DATA/DAY02/README.md)
