@@ -1,0 +1,60 @@
+//
+ * --------------------------------
+ * 모든 프로젝트에 공통으로 사용되는
+ * 공통 class 모듈
+ * --------------------------------
+
+// 가운데 배치(margin)
+// --------------------------------
+.margin-center
+	margin:
+		left: auto
+		right: auto
+
+// Clearfix 모듈
+// --------------------------------
+// Legacy
+.cf, .clearfix
+	&:after
+		content: ''
+		display: block
+		clear: both
+
+// Micro
+.micro-clearfix
+	&:before,
+	&:after
+		content: ''
+		display: table
+	&:after
+		clear: both
+
+// Image Replacement 모듈
+// --------------------------------
+.ir
+	overflow:    hidden
+	display:     block
+	text-indent: -9999em
+
+// a11y-hidden 모듈
+// 스크린리더가 읽을 수 읽을 수 있는
+// 화면 감춤 class 모듈
+// --------------------------------
+.a11y-hidden
+	overflow: hidden
+	position: absolute
+	clip:     rect(0 0 0 0) // IE 6,7
+	clip:     rect(0,0,0,0)
+	width:    1px
+	height:   1px
+	margin:   -1px
+	border:   0
+	padding:  0
+
+	&.focusable:focus
+		overflow: visible
+		position: static
+		clip:     auto
+		width:    auto
+		height:   auto
+		margin:   0

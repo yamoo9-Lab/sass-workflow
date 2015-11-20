@@ -1,0 +1,18 @@
+.carousel
+	position: relative
+	width: 100%
+
+	.carousel-item
+		display: none
+		&.active
+			display: block
+
+	// 미디어쿼리 구문 (중첩)
+	@media screen and (min-width: 43.75rem)
+		width: 90%
+		margin:
+			left: auto
+			right: auto
+
+	@media screen and (min-width: 68.75rem)
+		width: 62.5rem

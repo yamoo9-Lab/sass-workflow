@@ -1,0 +1,36 @@
+//
+ * --------------------------------
+ * 스타일 모듈 호출
+ * 1. 초기화(Inititialization)
+ * 2. 공통(Common)
+ * --------------------------------
+@import modules/init/reset
+@import modules/common/common
+//
+ * --------------------------------
+ * 그리드 시스템 (가이드)
+ * --------------------------------
+@import modules/grid-system/grid
+//
+ * --------------------------------
+ * 페이지 모듈 호출
+ * --------------------------------
+@import pages/skip-to-content
+
+body
+	&:hover
+		@extend .baseline
+		min-height: 100vh
+
+.container
+	margin-top: 10px * 2
+
+	&:last-of-type
+		margin-bottom: 10px * 2
+
+//
+ * --------------------------------
+ * 반응형 웹 스타일 모듈 호출
+ * --------------------------------
+@import modules/rwd/rwd
+

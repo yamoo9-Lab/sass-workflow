@@ -1,0 +1,81 @@
+// 베이스라인
+.baseline
+	background: linear-gradient(180deg, transparent 90%, #fc414b)
+	background-size: 10px 10px
+
+// 컨테이너
+.container
+	@extend .margin-center
+	// @extend .baseline
+	@extend .cf
+	width: 1200px
+	// min-height: 100vh
+	.fluid &
+		width: auto
+		max-width: 1200px
+
+// 컬럼 레이아웃(Float)
+[class*="col-"]
+	float: left
+	height: 80px
+
+// 컬럼 개수에 따른 폭 설정
+.col-1
+	width: 100px * 1
+.col-2
+	width: 100px * 2
+.col-3
+	width: 100px * 3
+.col-4
+	width: 100px * 4
+.col-5
+	width: 100px * 5
+.col-6
+	width: 100px * 6
+.col-7
+	width: 100px * 7
+.col-8
+	width: 100px * 8
+.col-9
+	width: 100px * 9
+.col-10
+	width: 100px * 10
+.col-11
+	width: 100px * 11
+.col-12
+	width: 100px * 12
+
+// %를 사용한 Fluid 그리드 컬럼 설정
+.fluid
+	.col-1
+		width: 100% / (12/1)
+	.col-2
+		width: 100% / (12/2)
+	.col-3
+		width: 100% / (12/3)
+	.col-4
+		width: 100% / (12/4)
+	.col-5
+		width: 100% / (12/5)
+	.col-6
+		width: 100% / (12/6)
+	.col-7
+		width: 100% / (12/7)
+	.col-8
+		width: 100% / (12/8)
+	.col-9
+		width: 100% / (12/9)
+	.col-10
+		width: 100% / (12/10)
+	.col-11
+		width: 100% / (12/11)
+	.col-12
+		width: 100% / (12/12)
+
+// 색상
+.col-red
+	background: rgba(#EC3B56, 0.45)
+.col-green
+	background: rgba(#37ECA6, 0.45)
+.col-blue
+	background: rgba(#308FE7, 0.45)

@@ -1,0 +1,18 @@
+.skip-to-content
+
+	a
+		// class 모듈 상속(Inheritance)
+		@extend .a11y-hidden
+		@extend .focusable
+
+		display: block
+		border-radius: 0 0 4px 4px
+		padding: 1em 2em
+		text-decoration: none
+		background: #303030
+		color: #fff
+
+		// 자바스크립트 미지원 환경에서 처리되는 스타일 코드
+		.no-js &
+			color: #000
+			background: #fff
