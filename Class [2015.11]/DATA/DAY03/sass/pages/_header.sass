@@ -1,0 +1,51 @@
+$alpha: 0.4
+
+.banner-sale
+	@extend .grid-4
+	// @extend .push-2
+	height: $leading * 24
+	background: rgba($u-red, $alpha)
+
+.banner-event
+	@extend .banner-sale
+	// @extend .pull-2
+	background: rgba($u-cyan, $alpha)
+
+.banner-summer
+	@extend .break
+	height: $leading * 12
+	background: rgba($u-light-yellow, $alpha)
+
+.content-headline
+	@extend .break
+	@extend .grid-2
+	@extend .push-2
+	height: $leading * 24
+	background: rgba($u-dark-gray, $alpha)
+
+.content-banner-sale
+	@extend .grid-2
+	@extend .pull-2
+	height: $leading * 24
+	background: rgba($u-brown, $alpha)
+
+.content-banner-accessories
+	@extend .grid-2
+	height: $leading * 24
+	background: rgba($u-dark-orange, $alpha)
+
+.content-bag-banner-sale
+	@extend .grid-2
+	@extend .fr
+	height: $leading * 24 * 2
+	background: rgba($u-dark-snow, $alpha)
+
+.content-shoes-banner
+	@extend .grid-6
+	height: $leading * 24
+	background: rgba($u-dark-red-orange, $alpha)
+
+.footer-banner
+	@extend .break
+	height: $leading * 12
+	background: rgba($u-dark-red-orange, $alpha)
