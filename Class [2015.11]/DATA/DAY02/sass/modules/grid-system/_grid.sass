@@ -8,11 +8,27 @@
 	@extend .margin-center
 	// @extend .baseline
 	@extend .cf
+	overflow: hidden
+	position: relative
 	width: 1200px
-	// min-height: 100vh
+
+	&:hover:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		min-height: 100vh
+		background: linear-gradient(90deg, hsla(238, 95%, 69%, 0.4), hsla(240, 85%, 87%, 0.4))
+		// background: linear-gradient(90deg, transparent 10%, hsla(342, 92%, 55%, 0.6) 10%, hsla(342, 92%, 55%, 0.6) 90%, transparent 90%)
+		background-size: 100px 100px
+
 	.fluid &
 		width: auto
 		max-width: 1200px
+
+		&:hover:before
+			background-size: 8.4% 8.4% // (1/12*100)%
 
 // 컬럼 레이아웃(Float)
 [class*="col-"]
