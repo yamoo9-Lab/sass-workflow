@@ -148,9 +148,7 @@ body
 	background-size:  $leading $leading
 
 .container
-	position: relative
 	width:    $page-width
-	height:   100vh
 	margin:
 		left:  auto
 		right: auto
@@ -164,6 +162,9 @@ body
 	// $layout-view 변수 값이 true이면 화면에 영역별 색상과 그리드가 그려짐
 	// 값이 false일 경우 화면에 색상/그리드 제거
 	@if $layout-view == true
+		position: relative
+		height:   100vh
+
 		&:hover:before
 			content:          ''
 			position:         absolute
@@ -438,7 +439,7 @@ body:hover{min-height:100vh;}
 html{overflow-y:visible;-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,0,0.004);}
 body{margin:0;font:100%/1.5 "Helvetica Neue",Helvetica,Verdana,Sans-Serif;color:#202020;}
 .leading-10{background-image:linear-gradient(180deg,transparent 90%,rgba(13,0,38,0.4));background-size:10px 10px;}
-.container{position:relative;width:960px;height:100vh;margin-left:auto;margin-right:auto;}
+.container{width:960px;margin-left:auto;margin-right:auto;}
 .container:after{content:"";display:block;clear:both;}
 .container .fl,.container .grid-1,.container .grid-2,.container .content-headline,.container .content-banner-sale,.container .content-banner-accessories,.container .content-bag-banner-sale,.container .grid-3,.container .grid-4,.container .banner-sale,.container .banner-event,.container .grid-5,.container .grid-6,.container .content-shoes-banner,.container .grid-7,.container .grid-8{float:left;}
 .container .fr,.container .content-bag-banner-sale{float:right;}
