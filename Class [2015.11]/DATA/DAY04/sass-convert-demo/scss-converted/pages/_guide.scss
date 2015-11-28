@@ -1,0 +1,7 @@
+body:hover {
+	@if $layout-view == true {
+		@extend %leading-10;
+
+		min-height: 100vh;
+	}
+}

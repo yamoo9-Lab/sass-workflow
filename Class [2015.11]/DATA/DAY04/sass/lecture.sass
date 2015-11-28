@@ -1,0 +1,65 @@
+@import settings/preference
+// -----------------------------------
+// 모듈
+%position-center
+	margin:
+		left: auto
+		right: auto
+
+.page
+	.wrapper
+		@extend %position-center
+		width: $page-width
+
+		[class*='grid-']
+			float: left
+			&.split
+				margin:
+					left: $gutter-width/2
+					right: $gutter-width/2
+			&.before
+				margin-left: $gutter-width
+			&.after
+				margin-right: $gutter-width
+
+
+
+// //
+//  * --------------------------------
+//  * 플레이스홀더(대체) 선택자
+//  * Placeholder Selector: %
+//  * --------------------------------
+
+// // 재사용 가능한 모듈
+// // 사용하지 않을 경우 CSS로 처리되지 않는다.
+// // 효율적으로 CSS 코드 관리르 가능케 한다.
+// %border-box
+// 	box-sizing: border-box
+
+// %reset-list
+// 	padding-left: 0
+// 	list-style: none
+
+// %remove-img-space
+// 	vertical-align: bottom
+
+// // ------------------------------------
+
+// [role=navigation]
+// 	ul
+// 		@extend %reset-list
+
+// 	a
+// 		@extend %remove-img-space
+
+// .app-header
+// 	@extend %border-box
+
+// .app-main
+// 	article
+// 		@extend %border-box
+
+
+// .app-footer
+// 	ul
+// 		@extend %reset-list

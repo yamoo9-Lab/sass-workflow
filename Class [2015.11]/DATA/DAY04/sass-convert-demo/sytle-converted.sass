@@ -1,0 +1,105 @@
+html
+  overflow-y: visible
+  -webkit-font-smoothing: antialiased
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004)
+
+body
+  margin: 0
+  font: 100%/1.5 "Helvetica Neue", Helvetica, Verdana, Sans-Serif
+  color: #202020
+
+  &:hover
+    background-image: linear-gradient(180deg, transparent 90%, rgba(13, 0, 38, 0.4))
+    background-size: 10px 10px
+
+.page.container
+  width: 960px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  height: 100vh
+
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+  &:hover:before
+    content: ""
+    position: absolute
+    z-index: 10000
+    left: 0
+    top: 0
+    width: 100%
+    height: 121vh
+    background-image: linear-gradient(90deg, rgba(112, 69, 207, 0.3) 50%, transparent 50%)
+    background-size: 240px 240px
+
+  .content-headline, .content-banner-sale, .content-banner-accessories, .content-bag-banner-sale, .banner-sale, .banner-event, .content-shoes-banner
+    float: left
+
+  .content-bag-banner-sale
+    float: right
+
+  .content-headline, .content-banner-sale
+    position: relative
+
+  .banner-summer, .content-headline, .footer-banner
+    clear: both
+
+  .content-headline, .content-banner-sale, .content-banner-accessories, .content-bag-banner-sale
+    width: 240px
+
+  .banner-sale, .banner-event
+    width: 480px
+
+  .content-shoes-banner
+    width: 720px
+
+  .content-headline
+    left: 240px
+
+  .content-banner-sale
+    left: -240px
+
+body:hover
+  min-height: 100vh
+
+.banner-sale
+  height: 240px
+  background: rgba(236, 0, 60, 0.85)
+
+.banner-event
+  height: 240px
+  background: rgba(236, 0, 60, 0.85)
+  background: rgba(34, 104, 105, 0.85)
+
+.banner-summer
+  height: 120px
+  background: rgba(255, 237, 191, 0.85)
+
+.content-headline
+  height: 240px
+  background: rgba(13, 0, 38, 0.85)
+
+.content-banner-sale
+  height: 240px
+  background: rgba(138, 63, 17, 0.85)
+
+.content-banner-accessories
+  height: 240px
+  background: rgba(215, 108, 44, 0.85)
+
+.content-bag-banner-sale
+  height: 480px
+  background: rgba(233, 217, 165, 0.85)
+
+.content-shoes-banner
+  height: 240px
+  background: rgba(217, 161, 86, 0.85)
+
+.footer-banner
+  height: 120px
+  background: rgba(110, 165, 123, 0.85)
+
+/*# sourceMappingURL=style.css.map

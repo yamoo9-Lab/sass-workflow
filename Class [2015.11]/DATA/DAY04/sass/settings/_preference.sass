@@ -1,0 +1,43 @@
+//
+ * ----------------------------------------------
+ * RWD 반응형 웹 디자인 중단점(Breakpoint) 설계 변수 설정
+ * Mobile First : M > T > D > TV
+ * Desktop First: D > T > M
+ * ----------------------------------------------
+// Desktop First $variables
+$bp-tablet: 760px
+$bp-mobile: 320px
+
+// Mobile First $variables
+// $bp-tablet:  780px
+// $bp-desktop: 1180px
+// $bp-wide:    1980px
+
+
+
+//
+ * --------------------------------
+ * 그리드 시스템 설계 변수 설정
+ * --------------------------------
+$gutter-width: 20px
+$column-count: 12
+$column-width: 120px
+// $page-width: ($column-width+$gutter-width)*$column-count
+$page-width: ($gutter-width*($column-count - 1)) + ($column-width*$column-count)
+
+//
+ * --------------------------------
+ * Sass $변수 선언
+ * $memory: '메모리'
+ * --------------------------------
+// $page-width: 1360px
+// $gutter-width: 15px
+// $column-count: 12
+// $column-width: (1280 - (24*16))/16
+// $column-width: ($page-width - ($gutter-width*$column-count))/$column-count
+// $column-width: 90px
+// $page-width: (80+18)*16
+// $page-width: ($column-width+$gutter-width)*$column-count
+
+
+// @debug $column-width

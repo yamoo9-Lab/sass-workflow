@@ -1,0 +1,145 @@
+%leading-10
+	background-image: linear-gradient(180deg, transparent 90%, $leading-color)
+	background-size:  $leading $leading
+
+%container
+	width:    $page-width
+	margin:
+		left:  auto
+		right: auto
+
+	&:after
+		content: ''
+		display: block
+		clear:   both
+
+	@if $layout-view == true
+		position: relative
+		height:   100vh
+
+		&:hover:before
+			content:          ''
+			position:         absolute
+			z-index:          10000
+			left:             0
+			top:              0
+			width:            100%
+			height:           121vh
+			background-image: linear-gradient(90deg, $columns-color 50%, transparent 50%)
+			background-size:  $column-width*2 $column-width*2
+
+	// 공통 class 모듈
+	// ------------------------------------
+	%fl
+		float: left
+
+	%fr
+		float: right
+
+	%pr
+		position: relative
+
+	%break
+		clear: both
+
+	// %grid-*
+	// ------------------------------------
+	%grid-1
+		@extend %fl
+		width: $column-width * 1
+
+	%grid-2
+		@extend %fl
+		width: $column-width * 2
+
+	%grid-3
+		@extend %fl
+		width: $column-width * 3
+
+	%grid-4
+		@extend %fl
+		width: $column-width * 4
+
+	%grid-5
+		@extend %fl
+		width: $column-width * 5
+
+	%grid-6
+		@extend %fl
+		width: $column-width * 6
+
+	%grid-7
+		@extend %fl
+		width: $column-width * 7
+
+	%grid-8
+		@extend %fl
+		width: $column-width * 8
+
+	// %push-*
+	// ------------------------------------
+	%push-1
+		@extend %pr
+		left: $column-width * 1
+
+	%push-2
+		@extend %pr
+		left: $column-width * 2
+
+	%push-3
+		@extend %pr
+		left: $column-width * 3
+
+	%push-4
+		@extend %pr
+		left: $column-width * 4
+
+	%push-5
+		@extend %pr
+		left: $column-width * 5
+
+	%push-6
+		@extend %pr
+		left: $column-width * 6
+
+	%push-7
+		@extend %pr
+		left: $column-width * 7
+
+	%push-8
+		@extend %pr
+		left: $column-width * 8
+
+	// %pull-*
+	// ------------------------------------
+	%pull-1
+		@extend %pr
+		left: $column-width * -1
+
+	%pull-2
+		@extend %pr
+		left: $column-width * -2
+
+	%pull-3
+		@extend %pr
+		left: $column-width * -3
+
+	%pull-4
+		@extend %pr
+		left: $column-width * -4
+
+	%pull-5
+		@extend %pr
+		left: $column-width * -5
+
+	%pull-6
+		@extend %pr
+		left: $column-width * -6
+
+	%pull-7
+		@extend %pr
+		left: $column-width * -7
+
+	%pull-8
+		@extend %pr
+		left: $column-width * -8

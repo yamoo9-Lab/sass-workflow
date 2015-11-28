@@ -1,0 +1,23 @@
+.page .wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page .wrapper {
+  width: 1660px;
+}
+.page .wrapper [class*='grid-'] {
+  float: left;
+}
+.page .wrapper [class*='grid-'].split {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.page .wrapper [class*='grid-'].before {
+  margin-left: 20px;
+}
+.page .wrapper [class*='grid-'].after {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=lecture.css.map */
