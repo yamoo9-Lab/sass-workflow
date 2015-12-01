@@ -1,0 +1,102 @@
+$gs-column-width: 100px !default
+
+// 베이스라인
+// Interpolation( 보간법, #{$variable} )
+#{$set-placeholder}baseline
+	background: linear-gradient($baseline-direction, transparent $baseline-position, $baseline-color)
+	background-size: $baseline-height-gap $baseline-height-gap
+
+// 컨테이너
+#{$set-placeholder}container
+	@extend .margin-center
+	// @extend .baseline
+	@extend .cf
+	overflow: hidden
+	position: relative
+	width: $gs-container-width
+
+	&:hover:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		min-height: 100vh
+		background: $gs-columns-gradient
+		background-size: $gs-column-width $gs-column-width
+
+	.fluid &
+		width: auto
+		max-width: $gs-container-width
+
+		&:hover:before
+			background-size: $gs-fluid-column-width $gs-fluid-column-width
+
+// 컬럼 레이아웃(Float)
+[class*="col-"]
+	float: left
+	// Sass의 조건문 @if 조건 확인
+	@if $display-layout == true
+		height: 80px
+
+// 컬럼 개수에 따른 폭 설정
+.col-1
+	width: $gs-column-width * 1
+.col-2
+	width: $gs-column-width * 2
+.col-3
+	width: $gs-column-width * 3
+.col-4
+	width: $gs-column-width * 4
+.col-5
+	width: $gs-column-width * 5
+.col-6
+	width: $gs-column-width * 6
+.col-7
+	width: $gs-column-width * 7
+.col-8
+	width: $gs-column-width * 8
+.col-9
+	width: $gs-column-width * 9
+.col-10
+	width: $gs-column-width * 10
+.col-11
+	width: $gs-column-width * 11
+.col-12
+	width: $gs-column-width * 12
+
+// %를 사용한 Fluid 그리드 컬럼 설정
+.fluid
+	.col-1
+		width: 100% / (12/1)
+	.col-2
+		width: 100% / (12/2)
+	.col-3
+		width: 100% / (12/3)
+	.col-4
+		width: 100% / (12/4)
+	.col-5
+		width: 100% / (12/5)
+	.col-6
+		width: 100% / (12/6)
+	.col-7
+		width: 100% / (12/7)
+	.col-8
+		width: 100% / (12/8)
+	.col-9
+		width: 100% / (12/9)
+	.col-10
+		width: 100% / (12/10)
+	.col-11
+		width: 100% / (12/11)
+	.col-12
+		width: 100% / (12/12)
+
+// 색상
+@if $display-layout == true
+	.col-#{$layout-red}
+		background: rgba(#EC3B56, 0.45)
+	.col-#{$layout-green}
+		background: rgba(#37ECA6, 0.45)
+	.col-#{$layout-blue}
+		background: rgba(#308FE7, 0.45)

@@ -1,0 +1,83 @@
+//
+ * --------------------------------------------
+ * Sass 변수
+ * $변수명: 값
+ *
+ * !defualt 플래그
+ * 변수 기본 값을 설정할 때 사용
+ *
+ * --------------------------------------------
+ *
+ * Sass 자료 유형 (Data Type)
+ *
+ * 비어있음
+ * null (부정)
+ *
+ * 숫자
+ * 실수(1.45), 정수(0, 9, -10), 소수(0.8, -0.3)
+ *
+ * 문자
+ * 홑따옴표, 쌍따옴표, 따옴표X
+ *
+ * 컬러(색상)
+ * #rrggbb, rgb(), hsl(), rgba(), hsla(), colorname
+ *
+ * 불리언(Boolean)
+ * true, false
+ *
+ * 리스트(list)
+ * 1em 2em 0em 4em / 'Times New Roman', Times, Serif
+ * $my-list: 'play', 'pause', 'stop', 'remind'
+ *
+ * 맵(maps)
+ * $headings: (h1: 42px, h2: 38px, h3: 32px, h4: 22px, h5: 16px, h6: 14px)
+
+// $headings: (h1: 42px, h2: 38px, h3: 32px, h4: 22px, h5: 16px, h6: 14px)
+
+// 프로그래밍 상에서 문제를 발생시키는 원인을 잡고 싶을 때(Debuging) 사용
+// @debug type-of( $headings )
+
+// 프로그래밍 상에서 사용자의 잘못된 점에 주의(Warning)를 주고 싶을 때 사용
+// @warn type-of( #434343 )
+
+// 프로그래밍 상에서 사용자의 잘못된 점에 오류(Error)를 주고 싶을 때 사용
+// @error type-of( #434343 )
+
+
+// Interpolation( 보간법, #{$variable} )
+$set-placeholder: '.'
+
+//
+ * --------------------------------
+ * grid.sass의 변수 설정
+ * --------------------------------
+// Interpolation( 보간법, #{$variable} )
+// $set-placeholder: '.'
+
+// BASELINE
+$baseline-color: #fc414b
+$baseline-position: 90%
+$baseline-direction: 180deg
+$baseline-height-gap: 10px
+
+// GRID-SYSTEM: CONTAINER
+$gs-container-width: 1200px
+// $gs-columns-gradient: linear-gradient(90deg, hsla(238, 95%, 69%, 0.4), hsla(240, 85%, 87%, 0.4))
+$gs-columns-gradient: linear-gradient(90deg, transparent 10%, hsla(342, 92%, 55%, 0.6) 10%, hsla(342, 92%, 55%, 0.6) 90%, transparent 90%)
+// $gs-column-width: 100px
+$gs-fluid-column-width: 8.4% // (1/12*100)%
+
+// DISPLAY LAYOUT SETTINGS
+$display-layout: true
+
+$layout-red: 'darkred'
+$layout-green: 'lightgreen'
+$layout-blue: 'mediumblue'
+
+
+//
+ * --------------------------------
+ * Google Webfont Settings
+ * --------------------------------
+$using-google-webfont: true
+$google-font: jejumyeongjo // jejuhallasan, jejumyeongjo
