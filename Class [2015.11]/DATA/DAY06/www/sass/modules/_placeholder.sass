@@ -1,4 +1,3 @@
-// A11Y-HIDDEN
 %a11y-hidden
 	overflow: hidden
 	position: absolute
@@ -10,7 +9,7 @@
 	border:   0
 	padding:  0
 
-	&.focusable:focus
+	&%focusable:focus
 		overflow: visible
 		position: static
 		clip:     auto
@@ -18,9 +17,6 @@
 		height:   auto
 		margin:   0
 
-
-
-// CLEARFIX
 %clearfix::after
 	content: ''
 	display: block

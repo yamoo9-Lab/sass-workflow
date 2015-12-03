@@ -1,0 +1,10 @@
+a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1em 1.4em;
+  -webkit-box-shadow: 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red;
+  -moz-box-shadow: 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red;
+  box-shadow: 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red, 2px 2px 10px 9px blue, 3px 0 4px red;
+}
+
+/*# sourceMappingURL=style.css.map */
