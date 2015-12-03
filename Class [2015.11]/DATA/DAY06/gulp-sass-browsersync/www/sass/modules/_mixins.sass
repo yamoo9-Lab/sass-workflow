@@ -1,0 +1,99 @@
+@import placeholder
+
+//
+ * --------------------------------
+ * Sass 믹스인(Mixin)
+ * 정의 @mixin 믹스인이름 {}
+ * --------------------------------
+
+// SCSS 문법
+// @mixin box-sizing {
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+
+// Sass 문법
+=box-sizing
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+// 전역 초기화
+=global-reset
+	+reset-list
+	+reset-img
+
+// 박스모델 초기화
+=reset-box-model
+	margin: 0
+	border: 0
+	padding: 0
+
+// 테이블 초기화
+=reset-table
+	border-collapse: collapse
+	border-spacing: 0
+	caption
+		@extend %a11y-hidden
+
+// 목록 초기화 믹스인 모듈
+=reset-list
+	nav, [role=navigation], .gnb, .lnb, .gallery
+		+_reset-list
+
+=_reset-list
+	margin:
+		top: 0
+		bottom: 0
+	list-style: none
+	padding-left: 0
+
+// li img 하단 공백을 제거 믹스인 모듈
+=reset-img
+	li img, li a img
+		vertical-align: bottom
+	a img
+		border: 0
+
+// 내비게이션 초기화
+=navigation
+	ul
+		+reset-list
+		@extend %clearfix
+	li
+		&:last-child, .last
+			margin-right: 0
+		img
+			+reset-img
+
+
+// HTML5 새로운 요소 블록 설정
+=set-html5-elements-block
+	$html5-new-elements: null !default
+	@if $html5-new-elements != null
+		#{$html5-new-elements}
+			display: block
+
+
+// postion
+// - static
+// - relative
+// - absolute
+// - fixed
+// +position(fixed)
+
+// Fullname Mixin
+=position($position-type: relative, $left: null, $top: null, $right: null, $bottom: null)
+	position: $position-type
+	left: $left
+	top: $top
+
+// Alias Mixin
+=pos($position-type: relative, $left: null, $top: null, $right: null, $bottom: null)
+	+position($position-type, $left, $top)
+
+
+=float($direction: left, $margin: null)
+	float: $direction
+	margin: $margin

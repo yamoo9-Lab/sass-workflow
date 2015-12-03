@@ -1,0 +1,23 @@
+@import config
+@import modules/mixins
+
++set-html5-elements-block
+
+// $pos-type: static
+
+.aside
+	.parent
+		+position()
+	.child
+		+pos(absolute, -30px, -10px)
+
+header
+	+pos()
+	.brand
+		+pos(absolute, 100px)
+
+footer
+	+pos(fixed, 0px, null, null, 0px)
+
+.gnb li
+	+float(right, 0 10px 0)
