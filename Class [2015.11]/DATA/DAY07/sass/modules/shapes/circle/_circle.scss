@@ -1,0 +1,17 @@
+// --------------------------------
+// 모듈 호출
+// --------------------------------
+@import "../../common/layout";
+@import "../../common/css3";
+
+@mixin circle(
+	$bg-color: #eaeaea,
+	$width:    100px,
+	$height:   $width,
+	$radius:   50%
+) {
+	@include size($width, $height);
+	@include border-radius($radius);
+	@include background-clip;
+	background: $bg-color;
+}

@@ -1,0 +1,75 @@
+.triangle-top {
+  width: 0px;
+  height: 0px;
+  border-bottom: 50px solid #4505E6;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #eaeaea;
+}
+
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #eaeaea;
+}
+
+.circle-purple {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #5549a6;
+}
+
+.rect {
+  width: 100px;
+  height: 100px;
+  background: #cf4646;
+}
+
+.round-rect {
+  width: 220px;
+  height: 220px;
+  background: #0163c4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+* html .triangle-top {
+  background: #2DCEDF;
+}
+
+* + html body {
+  font-size: 29px;
+}
+
+@media \0screen {
+  .container margin {
+    left: auto;
+    right: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

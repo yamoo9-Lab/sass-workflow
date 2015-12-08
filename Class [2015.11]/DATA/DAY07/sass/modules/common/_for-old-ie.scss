@@ -1,0 +1,17 @@
+@mixin for-ie6 {
+	* html {
+		@content;
+	}
+}
+
+@mixin for-ie7 {
+	*+html {
+		@content;
+	}
+}
+
+@mixin for-ie8 {
+	@media \0screen {
+			@content;
+	}
+}

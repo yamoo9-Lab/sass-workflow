@@ -1,0 +1,32 @@
+// 모듈 로드
+// ------------------------------------------
+@import modules/shapes/circle/circle
+@import modules/shapes/rectangle/rectangle
+@import modules/shapes/triangle/triangle
+// IE6-8을 위한 핵 (권장 X)
+@import modules/common/for-old-ie
+
+
+.triangle-top
+	+triangle-top(50px, #4505E6)
+.circle
+	+circle
+.circle-200
+	+circle($width: 200px)
+.circle-purple
+	+circle(#5549a6)
+.rect
+	+rectangle(#cf4646)
+.round-rect
+	+rounded-rectangle($width: 220px, $bg-color: #0163c4)
++for-ie6
+	.triangle-top
+		background: #2DCEDF
++for-ie7
+	body
+		font-size: 29px
++for-ie8
+	.container
+		margin
+			left: auto
+			right: auto
