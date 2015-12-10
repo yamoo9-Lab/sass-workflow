@@ -1,0 +1,58 @@
+body {
+  color: rgba(112, 69, 207, 0.45);
+}
+
+article {
+  color: hsla(258deg,59%,55%,0.45);
+}
+
+body {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+#app header {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+
+body {
+  margin: 0;
+}
+
+.grid-1, .grid-2 {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-1 {
+  width: 60px;
+}
+.fluid .grid-1 {
+  width: 6.25%;
+}
+
+.grid-2 {
+  width: 140px;
+}
+.fluid .grid-2 {
+  width: 14.58333%;
+}
+
+/*# sourceMappingURL=style.css.map */

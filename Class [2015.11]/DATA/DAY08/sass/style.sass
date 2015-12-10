@@ -1,0 +1,152 @@
+// 모듈 로드
+// ------------------------------------------
+
+// 환경설정 모듈 호출
+@import config
+
+// 재사용 가능한 모듈들을 호출
+@import modules/shapes/circle/circle
+@import modules/shapes/rectangle/rectangle
+@import modules/shapes/triangle/triangle
+
+// 사용자 정의 함수
+// User Defined Functions Module
+@import modules/functions/hsla
+@import modules/functions/rem
+
+// 사용자 정의 믹스인
+// User Defined Mixins Module
+@import modules/mixins/font-size
+
+// IE6-8을 위한 핵 (권장 X)
+@import modules/common/for-old-ie
+
+//
+ * --------------------------------
+ * 8일차 수업 내용
+ *
+ * 컬러 함수(Built-in Color Function)
+ * GET / SET
+ * red()
+ * green()
+ * blue()
+ * --------------------------------
+$hot-red: #7045CF
+
+body
+	// SET Function
+	color: rgba( $hot-red, 0.45 )
+
+// GET Function
+$r: red( $hot-red )
+$g: green( $hot-red )
+$b: blue( $hot-red )
+$a: 0.7
+
+// @debug '$r: #{$r}'
+// @debug '$g: #{$g}'
+// @debug '$b: #{$b}'
+
+// @debug "rgb(#{$r},#{$g},#{$b}, #{$a})"
+
+// ---------------------------------------
+
+//
+ * --------------------------------
+ * HSLA
+ * Hue
+ * Saturation
+ * Lightness
+ * Alpha
+ *
+ * hsl()
+ * hsla()
+ * hue()
+ * saturation()
+ * lightness()
+ * --------------------------------
+
+$hue:        hue( $hot-red )
+$saturation: saturation( $hot-red )
+$lightness:  lightness( $hot-red )
+
+// @debug '$hue: #{$hue}'
+// @debug '$saturation: #{$saturation}'
+// @debug '$lightness: #{$lightness}'
+
+
+article
+	color: hsla( #7045CF, 0.45 )
+
+$my-color: #B090F5
+
+// @debug lighten($my-color, 30%)
+// @debug darken($my-color, 30%)
+// @debug saturate($my-color, 10%)
+// @debug desaturate($my-color, 24%)
+// @debug grayscale($my-color)
+
+body
+	// font-size: rem(14px)
+	+font-size( 14px )
+
+#app
+	header
+		// font-size: rem(21px)
+		+font-size( 21px )
+
+
+$is-flexible: false
+$page-width: 960px
+$gutter: 10px
+
+// Pattern 1
+// .grid-1
+// 	$width: 60px
+// 	float: left
+// 	@if $is-flexible
+// 		width: percentage($width/$page-width)
+// 	@else
+// 		width: $width
+// 	margin-left: $gutter
+// 	margin-right: $gutter
+
+body
+	margin: 0
+
+%grid-module
+	float: left
+	margin:
+		left: $gutter
+		right: $gutter
+	// temp
+	height: 30px
+	background: #000
+	color: #fff
+	text-align: center
+
+.container
+	max-width: 960px
+	margin:
+		left: auto
+		right: auto
+	&:after
+		content: ''
+		display: block
+		clear: both
+
+// Pattern 2
+.grid-1
+	@extend %grid-module
+	$width: 60px
+	width: $width
+	.fluid &
+		width: percentage($width/$page-width)
+
+.grid-2
+	@extend %grid-module
+	$width: 140px
+	width: $width
+
+	.fluid &
+		width: percentage($width/$page-width)

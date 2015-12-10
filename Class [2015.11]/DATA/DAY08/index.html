@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if !IE]><!-->
+<html lang="ko-KR" class="no-js">
+<!--<![endif]-->
+<!--[if IE 8]><html lang="ko-KR" class="ie lt-ie10 ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="ko-KR" class="ie lt-ie10 ie9 no-js"><![endif]-->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Sass - Draw Native CSS3 Shape</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	/* hack: ie6; */
+	* html .triangle-top {
+		background: #f00;
+	}
+	/* hack: ie7; */
+	*+html .triangle-top {
+		background: #ff0;
+	}
+	/* filter: ie8 */
+	.ie8 .triangle-top {
+		background: #E5742F;
+	}
+	</style>
+</head>
+<body class="fluid">
+
+	<div class="container">
+		<div class="grid-1">grid 1</div>
+		<div class="grid-2">grid 2</div>
+		<div class="grid-1">grid 1</div>
+		<div class="grid-2">grid 2</div>
+		<div class="grid-1">grid 1</div>
+		<div class="grid-2">grid 2</div>
+		<div class="grid-1">grid 1</div>
+		<div class="grid-2">grid 2</div>
+	</div>
+
+</body>
+</html>

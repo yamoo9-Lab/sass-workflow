@@ -1,0 +1,80 @@
+// * --------------------------------
+// * 모듈 호출
+// * 의존 모듈
+// * modules/common/css3
+// * --------------------------------
+@import "../../common/layout";
+
+
+// 해당 모듈 내부에 정의된 믹스인에
+// 기본적으로 사용되는 설정 값
+$_thickness: 100px;
+$_color:     #303030;
+
+
+// * --------------------------------
+// * 삼각형 CSS3 도형 믹스인 정의
+@mixin triangle (
+	// 방향
+	$direction: top,
+	// 두께
+	$thickness: $_thickness,
+	// 색상
+	$color: $_color
+) {
+	// width, height는 0으로 설정
+	@include size(0px, 0px);
+
+	// 사용자가 전달한 삼각형의 방향은?
+	// top일 경우
+	@if $direction == top {
+		border-bottom: $thickness solid $color;
+		border-left:   $thickness solid transparent;
+		border-right:  $thickness solid transparent;
+	}
+	// bottom일 경우
+	@if $direction == bottom {
+		border-top:   $thickness solid $color;
+		border-left:  $thickness solid transparent;
+		border-right: $thickness solid transparent;
+	}
+	// left일 경우
+	@if $direction == left {
+		border-right:  $thickness solid $color;
+		border-top:    $thickness solid transparent;
+		border-bottom: $thickness solid transparent;
+	}
+	// right일 경우
+	@if $direction == right {
+		border-left:   $thickness solid $color;
+		border-top:    $thickness solid transparent;
+		border-bottom: $thickness solid transparent;
+	}
+}
+
+// Alias 별칭 믹스인
+@mixin triangle-top (
+	$thickness: $_thickness,
+	$color:     $_color
+) {
+	@include triangle(top, $thickness, $color);
+}
+@mixin triangle-bottom (
+	$thickness: $_thickness,
+	$color:     $_color
+) {
+	@include triangle(bottom, $thickness, $color);
+}
+@mixin triangle-left (
+	$thickness: $_thickness,
+	$color:     $_color
+) {
+	@include triangle(left, $thickness, $color);
+}
+@mixin triangle-right (
+	$thickness: $_thickness,
+	$color:     $_color
+) {
+	@include triangle(right, $thickness, $color);
+}
+
