@@ -1,3 +1,56 @@
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+  float: left;
+  margin-right: 20px;
+}
+
+.grid-1 {
+  width: 80px;
+}
+
+.grid-2 {
+  width: 161px;
+}
+
+.grid-3 {
+  width: 242px;
+}
+
+.grid-4 {
+  width: 323px;
+}
+
+.grid-5 {
+  width: 404px;
+}
+
+.grid-6 {
+  width: 485px;
+}
+
+.grid-7 {
+  width: 566px;
+}
+
+.grid-8 {
+  width: 647px;
+}
+
+.grid-9 {
+  width: 728px;
+}
+
+.grid-10 {
+  width: 809px;
+}
+
+.grid-11 {
+  width: 890px;
+}
+
+.grid-12 {
+  width: 971px;
+}
+
 .app-header {
   background: #040d1d;
   background: rgba(4, 13, 29, 0.87);
