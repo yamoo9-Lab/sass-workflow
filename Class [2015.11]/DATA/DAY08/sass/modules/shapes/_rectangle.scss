@@ -4,8 +4,8 @@
 // * modules/common/layout
 // * modules/common/css3
 // * --------------------------------
-@import "../../common/layout";
-@import "../../common/css3";
+@import "../mixins/layout";
+@import "../mixins/css3";
 
 
 // 해당 모듈 내부에 정의된 믹스인에

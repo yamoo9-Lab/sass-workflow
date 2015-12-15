@@ -1,8 +1,8 @@
 // --------------------------------
 // 모듈 호출
 // --------------------------------
-@import "../../common/layout";
-@import "../../common/css3";
+@import "../mixins/layout";
+@import "../mixins/css3";
 
 @mixin circle(
 	$bg-color: #eaeaea,

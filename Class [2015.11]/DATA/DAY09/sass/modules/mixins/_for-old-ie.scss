@@ -1,0 +1,24 @@
+@mixin for-ie6($selector: null) {
+	* html {
+		@content;
+
+		@if $selector {
+			#{$selector} {
+				content: 'print code';
+			}
+		}
+
+	}
+}
+
+@mixin for-ie7 {
+	*+html {
+		@content;
+	}
+}
+
+@mixin for-ie8 {
+	@media \0screen {
+			@content;
+	}
+}

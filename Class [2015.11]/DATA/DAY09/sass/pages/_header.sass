@@ -1,0 +1,14 @@
+@import modules/mixins/contrast
+
+$app-header-color: #E5328B !default
+
+.app-header
+	// 함수 사용 예
+	// background: $app-header-color
+	// color: contrastColor( $app-header-color, 22% )
+
+	// 믹스인 사용 예
+	+contrastColors( $app-header-color, background, $alpha: 0.87 )
+
+	.back-button
+		+contrastColors( contrastColor($app-header-color, 15%) )
