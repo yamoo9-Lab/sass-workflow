@@ -1,11 +1,12 @@
 // 그리드 시스템 설정 변수
-$i: 1
-$grid-total-columns: 12
-$column-width: 80px
-$gutter: 20px
-$gutter-type: after // 'before' | 'after' | 'split'
+$i:                  1 !default
+$grid-total-columns: 12 !default
+$column-width:       80px !default
+$gutter:             20px !default
+$gutter-type:        after !default
 
-// 그리드 모듈
+/* 그리드 시스템
+ ---------------------------------------------------- */
 %grid-module
 	float: left
 	margin:
@@ -16,6 +17,10 @@ $gutter-type: after // 'before' | 'after' | 'split'
 			left: $gutter
 		@if $gutter-type == after
 			right: $gutter
+	@if $gutter-type == inside
+		padding:
+			left: $gutter/2
+			right: $gutter/2
 
 @while $i <= $grid-total-columns
 	// 보간법(Interpolation) 사용
