@@ -1,0 +1,50 @@
+// * --------------------------------
+// * 요소의 배경 색과 전경 색을 비교 분석하여
+// * 배경 색이 어둡다면, 전경 색을 밝게 처리
+// * 배경 색이 밝다면, 전경 색을 어둡게 처리
+// * --------------------------------
+// [Sass 라이브러리] 사용자 정의 함수
+@import "../functions/hsla";
+// 초기 변수 값 설정
+$css3-color-type: hsla !default;
+
+// 함수 작성
+@function contrastColor( $color, $amount: 45% ) {
+	// 유효성 검사
+	@if type-of( $color ) != color {
+		@error "전달된 데이터 유형이 컬러가 아닙니다. 데이터 유형을 확인해주세요.";
+	}
+	// $color 변수 값의 밝고, 어두운 정도를 확인합니다.
+	// 비교할 것은 명도(Lightness)이니 색에서 명도 값을 가져옵니다.
+	// 0% - 50% - 100%
+	// @debug lightness( $color ) >= 50;
+	@if lightness( $color ) >= 50 {
+		// @debug '색이 밝다';
+		@return darken($color, $amount);
+	} @else {
+		// @debug '색이 어둡다';
+		@return lighten($color, $amount);
+	}
+
+	// @return null;
+}
+
+// 믹스인에 함수 추가
+@mixin contrastColors (
+	$fg-color,
+	$prop:   'color',
+	$amount: 45%,
+	$alpha:  1
+) {
+	$prop-result-color: contrastColor($fg-color, $amount);
+
+    #{$prop}: $prop-result-color;
+    @if $css3-color-type == hsla {
+    	#{$prop}: hsla( $prop-result-color, $alpha );
+    }
+    @else {
+    	@if $alpha != 1 {
+    		#{$prop}: rgba( $prop-result-color, $alpha );
+    	}
+    }
+}

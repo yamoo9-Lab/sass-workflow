@@ -1,0 +1,36 @@
+.icon-sns-youtube {
+  background-image: url(images/icons/sns/youtube.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.icon-sns-linkedIn {
+  background-image: url(images/icons/sns/linkedIn.png);
+  background-repeat: no-repeat;
+  width: 112px;
+  height: 59px;
+}
+
+.icon-sns-instagram {
+  background-image: url(images/icons/sns/instagram.png);
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 20px;
+}
+
+.icon-sns-kakao-story {
+  background-image: url(images/icons/sns/kakao-story.png);
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 81px;
+}
+
+.icon-sns-line {
+  background-image: url(images/icons/sns/line.png);
+  background-repeat: no-repeat;
+  width: 340px;
+  height: 124px;
+}
+
+/*# sourceMappingURL=style.css.map */

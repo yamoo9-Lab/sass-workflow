@@ -1,0 +1,18 @@
+// * --------------------------------
+// * CSS3 Mixins
+// * --------------------------------
+@mixin border-radius ( $radius: 4px ) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+}
+@mixin background-origin ( $origin: padding-box ) {
+	-webkit-background-origin: $origin;
+	-moz-background-origin:    $origin;
+	background-origin:         $origin;
+}
+@mixin background-clip ( $clip: padding-box ) {
+	-webkit-background-clip: $clip;
+	-moz-background-clip:    $clip;
+	background-clip:         $clip;
+}

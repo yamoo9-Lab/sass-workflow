@@ -1,0 +1,114 @@
+//
+ * --------------------------------
+ * 공통 모듈
+ * --------------------------------
+// 환경설정 모듈
+@import config
+// 초기화 모듈
+// @import modules/common/normalize
+// 그리드 시스템 모듈
+// @import modules/mixins/grid
+// @import modules/mixins/grid-for
+
+//
+ * --------------------------------
+ * 페이지 모듈
+ * --------------------------------
+// @import pages/header
+
+//
+ * --------------------------------
+ * 10일차 수업 내용
+ * --------------------------------
+ * Sass 반복문
+ * @while
+ * @for
+ * @each
+ * --------------------------------
+// 데이터 7가지 유형
+// 널(null)
+// 숫자(number)
+// 문자(string)
+// 컬러(color)
+// 불린(bool, boolean)
+
+// 반복 순환 가능한 데이터 2가지 유형
+// 리스트(list)
+$play-list: ("job-video", 'hobby-video', wedding-video)
+$sns-list: (youtube facebook linkedIn twitter instagram snapchat kakao-story)
+
+// 맵(map)
+$play-map: ("job-video": "your job.", 'hobby-video': "your hobby.", wedding-video: "your wedding.")
+
+// 데이터 유형을 체크할 때 사용되는 함수
+// @debug type-of($play-map)
+
+// $play-list의 총 아이템 개수
+// @debug length($play-list) // 3
+// @debug length($sns-list) // 7
+
+// $play-list 리스트에 아이템 추가
+$play-list: append( $play-list, 'live-video' )
+$play-list: append( $play-list, 'sleeping-video' )
+$play-list: append( $play-list, 'eating-video' )
+$play-list: append( $play-list, 'reading-video' )
+
+// $play-list의 총 아이템 개수
+// @debug length($play-list) // 4
+
+// @while 문을 사용해서 리스트, 맵을 반복 순환하여 탐색
+// $loop-start: 1
+// // $loop-end: length($play-list) // $play-list 집합 내부의 아이템 총 개수
+// $loop-end: length($sns-list) // $sns-list 집합 내부의 아이템 총 개수
+
+// @while $loop-start <= $loop-end
+// 	$item: nth($sns-list, $loop-start)
+// 	// @debug $item
+// 	.icon-sns-#{$item}
+// 		background-image: url("images/icons/sns/#{$item}.png")
+
+// 	$loop-start: $loop-start + 1
+
+$sns-list: set-nth($sns-list, 3, linked-in)
+
+$sns-list: append($sns-list, line)
+
+//
+ * --------------------------------
+ * @while → @for 문으로 변경
+ * --------------------------------
+// @for $i from 1 through length($sns-list)
+// 	$item: nth($sns-list, $i)
+// 	.icon-sns-#{$item}
+// 		background-image: url("images/icons/sns/#{$item}.png")
+
+
+//
+ * --------------------------------
+ * @each 반복 순환문
+ * list, map 탐색
+ * --------------------------------
+// @each $item in $sns-list
+// 	.icon-sns-#{$item}
+// 		// A and B 조건 : 둘 다 참이어야 참!
+// 		// A or B 조건 : 둘 중 하나가 참이면 참!
+// 		@if $item != youtube and $item != kakao-story
+// 			background-image: url(images/icons/sns/#{$item}.png)
+
+//
+ * --------------------------------
+ * @each ~ map 사용
+ * --------------------------------
+// @debug $sns-map
+
+@each $props in $sns-map
+	$icon-name: nth($props, 1)
+	$icon-dimension: nth($props, 2)
+	$icon-width: nth($icon-dimension, 1)
+	$icon-height: nth($icon-dimension, 2)
+
+	.icon-sns-#{$icon-name}
+		background-image: url(images/icons/sns/#{$icon-name}.png)
+		background-repeat: no-repeat
+		width: $icon-width
+		height: $icon-height
