@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/**
+ * 자동으로 Sprites 이미지 생성 예제
+ * --------------------------------
+ */
+.stash-sprite, .stash-bell, .stash-box-packing-peanut, .stash-computer-chip, .stash-hourglass, .stash-palette, .stash-pricing-table, .stash-ruby, .stash-shield, .stash-stealth-fighter-jet, .stash-wallet {
+  background-image: url('../assets/stash-s115e9bbbe4.png');
+  background-repeat: no-repeat;
+}
+
+.stash-bell {
+  background-position: -128px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-bell:hover, .stash-bell.bell-hover {
+  background-position: 0 0;
+}
+
+.stash-box-packing-peanut {
+  background-position: -384px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-box-packing-peanut:hover, .stash-box-packing-peanut.box-packing-peanut-hover {
+  background-position: -256px 0;
+}
+
+.stash-computer-chip {
+  background-position: -640px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-computer-chip:hover, .stash-computer-chip.computer-chip-hover {
+  background-position: -512px 0;
+}
+
+.stash-hourglass {
+  background-position: -896px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-hourglass:hover, .stash-hourglass.hourglass-hover {
+  background-position: -768px 0;
+}
+
+.stash-palette {
+  background-position: -1152px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-palette:hover, .stash-palette.palette-hover {
+  background-position: -1024px 0;
+}
+
+.stash-pricing-table {
+  background-position: -1408px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-pricing-table:hover, .stash-pricing-table.pricing-table-hover {
+  background-position: -1280px 0;
+}
+
+.stash-ruby {
+  background-position: -1664px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-ruby:hover, .stash-ruby.ruby-hover {
+  background-position: -1536px 0;
+}
+
+.stash-shield {
+  background-position: -1920px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-shield:hover, .stash-shield.shield-hover {
+  background-position: -1792px 0;
+}
+
+.stash-stealth-fighter-jet {
+  background-position: -2176px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-stealth-fighter-jet:hover, .stash-stealth-fighter-jet.stealth-fighter-jet-hover {
+  background-position: -2048px 0;
+}
+
+.stash-wallet {
+  background-position: -2432px 0;
+  height: 128px;
+  width: 128px;
+}
+.stash-wallet:hover, .stash-wallet.wallet-hover {
+  background-position: -2304px 0;
+}
+
+.demo-sprite-stash {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 3em;
+}
+.demo-sprite-stash li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.demo-sprite-stash li:first-child {
+  padding-left: 0;
+}
+.demo-sprite-stash li:last-child {
+  padding-right: 0;
+}
+.demo-sprite-stash li.last {
+  padding-right: 0;
+}
+.demo-sprite-stash li {
+  margin-bottom: 2em;
+}
+.demo-sprite-stash li:nth-child(5n) {
+  padding-right: 0;
+}
+.demo-sprite-stash li:nth-child(6n) {
+  padding-left: 0;
+}
+
+[class*="stash-"] {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+/*# sourceMappingURL=sprites.css.map */

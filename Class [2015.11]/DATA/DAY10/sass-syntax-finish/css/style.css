@@ -1,0 +1,57 @@
+.icon-sns-youtube {
+  background-image: url(images/icons/sns/youtube.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.icon-sns-facebook {
+  background-image: url(images/icons/sns/facebook.png);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 64px;
+}
+
+.icon-sns-linkedIn {
+  background-image: url(images/icons/sns/linkedIn.gif);
+  background-repeat: no-repeat;
+  width: 112px;
+  height: 59px;
+}
+
+.icon-sns-twitter {
+  background-image: url(images/icons/sns/twitter.jpg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 106px;
+}
+
+.icon-sns-instagram {
+  background-image: url(images/icons/sns/instagram.png);
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 20px;
+}
+
+.icon-sns-snapchat {
+  background-image: url(images/icons/sns/snapchat.bmp);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 45px;
+}
+
+.icon-sns-kakao-story {
+  background-image: url(images/icons/sns/kakao-story.webp);
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 81px;
+}
+
+.icon-sns-line {
+  background-image: url(images/icons/sns/line.jpeg);
+  background-repeat: no-repeat;
+  width: 340px;
+  height: 124px;
+}
+
+/*# sourceMappingURL=style.css.map */

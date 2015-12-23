@@ -1,0 +1,36 @@
+// * --------------------------------
+// * 모듈 호출
+// * 의존 모듈
+// * modules/common/layout
+// * modules/common/css3
+// * --------------------------------
+@import "../mixins/layout";
+@import "../mixins/css3";
+
+
+// 해당 모듈 내부에 정의된 믹스인에
+// 기본적으로 사용되는 설정 값
+$_bg-color: #dfdfdf;
+$_width:    100px;
+
+
+// * --------------------------------
+// * 믹스인 정의
+@mixin rectangle (
+	$bg-color: $_bg-color,
+	$width:    $_width,
+	$height:   $width
+) {
+	@include size($width, $height);
+	background: $bg-color;
+}
+
+@mixin rounded-rectangle (
+	$rounded:  4px,
+	$bg-color: $_bg-color,
+	$width:    $_width,
+	$height:   $width
+) {
+	@include rectangle( $bg-color, $width, $height );
+	@include border-radius( $rounded );
+}

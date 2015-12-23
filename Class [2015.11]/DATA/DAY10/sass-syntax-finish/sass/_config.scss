@@ -1,0 +1,48 @@
+//
+// * --------------------------------
+// * 사용자 환경 설정
+// * --------------------------------
+$polyfill-rem: true; // false
+
+//
+// * --------------------------------
+// * 조건문 실습을 위한 변수
+// * --------------------------------
+$is-phone: false;
+$phone-name: "Nexus";
+$css3-color-type: rgba;
+
+//
+// * --------------------------------
+// * 그리드 시스템 설정
+// * --------------------------------
+$i:                  1;
+$grid-total-columns: 12;
+$column-width:       80px;
+$gutter:             20px;
+$gutter-type:        inside; // split, before, after, inside;
+
+//
+// * --------------------------------
+// * 앱(App) 컬러 매니지먼트
+// * --------------------------------
+$app-header-color: #E5742F;
+
+//
+// * --------------------------------
+// * SNS 아이콘 세트 관리
+// * $sns-map: (youtube facebook linkedIn twitter instagram snapchat kakao-story);
+// * --------------------------------
+$sns-map: (
+	path:        'images/icons/sns/',
+	youtube:     100px 100px png,
+	facebook:    120px 64px png,
+	linkedIn:    112px 59px gif,
+	twitter:     32px 106px jpg,
+	instagram:   34px 20px png,
+	snapchat:    120px 45px bmp,
+	kakao-story: 220px 81px webp,
+	line:        340px 124px jpeg
+);
+
+// @debug map-get($sns-map, youtube);

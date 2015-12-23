@@ -1,0 +1,88 @@
+@import compass
+// 에릭 마이어의 리셋
++global-reset()
+
+// 브라우저 디버깅 모드 활성화
+// $debug-browser-support: true
+
+// 브라우저 별, 버전 최소 지원 범위 설정
+$browser-minimum-versions: (ie: '8')
+
+// 지원 브라우저에서 제거
+// (reject(), ruby function)하는 설정
+$supported-browsers: reject( browsers(), ie )
+
+body
+	&:before,
+	&:after,
+	*,
+	*:before,
+	*:after
+		+box-sizing()
+
+
+// enumerate() 헬퍼 함수를 사용한 예제
+$comments-hook: '.comment'
+$comments-from: 1
+$comments-through: 3
+$comments-gap: 3px
+
+#{enumerate($comments-hook, $comments-from, $comments-through)}
+	+box-shadow(0px 3px 0px #7045CF)
+	background: #fff
+
+@for $i from $comments-from through $comments-through
+	#{$comments-hook}-#{$i}
+		margin-left: $comments-gap * $i
+
+
+
+
+
+// cache buster를 사용하지 않을 경우 사용하는 함수
+@function image-no-cache-url($path)
+	@return image-url($path, false, false)
+
+.demo
+	+opacity(0.8)
+	+transition(color 0.3s ease)
+
+	// nest() 헬퍼 함수를 사용한 예제
+	#{nest( 'main, aside, nav', #{headings(2, 5)})}
+		&:before
+			content: 'image'
+
+	// headings() 헬퍼 함수를 사용한 예제
+	#{headings(3)}
+		font-size: 100%
+		color: #333
+
+	// background-image: url('../images/a.jpg')
+
+	// image-url() 헬퍼 함수를 사용한 예제
+	background-image: image-url('a.jpg')
+
+	.using-compass-image-url
+		// background: url('../images/b.png')
+		background: image-url('b.png')
+
+	p
+		&.flow-into
+			+flow-into(target)
+
+		&.flow-from
+			+inline-block
+			+flow-from(target)
+
+		// background-image: url('../images/c.gif')
+		// cache buster를 사용하지 않을 때
+		background-image: image-url('c.gif', null, false)
+		background-image: image-no-cache-url('k.webp')
+
+
+.dog-husky
+	$husky: 'dog03.gif'
+	background: image-no-cache-url($husky) no-repeat
+	// background: inline-image($husky) no-repeat
+	width:      image-width($husky)
+	height:     image-height($husky)

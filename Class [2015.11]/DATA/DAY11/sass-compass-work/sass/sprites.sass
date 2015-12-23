@@ -1,0 +1,25 @@
+@import compass
+/**
+ * 자동으로 Sprites 이미지 생성 예제
+ * --------------------------------
+ */
+@import stash/*.png
++all-stash-sprites(true)
+
+// .bell
+// 	+stash-sprite('palette')
+// 	width: stash-sprite-width('palette')
+// 	height: stash-sprite-height('palette')
+
+[class*="stash-"]
+	+inline-block
+
+.demo-sprite-stash
+	+horizontal-list(20px)
+	margin-bottom: 3em
+	li
+		margin-bottom: 2em
+		&:nth-child(5n)
+			padding-right: 0
+		&:nth-child(6n)
+			padding-left: 0

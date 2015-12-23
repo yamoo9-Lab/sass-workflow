@@ -1,0 +1,29 @@
+/* 앱 헤더(.app-header) 영역
+ * ---------------------------------------------------- */
+@import modules/mixins/contrast
+
+$app-header-color: #E5328B !default
+
+.app-header
+	// 함수 사용 예
+	// background: $app-header-color
+	// color: contrastColor( $app-header-color, 22% )
+
+	// 믹스인 사용 예
+	+contrastColors( $app-header-color, background, $alpha: 0.87 )
+
+	padding: 1em
+
+	.app-title,
+	.back-button
+		+contrastColors( contrastColor($app-header-color, 15%) )
+		margin: 0
+
+	.back-button
+		display: inline-block
+		margin:
+			top: 0.3em
+			bottom: 0.6em
+		text-decoration: none
+		padding-bottom: 0.01em
+		border-bottom: 1px dashed
