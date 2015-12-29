@@ -1,0 +1,38 @@
+@import config
+
+$app-color: #FFE04C
+$box-height: 200px
+
+.sass-app
+	+relative()
+	+size(80% 100vh)
+	+margin(left auto right auto)
+	background: $app-color
+
+	.sass-box
+		+absolute(top 50% left 50% z-index 100)
+		+size(50% $box-height)
+		width: 600px
+		+transform( translate(-50%, -50%) )
+		+transition(height 0.45s cubic-bezier(0.46, -0.46, 0.68, 1.53))
+		+border-radius(8px)
+		overflow: hidden
+		background: darken($app-color, 40%)
+		line-height: $box-height
+		// text-align: center
+
+
+		&:hover
+			height: $box-height * 2
+
+			img
+				+transform( translateY(-50%) scale(1.3) )
+
+		img
+			+rwd-image
+			+absolute(top 50%)
+			+transform( translateY(-50%) )
+			+transition(all 0.1s ease-in)
+
+.rwd-video-container
+	+rwd-video()
