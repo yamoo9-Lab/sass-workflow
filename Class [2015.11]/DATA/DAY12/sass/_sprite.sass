@@ -1,0 +1,69 @@
+//
+ * --------------------------------
+ * Compass Sprite Image Generator
+ * --------------------------------
+
+// 스프라이트 이미지 간격(spacing) 설정
+// $characters-spacing: 10px
+
+// 특정 파일만 간격을 설정하고 싶을 때
+// $characters-mario-spacing: 10px
+// $characters-mushroom-spacing: 44px
+
+// 매직 스프라이트 선택자 비활성화 옵션
+$disable-magic-sprite-selectors: true
+
+// 스프라이트 이미지 레이아웃(배치) 설정
+// vertical, horizontal, smart
+$characters-layout: smart
+
+// 스프라이트 이미지 자동 생성
+@import characters/*.png
+
+// 스프라이트 맵
+$characters-map: sprite-names( sprite-map("characters/*.png") )
+
+// 생성된 스프라이트 맵 디버깅
+// @debug $characters-map
+
+
+// 스프라이트 이미지 클래스 자동 생성
+// +all-characters-sprites(true)
+
+// 클래스 직접 컨트롤링
+// .icon.banana
+// 	+characters-sprite(banana)
+// 	width: characters-sprite-width(banana)
+// 	height: characters-sprite-height(banana)
+
+// .icon.elsa_stand
+// 	+characters-sprite(elsa_stand)
+// 	width: characters-sprite-width(elsa_stand)
+// 	height: characters-sprite-height(elsa_stand)
+
+// $icon-name: mario
+// .icon.#{$icon-name}
+// 	+characters-sprite($icon-name)
+// 	width: characters-sprite-width($icon-name)
+// 	height: characters-sprite-height($icon-name)
+
+// Sass 반복문 @each
+$prefix: yamoo9
+// $characters: banana, elsa, elsa_stand, mushroom, mario
+@each $icon-name in $characters-map
+	.#{$prefix}
+		&.#{$icon-name}
+			+characters-sprite($icon-name)
+			width: characters-sprite-width($icon-name)
+			height: characters-sprite-height($icon-name)
+
+
+// ------------------------------------------------------------
+
+// $_ratio: 3
+
+// +hidpi($_ratio)
+// 	background-image: image-url('sass-belle-pug-money-box-p3368-4608_zoom@#{$_ratio}x.jpg')
+
+.test
+	+retina-image('sass-belle-pug-money-box-p3368-4608_zoom', $ratio: 3, $extension: 'jpg')

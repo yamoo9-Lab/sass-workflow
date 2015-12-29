@@ -55,7 +55,7 @@ sourcemap = true
 # ------------------------------------------------------------------------
 # 스프라이트 이미지 설정
 
-# generated_images_dir = "images/sprites"
+generated_images_dir = "images/sprites"
 # sprite_load_path     = [images_path]
 # sprite_engine        = :chunky_png # :oily_png
 # chunky_png_options   = {:compression => Zlib::BEST_COMPRESSION}

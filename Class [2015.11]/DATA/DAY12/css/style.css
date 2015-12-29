@@ -394,6 +394,67 @@ table {
   height: 100%;
 }
 
+.characters-sprite, .yamoo9.banana, .yamoo9.elsa, .yamoo9.elsa_stand, .yamoo9.mario, .yamoo9.mushroom, .yamoo9.mushroom_active, .yamoo9.mushroom_hover {
+  background-image: url('../images/sprites/characters-sb748aaeb4c.png');
+  background-repeat: no-repeat;
+}
+
+.yamoo9.banana {
+  background-position: 0 0;
+  width: 492px;
+  height: 509px;
+}
+
+.yamoo9.elsa {
+  background-position: 0 -2960px;
+  width: 1024px;
+  height: 663px;
+}
+
+.yamoo9.elsa_stand {
+  background-position: -492px 0;
+  width: 436px;
+  height: 1100px;
+}
+
+.yamoo9.mario {
+  background-position: 0 -3623px;
+  width: 626px;
+  height: 1185px;
+}
+
+.yamoo9.mushroom {
+  background-position: 0 -1720px;
+  width: 625px;
+  height: 620px;
+}
+
+.yamoo9.mushroom_active {
+  background-position: 0 -1100px;
+  width: 625px;
+  height: 620px;
+}
+
+.yamoo9.mushroom_hover {
+  background-position: 0 -2340px;
+  width: 625px;
+  height: 620px;
+}
+
+.test {
+  background-image: url("sass-belle-pug-money-box-p3368-4608_zoom.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .test {
+    background-image: url("sass-belle-pug-money-box-p3368-4608_zoom@2x.jpg");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-moz-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+  .test {
+    background-image: url("sass-belle-pug-money-box-p3368-4608_zoom@3x.jpg");
+  }
+}
+
 .sass-app {
   position: relative;
   width: 80%;
