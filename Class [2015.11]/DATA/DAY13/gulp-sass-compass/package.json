@@ -1,0 +1,14 @@
+{
+  "name": "sass-compass-susy-gulp-project-template",
+  "version": "0.0.1",
+  "description": "Node.js + Gulp 프로젝트: Sass / Compass / Bourbon / Susy / yamoo9",
+  "author": "yamoo9",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-util": "^3.0.7"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "animate.sass",
+  "homepage": "https://github.com/adamstac/animate.sass",
+  "_release": "a6e41ed48d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a6e41ed48d3de9ccd9a47d505c3348d248fa70ab"
+  },
+  "_source": "git://github.com/adamstac/animate.sass.git",
+  "_target": "*",
+  "_originalSource": "animate.sass",
+  "_direct": true
+}
