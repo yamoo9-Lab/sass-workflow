@@ -4,7 +4,7 @@
 @mixin hidpi($ratio) {
 	$hidpi: "only screen and (-webkit-min-device-pixel-ratio: #{$ratio}),";
 	$hidpi: $hidpi + "only screen and (-moz-min-device-pixel-ratio: #{$ratio}),";
-	$hidpi: $hidpi + "only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),";
+	$hidpi: $hidpi + "only screen and (-o-min-device-pixel-ratio: #{$ratio}/#{1}),";
 	$hidpi: $hidpi + "only screen and (min-device-pixel-ratio: #{$ratio}),";
 	$hidpi: $hidpi + "only screen and (min-resolution: #{96 * $ratio}dpi),";
 	$hidpi: $hidpi + "only screen and (min-resolution: #{$ratio}dppx)";

@@ -11,7 +11,7 @@
 // $characters-mushroom-spacing: 44px
 
 // 매직 스프라이트 선택자 비활성화 옵션
-$disable-magic-sprite-selectors: true
+// $disable-magic-sprite-selectors: true
 
 // 스프라이트 이미지 레이아웃(배치) 설정
 // vertical, horizontal, smart
@@ -20,8 +20,10 @@ $characters-layout: smart
 // 스프라이트 이미지 자동 생성
 @import characters/*.png
 
+// +all-characters-sprites(true)
+
 // 스프라이트 맵
-$characters-map: sprite-names( sprite-map("characters/*.png") )
+// $characters-map: sprite-names( sprite-map("characters/*.png") )
 
 // 생성된 스프라이트 맵 디버깅
 // @debug $characters-map
@@ -48,14 +50,14 @@ $characters-map: sprite-names( sprite-map("characters/*.png") )
 // 	height: characters-sprite-height($icon-name)
 
 // Sass 반복문 @each
-$prefix: yamoo9
+// $prefix: yamoo9
 // $characters: banana, elsa, elsa_stand, mushroom, mario
-@each $icon-name in $characters-map
-	.#{$prefix}
-		&.#{$icon-name}
-			+characters-sprite($icon-name)
-			width: characters-sprite-width($icon-name)
-			height: characters-sprite-height($icon-name)
+// @each $icon-name in $characters-map
+// 	.#{$prefix}
+// 		&.#{$icon-name}
+// 			+characters-sprite($icon-name)
+// 			width: characters-sprite-width($icon-name)
+// 			height: characters-sprite-height($icon-name)
 
 
 // ------------------------------------------------------------
@@ -65,5 +67,5 @@ $prefix: yamoo9
 // +hidpi($_ratio)
 // 	background-image: image-url('sass-belle-pug-money-box-p3368-4608_zoom@#{$_ratio}x.jpg')
 
-.test
-	+retina-image('sass-belle-pug-money-box-p3368-4608_zoom', $ratio: 3, $extension: 'jpg')
+// .test
+// 	+retina-image('sass-belle-pug-money-box-p3368-4608_zoom', $ratio: 3, $extension: 'jpg')
