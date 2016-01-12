@@ -1,0 +1,8 @@
+{
+  "name": "bower-management",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bourbon": "~4.2.6",
+    "susy": "~2.2.9"
+  }
+}

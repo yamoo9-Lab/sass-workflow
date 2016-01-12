@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[\$susy: (
+	columns            : ${1:4},
+	gutters            : .25,
+	gutter-position    : after,
+
+	container          : auto,
+	container-position : center,
+
+	math               : fluid,
+	column-width       : false,
+
+	flow               : ltr,
+	last-flow          : to,
+	output             : float,
+	global-box-sizing  : border-box,
+
+	debug: (
+		image  : hide,
+		color  : rgba(#66f, .25),
+		output : background,
+		toggle : top right
+	),
+
+	use-custom: (
+		background-image   : true,
+		background-options : false,
+		box-sizing         : true,
+		clearfix           : false,
+		rem                : true
+	)
+);]]></content>
+	<tabTrigger>susy-global-settings-no-comment</tabTrigger>
+	<scope>source.scss</scope>
+	<description>Susy - 글로벌 설정</description>
+</snippet>

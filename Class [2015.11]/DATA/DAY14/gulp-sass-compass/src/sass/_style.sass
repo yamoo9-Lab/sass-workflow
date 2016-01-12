@@ -1,0 +1,76 @@
+//
+ * --------------------------------
+ * 모듈
+ * --------------------------------
+@import config
+
+//
+ * --------------------------------
+ * 페이지
+ * --------------------------------
+.circle
+	+position(relative)
+	$circle-start-color: #83d9e3
+	$circle-end-color:   #40c4d2
+	$circle-radius:      50%
+
+	$inner-circle-color: #fff
+
+	&:before
+		+position(absolute, 50% null null 50%)
+		+size(45px)
+		+background(radial-gradient($inner-circle-color, shade($inner-circle-color, 10%)))
+		+border-radius(50%)
+		+transform( translate(-50%, -50%) )
+		content: ''
+
+	+size(100px)
+	+background( linear-gradient($circle-start-color, $circle-end-color) )
+	&.radius-top
+		+border-top-radius(50%)
+	&.radius-right
+		+border-right-radius(50%)
+		+animation(rotate90deg 1s $ease-out-back forwards)
+	&.radius-bottom
+		+border-bottom-radius(50%)
+		+animation(rotate180deg 1s ease-in forwards)
+	&.radius-left
+		+border-left-radius(50%)
+		+animation(rotate-90deg 1s ease-in-out forwards)
+	// @each $direction in top right bottom left
+	// 	&.radius-#{$direction}
+	// 		@if $direction == top
+	// 			+border-top-radius($circle-radius)
+	// 		@if $direction == right
+	// 			+border-right-radius($circle-radius)
+	// 		@if $direction == bottom
+	// 			+border-bottom-radius($circle-radius)
+	// 		@if $direction == left
+	// 			+border-left-radius($circle-radius)
+
+//
+ * --------------------------------
+ * 애니메이션
++keyframes(rotate90deg)
+	0%
+		+transform(rotate(0deg))
+	25%
+		+transform(rotate(90deg) translate(-10px, 0))
+	50%
+		+transform(rotate(270deg) translate(10px, 0))
+	75%
+		+transform(rotate(180deg) translate(-10px, 0))
+	100%
+		+transform(rotate(90deg) translate(0px, 0))
+
++keyframes(rotate-90deg)
+	0%
+		+transform(rotate(0deg))
+	100%
+		+transform(rotate(-90deg))
+
++keyframes(rotate180deg)
+	0%
+		+transform(rotate(0deg))
+	100%
+		+transform(rotate(180deg))
