@@ -1,0 +1,86 @@
+@import susy-layout-setting
+
++global-box-sizing()
+
+//
+ * --------------------------------
+ * 모바일 퍼스트 레이아웃 디자인
+ * --------------------------------
+.container
+	+show-grid(show)
+	min-height: 100vh
+
+	+susy-breakpoint($tablet, 6)
+		+container(90% show)
+	+susy-breakpoint($desktop, 12 (80px 20px) split static)
+		+container(show)
+
+	> div
+		// height: $gap * 10
+		height: 25vh
+		text-align: center
+		// line-height: $gap * 10
+		line-height: 25vh
+		&:before
+			content: attr(class)
+			font-size: $gap * 4
+
+	.one
+		+susy-breakpoint($tablet, 6)
+			// +span(full)
+			+full()
+		// +span(1)
+		background: #34C0FF
+
+	.two
+		+break
+		background: #FE4940
+		+susy-breakpoint($tablet, 6)
+			+span(3 at 2 isolate)
+
+	.three
+		background: #7045CF
+		+susy-breakpoint($tablet, 6)
+			+span(2 at 5 isolate)
+	.four
+		background: #FFD219
+		+susy-breakpoint($tablet, 6)
+			+span(1 at 1 isolate)
+
+//
+ * --------------------------------
+ * 고정 그리드 시스템 레이아웃
+ * --------------------------------
+// .container
+// 	+container()
+// 	min-height: 100vh
+
+// 	> div
+// 		height: $base-line-height * 6
+// 		&:before
+// 			content: attr(class)
+
+// 	.one
+// 		+span(1)
+// 		// +prefix(1)
+// 		// +span(isolate 5 at 8)
+// 		background: rgba(red, 0.4)
+// 	.two
+// 		+span(2)
+// 		// +pre(2)
+// 		// +post(2)
+// 		// +span(isolate 3 at 3)
+// 		background: rgba(green, 0.4)
+// 	.three
+// 		// +break
+// 		// display: none
+// 		+span(4)
+// 		background: rgba(blue, 0.4)
+// 	.four
+// 		// display: none
+// 		+pre(3)
+// 		+span(2)
+// 		+last
+// 		// +span(2 last)
+// 		// +last
+// 		background: rgba(orange, 0.4)

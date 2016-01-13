@@ -1,0 +1,19 @@
+// * --------------------------------
+// * Bourbon 설정
+// $asset-pipeline: false;
+// $em-base: 16px;
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      true;
+
+// * --------------------------------
+// * Sass 의존 모듈
+// * --------------------------------
+@import "compass";
+@import "bourbon";
+@import "susy";
+@import "hover/hover";
+// @import "animate/animate";
+

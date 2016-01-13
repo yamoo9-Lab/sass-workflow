@@ -1,0 +1,6 @@
+=container($page-width: 100%, $fluid: true)
+	@if $fluid == true
+		max-width: $page-width
+	@else
+		width: $page-width
+	+margin(left auto right auto)

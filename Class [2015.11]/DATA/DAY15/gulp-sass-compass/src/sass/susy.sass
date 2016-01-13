@@ -1,0 +1,61 @@
+@import susy-setting
+
+//
+ * --------------------------------
+ * Susy Mixins
+ * --------------------------------
+ * 	+container()
+ *  +span()
+ * --------------------------------
+ * Susy Functions
+ * --------------------------------
+ * 	container()
+ *  span()
+ * --------------------------------
+
+// Susy Mixin - global-box-sizing()
++global-box-sizing()
+
+$base-line-height: 10px
+$base-gap: $base-line-height
+
+.page-wrapper
+	// Susy Mixin - show-grid($layout)
+	// Using Debug
+	// +show-grid(show)
+
+	// 데스크탑 퍼스트
+	// 고정 값을 사용하는 컨테이너 설정
+	+container()
+	min-height: 100vh
+
+	header
+		height: $base-gap * 8
+		background: #ececec
+		h1
+			margin-top: 0
+
+.slider
+	height: $base-gap * 48
+	background: #808080
+
+	> div
+		height: 100%
+
+	.slider-content
+		+span(6)
+		background: #f00
+
+	.slider-indicator
+		+span(2)
+		// background: #ff0
+
+		ul
+			list-style: none
+			margin: 0
+			padding-left: 0
+
+			img
+				width: span(2)
+				height: $base-gap * 12
+				vertical-align: bottom

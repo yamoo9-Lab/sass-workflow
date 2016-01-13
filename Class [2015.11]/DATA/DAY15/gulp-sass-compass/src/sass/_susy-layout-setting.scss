@@ -1,0 +1,54 @@
+@import "yamoo9/yamoo9";
+@import "susy/susy";
+
+$base-line-height: 10px;
+$gap: $base-line-height;
+
+// * --------------------------------
+// * RWD Breakpoint $variables
+// * --------------------------------
+$tablet: 780px;
+$desktop: 1140px;
+
+@debug $tablet;
+
+// $static-layout: (
+// 	columns            : 12,
+// 	gutters            : 20px/80px,
+// 	// gutter-position    : inside-static,
+
+// 	// container          : 1200px,
+// 	// container-position : right,
+
+// 	math               : static,
+// 	column-width       : 80px,
+
+// 	// flow               : ltr,
+// 	// last-flow          : to,
+// 	// output             : float,
+// 	global-box-sizing  : border-box,
+
+// 	debug: (
+// 		image  : show,
+// 		color  : rgba(#66f, .25),
+// 		// output : overlay,
+// 		// toggle : top left
+// 	),
+
+// 	// use-custom: (
+// 	// 	background-image   : true,
+// 	// 	background-options : false,
+// 	// 	box-sizing         : true,
+// 	// 	clearfix           : false,
+// 	// 	rem                : true
+// 	// )
+// );
+
+
+$mobile-first-layout: (
+	columns: 3,
+	gutters: 1/6,
+	gutter-position: inside
+);
+
+$susy: $mobile-first-layout;

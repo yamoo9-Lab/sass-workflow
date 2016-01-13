@@ -1,0 +1,11 @@
+@mixin selection() {
+	::-webkit-selection {
+		@content;
+	}
+	::-moz-selection {
+		@content;
+	}
+	::selection {
+		@content;
+	}
+}
